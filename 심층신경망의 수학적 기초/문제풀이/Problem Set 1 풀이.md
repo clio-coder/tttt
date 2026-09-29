@@ -12,7 +12,7 @@
 | --- | --- | --- | --- |
 | P1 | Jensen–Shannon divergence의 비음수성·비퇴화성·대칭성 | **KL ≥ 0과 등호 조건** ([09.07 §9](../수업정리/09.07%20수업정리.md)) | $m$이 확률분포임을 보이고 KL 정리를 두 번 쓴다 |
 | P2 | 정규분포 평균의 MAP = ridge, 축소 계수, bias–variance | **MAP = loss + regularization** ([09.07 §6](../수업정리/09.07%20수업정리.md)), **ridge** ([09.09 §5](../수업정리/09.09%20수업정리.md)) | $-\log$ 사후분포 → 상수 버리고 2배 → 미분 = 0 |
-| P3 | 점 2개짜리 hard-margin SVM의 쌍대 문제를 끝까지 풀기 | **SVM 라그랑주·쌍대·$b$ 공식** ([09.14 §7.5–7.7](../수업정리/09.14%20수업정리.md)) | $w=\sum\alpha_iy_ix_i$, $\sum\alpha_iy_i=0$ → 쌍대 최대화 → support vector로 $b$ |
+| P3 | 점 2개짜리 hard-margin SVM의 쌍대 문제를 끝까지 풀기 | **SVM 라그랑주·쌍대· $b$ 공식** ([09.14 §7.5–7.7](../수업정리/09.14%20수업정리.md)) | $w=\sum\alpha_iy_ix_i$, $\sum\alpha_iy_i=0$ → 쌍대 최대화 → support vector로 $b$ |
 | P4 | max–min 부등식 증명과 반례 | **SVM 쌍대의 "min max ≥ max min"** ([09.14 §7.7](../수업정리/09.14%20수업정리.md)) | 두 변수를 모두 고정한 사슬 부등식에서 한쪽씩 max·min |
 
 ### 출제 패턴 — 이 문제지에서 보이는 것
@@ -70,7 +70,7 @@
 
 **풀이**
 
-**1.** 베이즈 정리로 $p(\theta\mid X)\propto p(X\mid\theta)\,p(\theta)$ (분모 $p(X)$는 $\theta$와 무관).
+**1.** 베이즈 정리로 $p(\theta\mid X)\propto p(X\mid\theta)\thinspace p(\theta)$ (분모 $p(X)$는 $\theta$와 무관).
 $$p(X\mid\theta)=\prod_{i=1}^n\frac1{\sqrt{2\pi}}e^{-(X_i-\theta)^2/2},\qquad p(\theta)=\frac1{\sqrt{2\pi\tau^2}}e^{-\theta^2/(2\tau^2)}$$
 $$-\log p(\theta\mid X)=\frac12\sum_{i=1}^n(X_i-\theta)^2+\frac{\theta^2}{2\tau^2}+C\quad(C\text{는 }\theta\text{와 무관})$$
 $\hat\theta_{MAP}=\arg\max p(\theta\mid X)=\arg\min[-\log p(\theta\mid X)]$이고, 상수를 버리고 2를 곱해도 최소점은 그대로이므로
@@ -84,8 +84,10 @@ $$\boxed{a=\frac{n}{n+1/\tau^2}=\frac{n\tau^2}{n\tau^2+1}}\in(0,1)$$
 - **해석:** MLE $\bar X$를 prior 평균 0 쪽으로 **줄인다(shrinkage)**. $n\to\infty$ 또는 $\tau^2\to\infty$(prior가 평평)면 $a\to1$ (MLE), $\tau^2\to0$이면 $a\to0$.
 - 9/9 ridge 해 $(\lambda I+X^\top X)^{-1}X^\top y$에서 설계행렬이 $\mathbf 1_n$(1만 있는 열)인 경우다: $X^\top X=n$, $X^\top y=n\bar X$ (보충).
 
-**3. 분해 증명** (Hint: $\hat\theta-\theta=(\hat\theta-\mathbb E\hat\theta)+(\mathbb E\hat\theta-\theta)$)
-$$\begin{aligned}\mathbb E[(\hat\theta-\theta)^2]&=\mathbb E[(\hat\theta-\mathbb E\hat\theta)^2]+2(\mathbb E\hat\theta-\theta)\,\mathbb E[\hat\theta-\mathbb E\hat\theta]+(\mathbb E\hat\theta-\theta)^2\\&=\text{Var}(\hat\theta)+0+(\mathbb E\hat\theta-\theta)^2\end{aligned}$$
+**3. 분해 증명** (Hint: $\hat\theta-\theta=(\hat\theta-\mathbb E\hat\theta)+(\mathbb E\hat\theta-\theta){}$)
+
+$$\begin{aligned}\mathbb E[(\hat\theta-\theta)^2]&=\mathbb E[(\hat\theta-\mathbb E\hat\theta)^2]+2(\mathbb E\hat\theta-\theta)\thinspace\mathbb E[\hat\theta-\mathbb E\hat\theta]+(\mathbb E\hat\theta-\theta)^2\cr&=\text{Var}(\hat\theta)+0+(\mathbb E\hat\theta-\theta)^2\end{aligned}$$
+
 가운데 항: $\mathbb E\hat\theta-\theta$는 상수(확률변수 아님)라서 밖으로 나오고, $\mathbb E[\hat\theta-\mathbb E\hat\theta]=0$.
 
 **$\hat\theta_{MAP}$에 적용.** $\mathbb E[\bar X]=\theta$, $\text{Var}(\bar X)=\frac1{n^2}\sum\text{Var}(X_i)=\frac1n$ (∵ 독립)
@@ -93,13 +95,13 @@ $$\begin{aligned}\mathbb E[(\hat\theta-\theta)^2]&=\mathbb E[(\hat\theta-\mathbb
 | 양 | 계산 | 결과 |
 | --- | --- | --- |
 | Bias | $\mathbb E[a\bar X]-\theta=(a-1)\theta$ | $-\dfrac{\theta}{n\tau^2+1}$ |
-| Variance | $a^2\,\text{Var}(\bar X)=a^2/n$ | $\dfrac{n\tau^4}{(n\tau^2+1)^2}$ |
+| Variance | $a^2\thinspace\text{Var}(\bar X)=a^2/n$ | $\dfrac{n\tau^4}{(n\tau^2+1)^2}$ |
 | MSE | Bias² + Var | $\dfrac{\theta^2+n\tau^4}{(n\tau^2+1)^2}$ |
 
 - (보충) MLE $\bar X$는 bias 0, MSE $=1/n$. MAP가 더 나은 조건: $\dfrac{\theta^2+n\tau^4}{(n\tau^2+1)^2}<\dfrac1n\iff\theta^2<2\tau^2+\dfrac1n$. **prior가 참값을 크게 벗어나지 않으면 bias를 조금 내주고 variance를 크게 줄여 이긴다.**
 
 ✔ 분모 $p(X)$를 버리는 이유 · ✔ "상수 버리고 2배해도 argmin 불변" · ✔ 2계 조건 · ✔ 분해에서 가운데 항이 0인 이유 · ✔ $\text{Var}(\bar X)=1/n$의 근거(독립)
-✗ $\lambda=1/(2\tau^2)$로 적음 (2배를 안 함) · ✗ $\text{Var}(a\bar X)=a\,\text{Var}(\bar X)$ (제곱 빠뜨림) · ✗ bias 부호
+✗ $\lambda=1/(2\tau^2)$로 적음 (2배를 안 함) · ✗ $\text{Var}(a\bar X)=a\thinspace\text{Var}(\bar X)$ (제곱 빠뜨림) · ✗ bias 부호
 
 **더 생각해 볼 것** 다차원 ridge, 최적 $\lambda^\ast=\sigma^2/\beta^2$ → [연습문제 1 · 문제 4](연습문제%201.md)
 
@@ -107,7 +109,7 @@ $$\begin{aligned}\mathbb E[(\hat\theta-\theta)^2]&=\mathbb E[(\hat\theta-\mathbb
 
 ## 3. Problem 3 — 점 2개짜리 SVM 쌍대 문제
 
-**문제** $x_1=(0,0),\,y_1=-1$; $x_2=(2,2),\,y_2=+1$. primal $\min\frac12\lVert w\rVert^2$ s.t. $y_i(w^\top x_i+b)\ge1$.
+**문제** $x_1=(0,0),\thinspace y_1=-1$; $x_2=(2,2),\thinspace y_2=+1$. primal $\min\frac12\lVert w\rVert^2$ s.t. $y_i(w^\top x_i+b)\ge1$.
 1. 라그랑주 함수 → $w,b$에 대해 최소화 → $\alpha_1,\alpha_2$에 대한 쌍대 → 최적 승수
 2. $w,b$ 복원 3. 초평면과 마진
 
@@ -123,7 +125,7 @@ $$L(w,b,\alpha)=\frac12\lVert w\rVert^2+\alpha_1\big(1-y_1(w^\top x_1+b)\big)+\a
 ($x_1=0$이라 $w^\top x_1=0$, $y_1=-1$)
 
 **② $w,b$에 대해 최소화**
-$$\nabla_wL=w-\sum_i\alpha_iy_ix_i=0\Rightarrow w=-\alpha_1(0,0)+\alpha_2(2,2)=(2\alpha_2,\,2\alpha_2)$$
+$$\nabla_wL=w-\sum_i\alpha_iy_ix_i=0\Rightarrow w=-\alpha_1(0,0)+\alpha_2(2,2)=(2\alpha_2,\thinspace2\alpha_2)$$
 $$\frac{\partial L}{\partial b}=-\sum_i\alpha_iy_i=\alpha_1-\alpha_2=0\Rightarrow\alpha_1=\alpha_2$$
 
 **③ 쌍대 함수** 대입하면 $\sum\alpha_iy_ix_i^\top w=w^\top w$이고 $b$ 항은 $b\sum\alpha_iy_i=0$으로 사라져서
@@ -170,14 +172,14 @@ $\alpha_1,\alpha_2>0$이므로 둘 다 support vector. $b=y_2-x_2^\top w=1-(1+1)
 
 (보충) max·min이 존재하지 않으면 sup·inf로 바꿔 같은 증명이 된다.
 
-**반례 1 (이산)** $X=Y=\{0,1\}$, $f(x,y)=1$ ($x=y$), $0$ ($x\ne y$)
+**반례 1 (이산)** $X=Y=\lbrace0,1\rbrace$, $f(x,y)=1$ ($x=y$), $0$ ($x\ne y$)
 - $\max_x\min_yf$: $x=0$이면 $\min(f(0,0),f(0,1))=\min(1,0)=0$, $x=1$도 0 → **0**
 - $\min_y\max_xf$: $y=0$이면 $\max(1,0)=1$, $y=1$도 1 → **1**
 - $0<1$: 등호 불성립. (최대화하는 쪽은 상대가 맞춰 주지 않길 바라고, 최소화하는 쪽은 맞추길 바라는 "짝 맞추기 게임")
 
 **반례 2 (연속)** $X=Y=[0,1]$, $f(x,y)=(x-y)^2$
 - $\max_x\min_y(x-y)^2=\max_x0=0$ ($y=x$로 고르면 됨)
-- $\min_y\max_x(x-y)^2=\min_y\max\{y^2,(1-y)^2\}=\frac14$ ($y=\frac12$)
+- $\min_y\max_x(x-y)^2=\min_y\max\lbrace y^2,(1-y)^2\rbrace=\frac14$ ($y=\frac12$)
 - $0<\frac14$
 
 ✔ 두 변수를 고정한 사슬 부등식 · ✔ "왼쪽은 $x'$만, 오른쪽은 $y'$만의 함수"라는 말 · ✔ 반례의 두 값을 실제로 계산
@@ -220,4 +222,4 @@ PS1 P3·P4가 9/14의 **필기 없던 슬라이드**에서 나왔다. 같은 성
 | **독립 + 평균 0 → 교차항 0** | 분산 계산 (Xavier·He·mini-batch) | $\mathbb E[u_iu_j]=\mathbb E[u_i]\mathbb E[u_j]=0$ ($i\ne j$) |
 | **SVM 쌍대 레시피** | 작은 데이터 SVM | 라그랑주 → $\nabla_w,\partial_b$ → $g(\alpha)$ → 제약 하 최대화(내부해가 음수면 경계) → $w$, $b$ → 검산 |
 | **사슬 부등식 후 한쪽씩** | max–min, 약한 쌍대성 | 모두 고정 → $\min\le f\le\max$ → 한 변수씩 max·min |
-| **작은 반례** | "항상 성립하나?" | $\{0,1\}$ 위 표, 베르누이 분포, $(x-y)^2$ on $[0,1]^2$ |
+| **작은 반례** | "항상 성립하나?" | $\lbrace0,1\rbrace$ 위 표, 베르누이 분포, $(x-y)^2$ on $[0,1]^2$ |

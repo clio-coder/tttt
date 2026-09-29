@@ -18,7 +18,7 @@
 | 9/23(수) | [09.23 수업정리](09.23%20수업정리.md) | `Week4_Wed1_note` p1–25, `Week4_Wed2_note` p1–10 | He 초기화, LR, Batch Norm, Descent Lemma | ★ He (D.I.Y. 2개), ★ Descent Lemma (D.I.Y. 1개, ③은 9/28), covariate shift·ICS |
 
 ## 다음 수업으로 넘어간 것
-- **Descent Lemma ③** "β-smooth ⇒ $v^\top\nabla^2f\,v\le\beta\lVert v\rVert^2$" — 9/23 판서 "Next class" → 9/28 노트에서 이어서 정리 (9/23 노트 §5에 미리 보는 증명이 있음)
+- **Descent Lemma ③** "β-smooth ⇒ $v^\top\nabla^2f\thinspace v\le\beta\lVert v\rVert^2$" — 9/23 판서 "Next class" → 9/28 노트에서 이어서 정리 (9/23 노트 §5에 미리 보는 증명이 있음)
 
 ## 확인이 필요한 것
 - (해결) 9/14 SVM 쌍대 문제(p37–40)를 수업에서 다뤘는지 → 필기는 없지만 **Problem Set 1 P3·P4에 나왔으므로 시험 범위로 본다** (📝).

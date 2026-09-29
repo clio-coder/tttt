@@ -25,7 +25,7 @@
 
 **★★★ 매우 유력**
 
-1. 📝 **"$X_n\to$ 무엇"을 직접 보이기** — qm은 편향–분산 분해, p는 Chebyshev 또는 꼬리확률 직접 계산 (최댓값·최솟값은 CDF로, **양쪽 꼬리** 모두), 극한값의 함수는 CMT로 옮기기. hw1 #6·#7이 이 유형이다. → [3.2](#32-보충-편향분산-분해), [7](#7-보충-최댓값과-최솟값-다루기), [hw1 #6](#hw1-6-ar1-표본평균의-qm-수렴), [hw1 #7](#hw1-7-log-n을-최댓값으로-나눈-것의-일치성)
+1. 📝 **" $X_n\to$ 무엇"을 직접 보이기** — qm은 편향–분산 분해, p는 Chebyshev 또는 꼬리확률 직접 계산 (최댓값·최솟값은 CDF로, **양쪽 꼬리** 모두), 극한값의 함수는 CMT로 옮기기. hw1 #6·#7이 이 유형이다. → [3.2](#32-보충-편향분산-분해), [7](#7-보충-최댓값과-최솟값-다루기), [hw1 #6](#hw1-6-ar1-표본평균의-qm-수렴), [hw1 #7](#hw1-7-log-n을-최댓값으로-나눈-것의-일치성)
 2. 📐 **포함관계 증명 세 개** — qm ⟹ p (Chebyshev), p ⟹ d ($\epsilon$ 샌드위치 + lim inf/lim sup), 상수로의 d ⟹ p. → [3.1](#31-정의와-thm-32), [4.2](#42-thm-33-확률수렴이면-분포수렴), [4.5](#45-thm-34-상수로의-분포수렴)
 3. 📐 **반례 세 개** — Ex 3.2 (p지만 qm 아님), Ex 3.4 (d지만 p 아님), Remark (p지만 기댓값이 발산). → [5](#5-수렴의-관계)
 4. 🔢 **극한분포 유도** — $n(1-X_{(n)})\xrightarrow{d}\text{Exp}(1)$ (Ex 3.5), 원판 위 균등분포의 MLE (2021 기출), 지수분포 최댓값 → Gumbel (보충). → [4.4](#44-ex-35-표본최댓값), [V2](#v2-원판-위-균등분포의-극한분포), [V3](#v3-지수분포-최댓값과-gumbel)
@@ -35,19 +35,19 @@
 5. 📐 약한 대수의 법칙 (Chebyshev 증명), 일치추정량의 정의 → [2](#2-확률수렴과-약한-대수의-법칙)
 6. 🧩📐 Borel–Cantelli와 a.s. 충분조건 (Thm 2.1 증명 있음, First BC는 증명 없음 → 보충 증명이 두 줄), 지수 꼬리 ⟹ a.s. → [8](#8-보충-almost-sure-수렴과-borelcantelli)
 7. 🧩 CMT·Slutsky의 사용 (t 통계량 등)과 짧은 증명 (상수 극한의 CMT, Slutsky의 합) → [6](#6-cmt-slutsky-clt)
-8. 💡 a.s.와 qm 사이에는 포함관계가 없다 (예: Ex 3.2는 a.s.이지만 qm 아님, 독립 Bernoulli$(1/n)$은 qm이지만 a.s. 아님) → [5](#5-수렴의-관계), [V6](#v6-독립-bernoulli로-본-수렴의-차이)
+8. 💡 a.s.와 qm 사이에는 포함관계가 없다 (예: Ex 3.2는 a.s.이지만 qm 아님, 독립 Bernoulli $(1/n)$은 qm이지만 a.s. 아님) → [5](#5-수렴의-관계), [V6](#v6-독립-bernoulli로-본-수렴의-차이)
 
 **★ 가능성 있음**
 
 9. 💡 CLT의 내용과 해석 (WLLN = 일치성, CLT = 오차를 $\sqrt n$배 확대한 분포)
-10. 💡 정의들 — a.s.의 $\epsilon$–$N(\omega,\epsilon)$ 표현, 분포수렴은 **연속점에서만** (Ex 3.3)
+10. 💡 정의들 — a.s.의 $\epsilon$– $N(\omega,\epsilon)$ 표현, 분포수렴은 **연속점에서만** (Ex 3.3)
 
 ### 0.3 이 장의 도구
 
 | 도구 | 쓰는 곳 |
 | --- | --- |
 | [T14] Chebyshev·Markov로 확률수렴 | WLLN, qm ⟹ p, 비동일분포 WLLN |
-| [T15] 편향–분산 분해 $\mathbb E(X_n-c)^2=\operatorname{Var}X_n+(\mathbb EX_n-c)^2$ | hw1 #6 |
+| [T15] 편향–분산 분해 $\mathbb E(X_n-c)^2=\mathop{\mathrm{Var}}\nolimits X_n+(\mathbb EX_n-c)^2$ | hw1 #6 |
 | [T16] 최댓값·최솟값의 CDF, 양쪽 꼬리, 합집합 | Ex 3.5, hw1 #7 |
 | [T17] $(1-x/n)^n\to e^{-x}$, $1-x\le e^{-x}$ | Ex 3.5, hw1 #7 |
 | [T18] CMT·Slutsky로 옮기기 | hw1 #7 마지막 단계, t 통계량 |
@@ -64,7 +64,7 @@
 
 **정의 (3.1)**
 
-$$\Pr\Big(\big\{\omega:\lim_{n\to\infty}X_n(\omega)=X(\omega)\big\}\Big)=1 .$$
+$$\Pr\Big(\big\lbrace\omega:\lim_{n\to\infty}X_n(\omega)=X(\omega)\big\rbrace\Big)=1 .$$
 
 **동치** 확률 1인 집합 $\Omega_0$가 있어서, 모든 $\omega\in\Omega_0$와 $\epsilon > 0$에 대해 어떤 $N=N(\omega,\epsilon)$이 있고 $n\ge N$이면 $\lvert X_n(\omega)-X(\omega)\rvert < \epsilon$. 즉 확률 0인 예외를 빼면 **표본 경로마다 보통의 실수열처럼 수렴**한다.
 
@@ -81,11 +81,11 @@ $$\Pr\Big(\big\{\omega:\lim_{n\to\infty}X_n(\omega)=X(\omega)\big\}\Big)=1 .$$
 - $X=c$ (상수)이면 $X_n$의 분포가 $c$ 주위에 집중된다는 뜻이다.
 - a.s. 수렴은 "거의 모든 **표본 경로의 값**"에 대한 말, 확률수렴은 "오차가 큰 **사건의 확률**"에 대한 말이다.
 
-**Theorem 3.1 (약한 대수의 법칙, WLLN)** $Y_i$ iid, $\mathbb EY_1=\mu$, $\operatorname{Var}Y_1=\sigma^2 < \infty$이면 $\bar Y_n\xrightarrow{p}\mu$.
+**Theorem 3.1 (약한 대수의 법칙, WLLN)** $Y_i$ iid, $\mathbb EY_1=\mu$, $\mathop{\mathrm{Var}}\nolimits Y_1=\sigma^2 < \infty$이면 $\bar Y_n\xrightarrow{p}\mu$.
 
-**증명** $\mathbb E\bar Y_n=\mu$, $\operatorname{Var}\bar Y_n=\sigma^2/n$ (∵ 독립 — 사실 비상관이면 충분). Chebyshev로
+**증명** $\mathbb E\bar Y_n=\mu$, $\mathop{\mathrm{Var}}\nolimits\bar Y_n=\sigma^2/n$ (∵ 독립 — 사실 비상관이면 충분). Chebyshev로
 
-$$\Pr(\lvert\bar Y_n-\mu\rvert > \epsilon)\le\frac{\operatorname{Var}\bar Y_n}{\epsilon^2}=\frac{\sigma^2}{n\epsilon^2}\to0 .\qquad\blacksquare$$
+$$\Pr(\lvert\bar Y_n-\mu\rvert \gt  \epsilon)\le\frac{\mathop{\mathrm{Var}}\nolimits\bar Y_n}{\epsilon^2}=\frac{\sigma^2}{n\epsilon^2}\to0 .\qquad\blacksquare$$
 
 **정의 (일치성)** 추정량 $\hat\theta_n$이 $\hat\theta_n\xrightarrow{p}\theta$를 만족하면 $\theta$의 **일치추정량(consistent estimator)**이다. → hw1 #7 "일치추정량인가?" = "확률수렴하는가?"
 
@@ -105,23 +105,23 @@ $$\Pr(\lvert\bar Y_n-\mu\rvert > \epsilon)\le\frac{\operatorname{Var}\bar Y_n}{\
 
 **증명** 임의의 $\epsilon > 0$에 대해 Chebyshev (정확히는 $(X_n-X)^2$에 Markov)로
 
-$$\Pr(\lvert X_n-X\rvert > \epsilon)\le\frac{\mathbb E[(X_n-X)^2]}{\epsilon^2}\to0 .\qquad\blacksquare$$
+$$\Pr(\lvert X_n-X\rvert \gt  \epsilon)\le\frac{\mathbb E[(X_n-X)^2]}{\epsilon^2}\to0 .\qquad\blacksquare$$
 
 ### 3.2 보충 편향–분산 분해
 
 (보충) hw1 #6의 핵심 도구. [T15]
 
-$$\mathbb E(X_n-c)^2=\operatorname{Var}X_n+(\mathbb EX_n-c)^2 .$$
+$$\mathbb E(X_n-c)^2=\mathop{\mathrm{Var}}\nolimits X_n+(\mathbb EX_n-c)^2 .$$
 
 (증명: $X_n-c=(X_n-\mathbb EX_n)+(\mathbb EX_n-c)$를 제곱해 기댓값, 교차항은 $\mathbb E(X_n-\mathbb EX_n)=0$이라 사라진다.)
 
-따라서 **상수 $c$로의 qm 수렴** ⟺ $\mathbb EX_n\to c$ 그리고 $\operatorname{Var}X_n\to0$. qm을 보이라는 문제는 "평균과 분산을 계산하라"는 문제다.
+따라서 **상수 $c$로의 qm 수렴** ⟺ $\mathbb EX_n\to c$ 그리고 $\mathop{\mathrm{Var}}\nolimits X_n\to0$. qm을 보이라는 문제는 "평균과 분산을 계산하라"는 문제다.
 
 ### 3.3 Ex 3.2 역은 성립하지 않는다
 
 📐 [ch3 p3]
 
-$U\sim\text{Unif}(0,1)$, $X_n=\sqrt n\,I_{[0,1/n]}(U)$.
+$U\sim\text{Unif}(0,1)$, $X_n=\sqrt n\thinspace I_{[0,1/n]}(U)$.
 - 확률수렴: $\sqrt n > \epsilon$인 $n$에서 $\Pr(\lvert X_n\rvert > \epsilon)=\Pr(U\le1/n)=1/n\to0$ → $X_n\xrightarrow{p}0$.
 - qm 아님: $\mathbb E(X_n^2)=n\Pr(U\le1/n)=1$ → $X_n\not\xrightarrow{qm}0$.
 - 요점: $X_n$은 **대부분 0이지만 아주 드물게 큰 값**을 갖는다. 확률수렴은 드문 사건을 무시하지만 제곱 기댓값은 무시하지 못한다.
@@ -138,7 +138,7 @@ $U\sim\text{Unif}(0,1)$, $X_n=\sqrt n\,I_{[0,1/n]}(U)$.
 **정의 (3.4)** $F$의 **모든 연속점** $x$에서 $F_n(x)\to F(x)$이면 $X_n\xrightarrow{d}X$.
 
 - 값이 가까워질 필요 없이 **분포의 모양**만 가까워지면 된다 → 네 가지 중 가장 약한 수렴.
-- 연속점만 보는 조건은 필수다. **Ex 3.3:** $X_n\sim N(0,1/n)$, $X=0$ a.s. ($F(x)=I(x\ge0)$). $x < 0$이면 $F_n(x)=\Pr(Z\le\sqrt nx)\to0$, $x > 0$이면 $\to1$. 그런데 $F_n(0)=1/2\not\to F(0)=1$. $x=0$은 $F$의 불연속점이라 상관없고, $X_n\xrightarrow{d}0$이다.
+- 연속점만 보는 조건은 필수다. **Ex 3.3:** $X_n\sim N(0,1/n)$, $X=0$ a.s. ($F(x)=I(x\ge0){}$). $x < 0$이면 $F_n(x)=\Pr(Z\le\sqrt nx)\to0$, $x > 0$이면 $\to1$. 그런데 $F_n(0)=1/2\not\to F(0)=1$. $x=0$은 $F$의 불연속점이라 상관없고, $X_n\xrightarrow{d}0$이다.
 
 ### 4.2 Thm 3.3 확률수렴이면 분포수렴
 
@@ -151,13 +151,13 @@ $U\sim\text{Unif}(0,1)$, $X_n=\sqrt n\,I_{[0,1/n]}(U)$.
 **증명** $F$의 연속점 $x$와 $\epsilon > 0$을 고정한다.
 
 $$\begin{aligned}
-F_n(x)&=\Pr(X_n\le x,\ X\le x+\epsilon)+\Pr(X_n\le x,\ X > x+\epsilon)\le F(x+\epsilon)+\Pr(\lvert X_n-X\rvert > \epsilon),\\
-F(x-\epsilon)&=\Pr(X\le x-\epsilon,\ X_n\le x)+\Pr(X\le x-\epsilon,\ X_n > x)\le F_n(x)+\Pr(\lvert X_n-X\rvert > \epsilon).
+F_n(x)&=\Pr(X_n\le x,\ X\le x+\epsilon)+\Pr(X_n\le x,\ X \gt  x+\epsilon)\le F(x+\epsilon)+\Pr(\lvert X_n-X\rvert \gt  \epsilon),\cr
+F(x-\epsilon)&=\Pr(X\le x-\epsilon,\ X_n\le x)+\Pr(X\le x-\epsilon,\ X_n \gt  x)\le F_n(x)+\Pr(\lvert X_n-X\rvert \gt  \epsilon).
 \end{aligned}$$
 
 (둘째 항들: $X_n\le x < x+\epsilon < X$이면 $X-X_n > \epsilon$, $X\le x-\epsilon < x < X_n$이면 $X_n-X > \epsilon$.) 합치면
 
-$$F(x-\epsilon)-\Pr(\lvert X_n-X\rvert > \epsilon)\le F_n(x)\le F(x+\epsilon)+\Pr(\lvert X_n-X\rvert > \epsilon).$$
+$$F(x-\epsilon)-\Pr(\lvert X_n-X\rvert \gt  \epsilon)\le F_n(x)\le F(x+\epsilon)+\Pr(\lvert X_n-X\rvert \gt  \epsilon).$$
 
 $F_n(x)$의 극한이 있는지 모르므로 lim inf와 lim sup를 취한다. $X_n\xrightarrow{p}X$라 $\Pr(\lvert X_n-X\rvert > \epsilon)\to0$:
 
@@ -191,7 +191,7 @@ $X_1,\dots,X_n\overset{\text{iid}}{\sim}\text{Unif}(0,1)$, $X_{(n)}=\max_iX_i$.
 - **확률수렴:** $0 < \epsilon < 1$이면 $\Pr(\lvert X_{(n)}-1\rvert > \epsilon)=\Pr(X_{(n)} < 1-\epsilon)=\prod_i\Pr(X_i < 1-\epsilon)=(1-\epsilon)^n\to0$ (∵ 독립, max ≤ a ⟺ 모두 ≤ a). → $X_{(n)}\xrightarrow{p}1$.
 - **확대한 극한:** $t\ge0$이면
 
-$$\Pr\big(n(1-X_{(n)})\le t\big)=1-\Pr\Big(X_{(n)} < 1-\frac tn\Big)=1-\Big(1-\frac tn\Big)^n\to1-e^{-t}$$
+$$\Pr\big(n(1-X_{(n)})\le t\big)=1-\Pr\Big(X_{(n)} \lt  1-\frac tn\Big)=1-\Big(1-\frac tn\Big)^n\to1-e^{-t}$$
 
   ($n\ge t$일 때). 따라서 $n(1-X_{(n)})\xrightarrow{d}\text{Exp}(1)$.
 - **요점:** 최댓값 자체는 1로 확률수렴하지만, **적절한 속도 $n$으로 확대**하면 지수분포라는 극한분포가 나온다. (표본평균은 $\sqrt n$, 최댓값은 $n$ — 속도가 다르다)
@@ -204,7 +204,7 @@ $$\Pr\big(n(1-X_{(n)})\le t\big)=1-\Pr\Big(X_{(n)} < 1-\frac tn\Big)=1-\Big(1-\f
 
 **증명** $F(x)=I(x\ge c)$의 불연속점은 $c$뿐이라 $c\pm\epsilon$은 연속점이다.
 
-$$\Pr(\lvert X_n-c\rvert > \epsilon)=\Pr(X_n > c+\epsilon)+\Pr(X_n < c-\epsilon)\le1-F_n(c+\epsilon)+F_n(c-\epsilon)\to1-1+0=0 .\qquad\blacksquare$$
+$$\Pr(\lvert X_n-c\rvert \gt  \epsilon)=\Pr(X_n \gt  c+\epsilon)+\Pr(X_n \lt  c-\epsilon)\le1-F_n(c+\epsilon)+F_n(c-\epsilon)\to1-1+0=0 .\qquad\blacksquare$$
 
 ---
 
@@ -244,21 +244,21 @@ $$X_n\xrightarrow{p}X\Rightarrow g(X_n)\xrightarrow{p}g(X),\qquad X_n\xrightarro
 
 **Theorem 3.6 (Slutsky)** $X_n\xrightarrow{d}X$, $Y_n\xrightarrow{p}c$ (상수)이면 $X_n+Y_n\xrightarrow{d}X+c$, $X_nY_n\xrightarrow{d}cX$.
 
-**Theorem 3.7 (CLT)** $Y_i$ iid, $\mathbb EY_1=\mu$, $\operatorname{Var}Y_1=\sigma^2 > 0$이면 $\dfrac{\sqrt n(\bar Y_n-\mu)}{\sigma}\xrightarrow{d}Z\sim N(0,1)$.
+**Theorem 3.7 (CLT)** $Y_i$ iid, $\mathbb EY_1=\mu$, $\mathop{\mathrm{Var}}\nolimits Y_1=\sigma^2 > 0$이면 $\dfrac{\sqrt n(\bar Y_n-\mu)}{\sigma}\xrightarrow{d}Z\sim N(0,1)$.
 
 - 두 정리(CMT, Slutsky)는 표본평균, 표본분산, MLE 등의 극한분포를 유도하는 기본 도구다. CLT + Slutsky로 **모르는 모수를 일치추정량으로 바꾼 통계량**의 점근분포를 얻는다.
 - WLLN은 $\bar Y_n$이 $\mu$에 가까워진다는 것 (일치성), CLT는 그 오차를 $\sqrt n$배 확대했을 때의 분포 (신뢰구간·검정의 근거).
 
-**(보충 증명 1) 극한이 상수인 CMT.** $g$가 $c$에서 연속이고 $X_n\xrightarrow{p}c$라 하자. 임의의 $\epsilon > 0$에 대해 $\delta > 0$이 있어 $\lvert x-c\rvert < \delta\Rightarrow\lvert g(x)-g(c)\rvert < \epsilon$. 대우로 $\{\lvert g(X_n)-g(c)\rvert\ge\epsilon\}\subset\{\lvert X_n-c\rvert\ge\delta\}$이므로 $\Pr(\lvert g(X_n)-g(c)\rvert\ge\epsilon)\le\Pr(\lvert X_n-c\rvert\ge\delta)\to0$. ∎ (hw1 #7의 마지막 단계가 이것이다: $g(x)=\lambda/x$는 $x=1$에서 연속)
+**(보충 증명 1) 극한이 상수인 CMT.** $g$가 $c$에서 연속이고 $X_n\xrightarrow{p}c$라 하자. 임의의 $\epsilon > 0$에 대해 $\delta > 0$이 있어 $\lvert x-c\rvert < \delta\Rightarrow\lvert g(x)-g(c)\rvert < \epsilon$. 대우로 $\lbrace\lvert g(X_n)-g(c)\rvert\ge\epsilon\rbrace\subset\lbrace\lvert X_n-c\rvert\ge\delta\rbrace$이므로 $\Pr(\lvert g(X_n)-g(c)\rvert\ge\epsilon)\le\Pr(\lvert X_n-c\rvert\ge\delta)\to0$. ∎ (hw1 #7의 마지막 단계가 이것이다: $g(x)=\lambda/x$는 $x=1$에서 연속)
 
 **(보충 증명 2) Slutsky의 합.** $x-c$가 $F_X$의 연속점이라 하자. Thm 3.3과 같은 샌드위치로
 
-$$\Pr(X_n+Y_n\le x)\le\Pr(X_n\le x-c+\epsilon)+\Pr(\lvert Y_n-c\rvert > \epsilon),\qquad\Pr(X_n+Y_n\le x)\ge\Pr(X_n\le x-c-\epsilon)-\Pr(\lvert Y_n-c\rvert > \epsilon).$$
+$$\Pr(X_n+Y_n\le x)\le\Pr(X_n\le x-c+\epsilon)+\Pr(\lvert Y_n-c\rvert \gt  \epsilon),\qquad\Pr(X_n+Y_n\le x)\ge\Pr(X_n\le x-c-\epsilon)-\Pr(\lvert Y_n-c\rvert \gt  \epsilon).$$
 
 $x-c\pm\epsilon$이 연속점이 되도록 $\epsilon$을 고르고 (불연속점은 셀 수 있을 만큼뿐) lim sup·lim inf를 취한 뒤 $\epsilon\downarrow0$: $\lim\Pr(X_n+Y_n\le x)=F_X(x-c)=\Pr(X+c\le x)$. ∎
 
 **(보충) 자주 쓰는 사실**
-- $X_n\xrightarrow{p}X$, $Y_n\xrightarrow{p}Y$이면 $X_n+Y_n\xrightarrow{p}X+Y$ (∵ $\{\lvert X_n+Y_n-X-Y\rvert > \epsilon\}\subset\{\lvert X_n-X\rvert > \epsilon/2\}\cup\{\lvert Y_n-Y\rvert > \epsilon/2\}$).
+- $X_n\xrightarrow{p}X$, $Y_n\xrightarrow{p}Y$이면 $X_n+Y_n\xrightarrow{p}X+Y$ (∵ $\lbrace\lvert X_n+Y_n-X-Y\rvert > \epsilon\rbrace\subset\lbrace\lvert X_n-X\rvert > \epsilon/2\rbrace\cup\lbrace\lvert Y_n-Y\rvert > \epsilon/2\rbrace$).
 - Slutsky의 나눗셈: $c\ne0$이면 $X_n/Y_n\xrightarrow{d}X/c$.
 - ⚠ $X_n\xrightarrow{d}X$, $Y_n\xrightarrow{d}Y$만으로는 $X_n+Y_n$의 극한을 알 수 없다 (결합분포가 정해지지 않음) → [V7](#v7-slutsky에-상수-조건이-필요한-이유). Slutsky에서 $Y_n$의 극한이 **상수**여야 하는 이유다.
 - **t 통계량:** $\sqrt n(\bar X-\mu)/S_n\xrightarrow{d}N(0,1)$ (CLT + $S_n\xrightarrow{p}\sigma$ + CMT + Slutsky) → [V4](#v4-표본분산과-t-통계량)
@@ -272,15 +272,15 @@ $x-c\pm\epsilon$이 연속점이 되도록 $\epsilon$을 고르고 (불연속점
 | 도구 | 식 |
 | --- | --- |
 | 최댓값의 CDF (iid) | $\Pr(X_{(n)}\le x)=F(x)^n$ |
-| 최솟값의 생존함수 (iid) | $\Pr(X_{(1)} > x)=\{1-F(x)\}^n$ |
+| 최솟값의 생존함수 (iid) | $\Pr(X_{(1)} > x)=\lbrace1-F(x)\rbrace^n$ |
 | 위쪽 꼬리 (합집합) | $\Pr(X_{(n)}\ge x)\le n\Pr(X_1\ge x)$ |
 | 지수 극한 | $(1-x/n)^n\to e^{-x}$, 더 일반적으로 $a_n\to a$이면 $(1-a_n/n)^n\to e^{-a}$ |
 | 부등식 | $1-x\le e^{-x}$ → $(1-p)^n\le e^{-np}$ |
 
-**"$M_n/c_n\xrightarrow{p}1$을 보여라"의 틀:** $0 < \epsilon < 1$에 대해 **두 꼬리**를 따로 보인다.
+**" $M_n/c_n\xrightarrow{p}1$을 보여라"의 틀:** $0 < \epsilon < 1$에 대해 **두 꼬리**를 따로 보인다.
 1. 아래 꼬리 $\Pr(M_n\le(1-\epsilon)c_n)=F((1-\epsilon)c_n)^n\to0$ — 보통 $1-x\le e^{-x}$로
-2. 위 꼬리 $\Pr(M_n\ge(1+\epsilon)c_n)\le n\{1-F((1+\epsilon)c_n)\}\to0$ — 합집합으로
-3. $\{\lvert M_n/c_n-1\rvert > \epsilon\}$은 두 사건의 합집합에 포함 → 확률 → 0
+2. 위 꼬리 $\Pr(M_n\ge(1+\epsilon)c_n)\le n\lbrace1-F((1+\epsilon)c_n)\rbrace\to0$ — 합집합으로
+3. $\lbrace\lvert M_n/c_n-1\rvert > \epsilon\rbrace$은 두 사건의 합집합에 포함 → 확률 → 0
 
 **예**
 - $\text{Unif}(0,\theta)$: $X_{(n)}\xrightarrow{p}\theta$, $\frac n\theta(\theta-X_{(n)})\xrightarrow{d}\text{Exp}(1)$ → [V1](#v1-균등분포-최댓값의-세-가지-수렴)
@@ -299,7 +299,7 @@ $x-c\pm\epsilon$이 연속점이 되도록 $\epsilon$을 고르고 (불연속점
 
 📐 [보충 p1 (1.1)]
 
-$$\{A_n\ \text{i.o.}\}=\bigcap_{N=1}^\infty\bigcup_{n=N}^\infty A_n .$$
+$$\lbrace A_n\ \text{i.o.}\rbrace=\bigcap_{N=1}^\infty\bigcup_{n=N}^\infty A_n .$$
 
 어느 시점 $N$ 이후를 보더라도 $A_n$이 적어도 한 번 다시 일어난다는 뜻이다 (i.o. = infinitely often).
 
@@ -309,7 +309,7 @@ $$\{A_n\ \text{i.o.}\}=\bigcap_{N=1}^\infty\bigcup_{n=N}^\infty A_n .$$
 
 **First Borel–Cantelli** $\sum_{n=1}^\infty\Pr(A_n) < \infty\Rightarrow\Pr(A_n\ \text{i.o.})=0$. **독립성이 필요 없다.**
 
-**(보충 증명)** 모든 $N$에서 $\{A_n\text{ i.o.}\}\subset\bigcup_{n\ge N}A_n$이므로
+**(보충 증명)** 모든 $N$에서 $\lbrace A_n\text{ i.o.}\rbrace\subset\bigcup_{n\ge N}A_n$이므로
 
 $$\Pr(A_n\ \text{i.o.})\le\Pr\Big(\bigcup_{n\ge N}A_n\Big)\le\sum_{n\ge N}\Pr(A_n)\xrightarrow[N\to\infty]{}0$$
 
@@ -326,8 +326,8 @@ $$\Pr(A_n\ \text{i.o.})\le\Pr\Big(\bigcup_{n\ge N}A_n\Big)\le\sum_{n\ge N}\Pr(A_
 **핵심 한 수** $\epsilon=1/m$마다 Borel–Cantelli → 셀 수 있는 교집합.
 
 **증명**
-1. $m=1,2,\dots$에 대해 $A_n^{(m)}=\{\lvert X_n-X\rvert > 1/m\}$. (2.1)과 First BC로 $\Pr(A_n^{(m)}\text{ i.o.})=0$.
-2. $\Omega_0=\bigcap_{m=1}^\infty\{A_n^{(m)}\text{가 유한 번만 일어남}\}$은 확률 0인 사건 셀 수 있게 많은 것의 여사건의 교집합이라 $\Pr(\Omega_0)=1$.
+1. $m=1,2,\dots$에 대해 $A_n^{(m)}=\lbrace\lvert X_n-X\rvert > 1/m\rbrace$. (2.1)과 First BC로 $\Pr(A_n^{(m)}\text{ i.o.})=0$.
+2. $\Omega_0=\bigcap_{m=1}^\infty\lbrace A_n^{(m)}\text{가 유한 번만 일어남}\rbrace$은 확률 0인 사건 셀 수 있게 많은 것의 여사건의 교집합이라 $\Pr(\Omega_0)=1$.
 3. $\omega\in\Omega_0$, $\epsilon > 0$을 고정하고 $1/m < \epsilon$인 $m$을 고른다. $A_n^{(m)}$이 유한 번만 일어나므로 어떤 $N=N(\omega,m)$ 이후 $\lvert X_n(\omega)-X(\omega)\rvert\le1/m < \epsilon$. 즉 $X_n(\omega)\to X(\omega)$.
 4. 이것이 확률 1인 $\Omega_0$에서 성립하므로 $X_n\xrightarrow{\text{a.s.}}X$. ∎
 
@@ -353,7 +353,7 @@ $$\Pr(A_n\ \text{i.o.})\le\Pr\Big(\bigcup_{n\ge N}A_n\Big)\le\sum_{n\ge N}\Pr(A_
 
 2. **합의 계수.** 합의 순서를 바꾸면
 
-$$\sum_{k=1}^nX_k=\sum_{k=1}^n\sum_{j=1}^k\beta^{k-j}\epsilon_j=\sum_{j=1}^n\Big(\sum_{k=j}^n\beta^{k-j}\Big)\epsilon_j=\sum_{j=1}^nc_{n,j}\,\epsilon_j,\qquad c_{n,j}=\sum_{m=0}^{n-j}\beta^m=\frac{1-\beta^{n-j+1}}{1-\beta}$$
+$$\sum_{k=1}^nX_k=\sum_{k=1}^n\sum_{j=1}^k\beta^{k-j}\epsilon_j=\sum_{j=1}^n\Big(\sum_{k=j}^n\beta^{k-j}\Big)\epsilon_j=\sum_{j=1}^nc_{n,j}\thinspace\epsilon_j,\qquad c_{n,j}=\sum_{m=0}^{n-j}\beta^m=\frac{1-\beta^{n-j+1}}{1-\beta}$$
 
    ($\beta\ne1$이라 등비합 공식을 쓸 수 있다).
 
@@ -365,13 +365,13 @@ $$\mathbb E\bar X_n=\frac\mu n\sum_{j=1}^nc_{n,j}=\frac{\mu}{n(1-\beta)}\sum_{j=
 
 4. **분산.** $\epsilon_j$가 독립이므로
 
-$$\operatorname{Var}\bar X_n=\frac{\sigma^2}{n^2}\sum_{j=1}^nc_{n,j}^2 .$$
+$$\mathop{\mathrm{Var}}\nolimits\bar X_n=\frac{\sigma^2}{n^2}\sum_{j=1}^nc_{n,j}^2 .$$
 
-   $\lvert\beta\rvert\le1$이라 $\lvert1-\beta^{m}\rvert\le1+\lvert\beta\rvert^m\le2$, 그래서 $\lvert c_{n,j}\rvert\le\frac2{1-\beta}$. 따라서 $\operatorname{Var}\bar X_n\le\dfrac{\sigma^2}{n^2}\cdot n\cdot\dfrac4{(1-\beta)^2}=\dfrac{4\sigma^2}{n(1-\beta)^2}\to0$.
+   $\lvert\beta\rvert\le1$이라 $\lvert1-\beta^{m}\rvert\le1+\lvert\beta\rvert^m\le2$, 그래서 $\lvert c_{n,j}\rvert\le\frac2{1-\beta}$. 따라서 $\mathop{\mathrm{Var}}\nolimits\bar X_n\le\dfrac{\sigma^2}{n^2}\cdot n\cdot\dfrac4{(1-\beta)^2}=\dfrac{4\sigma^2}{n(1-\beta)^2}\to0$.
 
 5. **결론.** 편향–분산 분해로
 
-$$\mathbb E\Big(\bar X_n-\frac\mu{1-\beta}\Big)^2=\operatorname{Var}\bar X_n+\Big(\mathbb E\bar X_n-\frac\mu{1-\beta}\Big)^2\to0,$$
+$$\mathbb E\Big(\bar X_n-\frac\mu{1-\beta}\Big)^2=\mathop{\mathrm{Var}}\nolimits\bar X_n+\Big(\mathbb E\bar X_n-\frac\mu{1-\beta}\Big)^2\to0,$$
 
    즉 $\bar X_n\xrightarrow{qm}\dfrac\mu{1-\beta}$. ∎
 
@@ -382,10 +382,10 @@ $$\mathbb E\Big(\bar X_n-\frac\mu{1-\beta}\Big)^2=\operatorname{Var}\bar X_n+\Bi
 - 편향–분산 분해로 qm을 결론 (평균·분산 → 0만 쓰고 끝내지 않기)
 
 **내 풀이 점검**
-- ✅ 닫힌 꼴, $c_{n,j}=\frac{1-\beta^{n-j+1}}{1-\beta}$, $\mathbb E\bar X_n\to\frac\mu{1-\beta}$, $\lvert c_{n,j}\rvert\le\frac2{1-\beta}$, $\operatorname{Var}\le\frac{4\sigma^2}{n(1-\beta)^2}$, 편향–분산 분해까지 모범 답안과 같다.
-- ⚠ "$-1\le\beta < 1$이므로 $\frac1n\sum\beta^m\to0$"의 이유 (부분합이 유계)를 한 줄 쓰면 좋다. 특히 $\beta=-1$은 $\lvert\beta\rvert < 1$의 등비급수 논리가 안 통하므로 따로 말해야 한다.
+- ✅ 닫힌 꼴, $c_{n,j}=\frac{1-\beta^{n-j+1}}{1-\beta}$, $\mathbb E\bar X_n\to\frac\mu{1-\beta}$, $\lvert c_{n,j}\rvert\le\frac2{1-\beta}$, $\mathop{\mathrm{Var}}\nolimits\le\frac{4\sigma^2}{n(1-\beta)^2}$, 편향–분산 분해까지 모범 답안과 같다.
+- ⚠ " $-1\le\beta < 1$이므로 $\frac1n\sum\beta^m\to0$"의 이유 (부분합이 유계)를 한 줄 쓰면 좋다. 특히 $\beta=-1$은 $\lvert\beta\rvert < 1$의 등비급수 논리가 안 통하므로 따로 말해야 한다.
 
-**더 생각해 보기 (보충)** $n\operatorname{Var}\bar X_n=\frac{\sigma^2}{n}\sum c_{n,j}^2\to\frac{\sigma^2}{(1-\beta)^2}$ ($\lvert\beta\rvert < 1$일 때, "장기 분산"). iid이면 $\sigma^2$인데 양의 상관($\beta > 0$)이 있으면 표본평균의 분산이 커진다. ($\beta=-1$이면 $c_{n,j}\in\{0,1\}$이 번갈아 나와 $\sigma^2/2$로 간다.)
+**더 생각해 보기 (보충)** $n\mathop{\mathrm{Var}}\nolimits\bar X_n=\frac{\sigma^2}{n}\sum c_{n,j}^2\to\frac{\sigma^2}{(1-\beta)^2}$ ($\lvert\beta\rvert < 1$일 때, "장기 분산"). iid이면 $\sigma^2$인데 양의 상관($\beta > 0$)이 있으면 표본평균의 분산이 커진다. ($\beta=-1$이면 $c_{n,j}\in\lbrace0,1\rbrace$이 번갈아 나와 $\sigma^2/2$로 간다.)
 
 ### hw1 7 log n을 최댓값으로 나눈 것의 일치성
 
@@ -408,7 +408,7 @@ $$\Pr\big(N_n\le(1-\epsilon)\log n\big)=\big(1-e^{-(1-\epsilon)\log n}\big)^n=\b
 
 $$\Pr\big(N_n\ge(1+\epsilon)\log n\big)\le n\Pr\big(Y_1\ge(1+\epsilon)\log n\big)=n\cdot n^{-(1+\epsilon)}=n^{-\epsilon}\to0 .$$
 
-4. **확률수렴.** $\{\lvert N_n/\log n-1\rvert > \epsilon\}\subset\{N_n\le(1-\epsilon)\log n\}\cup\{N_n\ge(1+\epsilon)\log n\}$이므로 확률 → 0. ($\epsilon\ge1$이면 아래 꼬리는 $\Pr(N_n\le0)=0$이라 자명) 따라서 $N_n/\log n\xrightarrow{p}1$.
+4. **확률수렴.** $\lbrace\lvert N_n/\log n-1\rvert > \epsilon\rbrace\subset\lbrace N_n\le(1-\epsilon)\log n\rbrace\cup\lbrace N_n\ge(1+\epsilon)\log n\rbrace$이므로 확률 → 0. ($\epsilon\ge1$이면 아래 꼬리는 $\Pr(N_n\le0)=0$이라 자명) 따라서 $N_n/\log n\xrightarrow{p}1$.
 5. **CMT.** $g(x)=\lambda/x$는 $x=1$에서 연속이므로 CMT (Thm 3.5)로
 
 $$\frac{\log n}{M_n}=\frac{\lambda}{N_n/\log n}=g\Big(\frac{N_n}{\log n}\Big)\xrightarrow{p}g(1)=\lambda .\qquad\blacksquare$$
@@ -439,7 +439,7 @@ $$\frac{\log n}{M_n}=\frac{\lambda}{N_n/\log n}=g\Big(\frac{N_n}{\log n}\Big)\xr
 
 <details><summary>전략 힌트</summary>
 
-(a)(b) Ex 3.5를 $\theta$배. (c) (a)의 꼬리확률이 등비수열 → Thm 2.1. (d) CLT, $\operatorname{Var}X=\theta^2/12$.
+(a)(b) Ex 3.5를 $\theta$배. (c) (a)의 꼬리확률이 등비수열 → Thm 2.1. (d) CLT, $\mathop{\mathrm{Var}}\nolimits X=\theta^2/12$.
 
 </details>
 <details><summary>풀이</summary>
@@ -450,7 +450,7 @@ $$\frac{\log n}{M_n}=\frac{\lambda}{N_n/\log n}=g\Big(\frac{N_n}{\log n}\Big)\xr
 
 (c) $\sum_n(1-\epsilon/\theta)^n < \infty$ → 보충 Thm 2.1.
 
-(d) $\mathbb E(2X)=\theta$, $\operatorname{Var}(2X)=4\cdot\frac{\theta^2}{12}=\frac{\theta^2}3$. WLLN으로 일치, CLT로 $\sqrt n(2\bar X-\theta)\xrightarrow{d}N(0,\theta^2/3)$. $X_{(n)}$의 오차는 $1/n$, $2\bar X$의 오차는 $1/\sqrt n$ 크기 → 최댓값이 훨씬 빠르다.
+(d) $\mathbb E(2X)=\theta$, $\mathop{\mathrm{Var}}\nolimits(2X)=4\cdot\frac{\theta^2}{12}=\frac{\theta^2}3$. WLLN으로 일치, CLT로 $\sqrt n(2\bar X-\theta)\xrightarrow{d}N(0,\theta^2/3)$. $X_{(n)}$의 오차는 $1/n$, $2\bar X$의 오차는 $1/\sqrt n$ 크기 → 최댓값이 훨씬 빠르다.
 
 </details>
 
@@ -472,7 +472,7 @@ $$\frac{\log n}{M_n}=\frac{\lambda}{N_n/\log n}=g\Big(\frac{N_n}{\log n}\Big)\xr
 
 (b) $L(\theta)=\prod\frac1{\pi\theta}I(x_i^2+y_i^2\le\theta)=(\pi\theta)^{-n}I(\max R_i^2\le\theta)$ — $\theta\ge\max R_i^2$에서 감소함수라 $\hat\theta=\max R_i^2$.
 
-(c) V1(b)로 $\frac n\theta(\theta-\hat\theta)\xrightarrow{d}\text{Exp}(1)$ (평균 1). 즉 $a_n=-\frac n\theta$, $b_n=\theta$. (기출 풀이도 $-\frac n\theta(\hat\theta-\theta)$)
+(c) V1(b)로 $\frac n\theta(\theta-\hat\theta)\xrightarrow{d}\text{Exp}(1)$ (평균 1). 즉 $a_n=-\frac n\theta$, $b_n=\theta$. (기출 풀이도 $-\frac n\theta(\hat\theta-\theta){}$)
 
 </details>
 
@@ -515,11 +515,11 @@ $$\frac{\log n}{M_n}=\frac{\lambda}{N_n/\log n}=g\Big(\frac{N_n}{\log n}\Big)\xr
 
 ### V5 분산이 다른 독립 변수의 대수의 법칙
 
-`●` $X_i$ 독립, $\mathbb EX_i=\mu$, $\operatorname{Var}X_i=i^a$ ($a\ge0$). 어떤 $a$에서 $\bar X_n\xrightarrow{qm}\mu$인가?
+`●` $X_i$ 독립, $\mathbb EX_i=\mu$, $\mathop{\mathrm{Var}}\nolimits X_i=i^a$ ($a\ge0$). 어떤 $a$에서 $\bar X_n\xrightarrow{qm}\mu$인가?
 
 <details><summary>풀이</summary>
 
-$\mathbb E\bar X_n=\mu$ (편향 0), $\operatorname{Var}\bar X_n=\frac1{n^2}\sum_{i=1}^ni^a$. $\sum_{i\le n}i^a$는 $\frac{n^{a+1}}{a+1}$ 크기이므로 $\operatorname{Var}\bar X_n\approx\frac{n^{a-1}}{a+1}\to0\iff a < 1$. 따라서 $0\le a < 1$이면 qm (그리고 p) 수렴. ($a=1$이면 분산 → 1/2)
+$\mathbb E\bar X_n=\mu$ (편향 0), $\mathop{\mathrm{Var}}\nolimits\bar X_n=\frac1{n^2}\sum_{i=1}^ni^a$. $\sum_{i\le n}i^a$는 $\frac{n^{a+1}}{a+1}$ 크기이므로 $\mathop{\mathrm{Var}}\nolimits\bar X_n\approx\frac{n^{a-1}}{a+1}\to0\iff a < 1$. 따라서 $0\le a < 1$이면 qm (그리고 p) 수렴. ($a=1$이면 분산 → 1/2)
 
 </details>
 
@@ -531,7 +531,7 @@ $\mathbb E\bar X_n=\mu$ (편향 0), $\operatorname{Var}\bar X_n=\frac1{n^2}\sum_
 
 <details><summary>풀이</summary>
 
-(a) $\Pr(\lvert X_n\rvert > \epsilon)=\frac1n\to0$ ($0 < \epsilon < 1$), $\mathbb EX_n^2=\frac1n\to0$. 사건 $\{X_n=1\}$은 독립이고 $\sum\frac1n=\infty$ → Second Borel–Cantelli로 확률 1로 무한히 자주 $X_n=1$ → 거의 모든 경로에서 $X_n$은 0으로 수렴하지 않는다. → **qm이지만 a.s. 아님** (5의 표).
+(a) $\Pr(\lvert X_n\rvert > \epsilon)=\frac1n\to0$ ($0 < \epsilon < 1$), $\mathbb EX_n^2=\frac1n\to0$. 사건 $\lbrace X_n=1\rbrace$은 독립이고 $\sum\frac1n=\infty$ → Second Borel–Cantelli로 확률 1로 무한히 자주 $X_n=1$ → 거의 모든 경로에서 $X_n$은 0으로 수렴하지 않는다. → **qm이지만 a.s. 아님** (5의 표).
 
 (b) $\sum\Pr(\lvert X_n\rvert > \epsilon)=\sum\frac1{n^2} < \infty$ → Thm 2.1.
 
@@ -549,7 +549,7 @@ $\mathbb E\bar X_n=\mu$ (편향 0), $\operatorname{Var}\bar X_n=\frac1{n^2}\sum_
 
 ### V8 AR 대신 MA(1)
 
-`●●` $\epsilon_0,\epsilon_1,\dots$ 독립, 평균 $\mu$, 분산 $\sigma^2$. $X_n=\epsilon_n+\theta\epsilon_{n-1}$ ($n\ge1$). (a) $\bar X_n\xrightarrow{qm}(1+\theta)\mu$. (b) $\lim n\operatorname{Var}\bar X_n$을 구하라.
+`●●` $\epsilon_0,\epsilon_1,\dots$ 독립, 평균 $\mu$, 분산 $\sigma^2$. $X_n=\epsilon_n+\theta\epsilon_{n-1}$ ($n\ge1$). (a) $\bar X_n\xrightarrow{qm}(1+\theta)\mu$. (b) $\lim n\mathop{\mathrm{Var}}\nolimits\bar X_n$을 구하라.
 
 <details><summary>전략 힌트</summary>
 
@@ -560,9 +560,9 @@ hw1 #6과 같다: $\sum X_k$에서 $\epsilon_j$의 계수를 모은다.
 
 $\sum_{k=1}^nX_k=\theta\epsilon_0+(1+\theta)\sum_{j=1}^{n-1}\epsilon_j+\epsilon_n$.
 
-(a) $\mathbb E\sum X_k=\theta\mu+(1+\theta)(n-1)\mu+\mu=(1+\theta)n\mu$ → $\mathbb E\bar X_n=(1+\theta)\mu$ (편향 0). $\operatorname{Var}\bar X_n=\frac{\sigma^2}{n^2}\{\theta^2+(1+\theta)^2(n-1)+1\}\to0$. 편향–분산 분해로 qm.
+(a) $\mathbb E\sum X_k=\theta\mu+(1+\theta)(n-1)\mu+\mu=(1+\theta)n\mu$ → $\mathbb E\bar X_n=(1+\theta)\mu$ (편향 0). $\mathop{\mathrm{Var}}\nolimits\bar X_n=\frac{\sigma^2}{n^2}\lbrace\theta^2+(1+\theta)^2(n-1)+1\rbrace\to0$. 편향–분산 분해로 qm.
 
-(b) $n\operatorname{Var}\bar X_n\to(1+\theta)^2\sigma^2$.
+(b) $n\mathop{\mathrm{Var}}\nolimits\bar X_n\to(1+\theta)^2\sigma^2$.
 
 </details>
 
@@ -578,7 +578,7 @@ $\sum_{k=1}^nX_k=\theta\epsilon_0+(1+\theta)\sum_{j=1}^{n-1}\epsilon_j+\epsilon_
 
 ### V10 확률수렴과 기댓값
 
-`●●` $U\sim\text{Unif}(0,1)$, $X_n=n\,I(U\le1/n)$. (a) $X_n\xrightarrow{\text{a.s.}}0$. (b) $\mathbb EX_n$은? (c) $X_n\xrightarrow{qm}0$인가? (d) 이 예에서 $X_n\xrightarrow{p}0$인데 기댓값이 0으로 가지 않는 것이 Remark와 어떻게 같은가?
+`●●` $U\sim\text{Unif}(0,1)$, $X_n=n\thinspace I(U\le1/n)$. (a) $X_n\xrightarrow{\text{a.s.}}0$. (b) $\mathbb EX_n$은? (c) $X_n\xrightarrow{qm}0$인가? (d) 이 예에서 $X_n\xrightarrow{p}0$인데 기댓값이 0으로 가지 않는 것이 Remark와 어떻게 같은가?
 
 <details><summary>풀이</summary>
 
@@ -594,7 +594,7 @@ $\sum_{k=1}^nX_k=\theta\epsilon_0+(1+\theta)\sum_{j=1}^{n-1}\epsilon_j+\epsilon_
 
 | ☐ | 증명 | 뼈대 | 위치 |
 | --- | --- | --- | --- |
-| ☐ | WLLN | $\operatorname{Var}\bar Y=\sigma^2/n$ → Chebyshev | [2](#2-확률수렴과-약한-대수의-법칙) |
+| ☐ | WLLN | $\mathop{\mathrm{Var}}\nolimits\bar Y=\sigma^2/n$ → Chebyshev | [2](#2-확률수렴과-약한-대수의-법칙) |
 | ☐ | qm ⟹ p | $(X_n-X)^2$에 Markov | [3.1](#31-정의와-thm-32) |
 | ☐ | 편향–분산 분해 | 가운데 $\mathbb EX_n$ 더하고 빼기, 교차항 0 | [3.2](#32-보충-편향분산-분해) |
 | ☐ | Ex 3.2 | $\Pr=1/n$, $\mathbb EX_n^2=1$ | [3.3](#33-ex-32-역은-성립하지-않는다) |
@@ -602,7 +602,7 @@ $\sum_{k=1}^nX_k=\theta\epsilon_0+(1+\theta)\sum_{j=1}^{n-1}\epsilon_j+\epsilon_
 | ☐ | Ex 3.4 | $X_n=-X$, $\lvert X_n-X\rvert=2\lvert X\rvert$ | [4.3](#43-ex-34-역은-성립하지-않는다) |
 | ☐ | **Ex 3.5** | $(1-\epsilon)^n$, $1-(1-t/n)^n\to1-e^{-t}$ | [4.4](#44-ex-35-표본최댓값) |
 | ☐ | 상수로의 d ⟹ p | $\le1-F_n(c+\epsilon)+F_n(c-\epsilon)$, $c\pm\epsilon$은 연속점 | [4.5](#45-thm-34-상수로의-분포수렴) |
-| ☐ | CMT (상수 극한, 보충) | $\epsilon$–$\delta$ 연속성의 대우 → 사건 포함 | [6](#6-cmt-slutsky-clt) |
+| ☐ | CMT (상수 극한, 보충) | $\epsilon$– $\delta$ 연속성의 대우 → 사건 포함 | [6](#6-cmt-slutsky-clt) |
 | ☐ | Slutsky 합 (보충) | Thm 3.3과 같은 샌드위치, $x-c\pm\epsilon$ 연속점 | [6](#6-cmt-slutsky-clt) |
 | ☐ | First BC (보충) | $\le\sum_{n\ge N}\Pr(A_n)\to0$ | [8.2](#82-borelcantelli) |
 | ☐ | **Thm 2.1** | $\epsilon=1/m$마다 BC → $\Omega_0$ 셀 수 있는 교집합 → 경로별 수렴 | [8.3](#83-thm-21-almost-sure-수렴의-충분조건) |
@@ -618,7 +618,7 @@ a.s. ⟹ p ⟹ d, qm ⟹ p ⟹ d. a.s.와 qm은 서로 무관. d ⟹ p는 극한
 </details>
 <details><summary>2. "상수로의 qm 수렴"은 무엇을 확인하면 되나?</summary>
 
-$\mathbb EX_n\to c$와 $\operatorname{Var}X_n\to0$ (편향–분산 분해).
+$\mathbb EX_n\to c$와 $\mathop{\mathrm{Var}}\nolimits X_n\to0$ (편향–분산 분해).
 
 </details>
 <details><summary>3. 분포수렴의 정의에서 연속점 조건이 필요함을 보이는 예는?</summary>
@@ -628,7 +628,7 @@ Ex 3.3: $X_n\sim N(0,1/n)$, $F_n(0)=1/2$, $F(0)=1$인데 $X_n\xrightarrow{d}0$.
 </details>
 <details><summary>4. 확률수렴하지만 qm 수렴하지 않는 예와, a.s.이지만 qm 아닌 예는?</summary>
 
-둘 다 Ex 3.2: $X_n=\sqrt n\,I(U\le1/n)$.
+둘 다 Ex 3.2: $X_n=\sqrt n\thinspace I(U\le1/n)$.
 
 </details>
 <details><summary>5. qm이지만 a.s. 아닌 예는?</summary>
@@ -661,6 +661,6 @@ $\sum_n\frac{\sigma^2}{n\epsilon^2}=\infty$. 지수형 꼬리(Hoeffding)나 더 
 | 쪽 | 강의노트 원문 | 노트에 반영한 것 | 근거 | 영향 |
 | --- | --- | --- | --- | --- |
 | 보충 p1 제목 | "Almost sure 수렴과 SGD" | SGD 내용은 2쪽 안에 없음을 명시 | 본문 확인 | · |
-| p3 Ex 3.2 | "충분히 큰 $n$에서 $\Pr(\lvert X_n\rvert > \epsilon)=1/n$" | "$\sqrt n > \epsilon$인 $n$에서"로 조건을 구체화 | $X_n\in\{0,\sqrt n\}$ | · |
+| p3 Ex 3.2 | "충분히 큰 $n$에서 $\Pr(\lvert X_n\rvert > \epsilon)=1/n$" | " $\sqrt n > \epsilon$인 $n$에서"로 조건을 구체화 | $X_n\in\lbrace0,\sqrt n\rbrace$ | · |
 | p5 관계도 | a.s. ⟹ p를 증명 없이 사용 | 표에 "(강의노트는 증명 없음)" 표시 | – | · |
 | p5 Thm 3.5–3.7 | 증명 없음 | CMT(상수 극한)·Slutsky(합) 보충 증명 | 무증명 정리 = 출제 후보 | · |

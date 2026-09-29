@@ -46,7 +46,7 @@
 | 도구 | 쓰는 곳 |
 | --- | --- |
 | [T21] 정의로: $\Pr_\theta(X=x\mid T=t)$를 계산해 $\theta$가 사라지는지 | Ex 4.1, 4.2 |
-| [T22] 분해정리 + 지시함수: $\prod I(\cdot)$ → $\min$·$\max$의 지시함수 | hw1 #8, #9 |
+| [T22] 분해정리 + 지시함수: $\prod I(\cdot)$ → $\min$· $\max$의 지시함수 | hw1 #8, #9 |
 | [T23] 우도비 판정법: $p_\theta(y)/p_\theta(x)$가 $\theta$와 무관 ⟺ $T(x)=T(y)$ | 최소충분 |
 | [T24] 충분하지 **않음**: $T$가 같은데 조건부 확률이 $\theta$에 의존하는 점 찾기 | $X_1$, $X_1+2X_2$ |
 | [T12] 이차형식 항등식 $\sum(x_i-\mu)^2=\sum(x_i-\bar x)^2+n(\bar x-\mu)^2$ | Ex 4.3 |
@@ -59,8 +59,8 @@
 
 - iid 표본 $X_1,\dots,X_n\sim P_\theta$에서 추론의 목표는 모르는 $\theta$에 관한 질문에 답하는 것이다. 그런데 원자료의 모든 좌표가 $\theta$에 대한 새로운 정보를 주는 것은 아니다. 질문: **어떤 통계량 $T(X)$만 남겨도 $\theta$에 관한 정보를 잃지 않는가?**
 - 좋은 축약은 저장 공간을 줄이는 것 이상이다. 우도 계산, 추정, 검정이 $T$만으로 되면 분석 구조가 단순해진다. 단 **"차원이 작다"만으로 좋은 축약이 되지는 않는다.** 핵심은 모수에 관한 정보가 보존되는가다.
-- **통계모형** $\mathcal P=\{p_\theta:\theta\in\Theta\}$.
-  - 모수적 모형: $\Theta\subseteq\mathbb R^d$ (예: $N(\mu,\sigma^2)$에서 $\theta=(\mu,\sigma)$)
+- **통계모형** $\mathcal P=\lbrace p_\theta:\theta\in\Theta\rbrace$.
+  - 모수적 모형: $\Theta\subseteq\mathbb R^d$ (예: $N(\mu,\sigma^2)$에서 $\theta=(\mu,\sigma){}$)
   - 비모수적 모형: 유한 차원 모수로 기술되지 않음 (예: 실수축 위의 모든 분포, 일정한 매끄러움을 만족하는 모든 밀도)
   - 충분성은 주로 모수적 틀에서 자연스럽게 쓰인다.
 - **통계량:** 표본 $X$의 측정 가능한 함수 $T(X)$. 자료의 함수이므로 확률변수다. 예: $\bar X$, $S^2$, $X_{(1)}$, $X_{(n)}$, 순서통계량 $(X_{(1)},\dots,X_{(n)})$.
@@ -73,14 +73,14 @@
 
 **정의** $T(X)$가 $\theta$에 대해 **충분(sufficient)** ⟺ 모든 $t$에 대해 조건부분포 $p_\theta(X\mid T(X)=t)$가 $\theta$에 의존하지 않는다.
 
-- 표본공간을 $A_t=\{x:T(x)=t\}$로 분할하면, 각 $A_t$ 안에서는 $\theta$의 정보가 같다. $T=t$를 안 뒤의 세부 배열은 더 이상 $\theta$를 구별하지 못한다.
+- 표본공간을 $A_t=\lbrace x:T(x)=t\rbrace$로 분할하면, 각 $A_t$ 안에서는 $\theta$의 정보가 같다. $T=t$를 안 뒤의 세부 배열은 더 이상 $\theta$를 구별하지 못한다.
 - 연속형에서는 $T=t$가 확률 0인 사건이라 정의로 직접 계산하기 어렵다 → 보통 **분해정리**를 쓴다.
 
 **Example 4.1 (포아송)** $X_i\overset{\text{iid}}{\sim}\text{Poi}(\theta)$, $T=\sum X_i\sim\text{Poi}(n\theta)$. $\sum x_i=t$이면
 
 $$\Pr_\theta(X=x\mid T=t)=\frac{\Pr_\theta(X=x)}{\Pr_\theta(T=t)}=\frac{e^{-n\theta}\theta^t/\prod_ix_i!}{e^{-n\theta}(n\theta)^t/t!}=\frac{t!}{n^t\prod_{i=1}^nx_i!}$$
 
-($\{X=x\}\subset\{T=t\}$라 분자가 결합확률과 같다). $\theta$가 없으므로 $\sum X_i$는 충분통계량이고, $\bar X$는 그 일대일 변환이라 역시 충분하다. (조건부분포는 다항분포 $\text{Mult}(t;\frac1n,\dots,\frac1n)$)
+($\lbrace X=x\rbrace\subset\lbrace T=t\rbrace$라 분자가 결합확률과 같다). $\theta$가 없으므로 $\sum X_i$는 충분통계량이고, $\bar X$는 그 일대일 변환이라 역시 충분하다. (조건부분포는 다항분포 $\text{Mult}(t;\frac1n,\dots,\frac1n){}$)
 
 **Example 4.2 (베르누이)** $X_i\overset{\text{iid}}{\sim}\text{Ber}(\theta)$, $T=\sum X_i$ = 성공 횟수. $T=t$이면 성공 위치의 배열 $\binom nt$개가 모두 같은 확률:
 
@@ -89,7 +89,7 @@ $$\Pr_\theta(X=x\mid T=t)=\frac{\theta^t(1-\theta)^{n-t}}{\binom nt\theta^t(1-\t
 반대로 **$T=X_1$만 관측하면 충분하지 않다.** 예: $X_1=0$일 때 나머지 $(X_2,\dots,X_n)$의 조건부분포는 여전히 $\prod_{i\ge2}\theta^{x_i}(1-\theta)^{1-x_i}$라 $\theta$에 의존한다.
 
 **분할로 보기 [p2]**
-- $T$는 표본공간을 $\{x:T(x)=t\}$들로 나눈다. 충분성 = 각 칸 안의 조건부분포가 $\theta$와 무관.
+- $T$는 표본공간을 $\lbrace x:T(x)=t\rbrace$들로 나눈다. 충분성 = 각 칸 안의 조건부분포가 $\theta$와 무관.
 - 칸을 **더 잘게 나눠도** 충분성은 유지된다. 예: 충분통계량이 $\sum X_i$일 때 자료를 임의로 둘로 나눠 각 부분의 합 $(\sum_{i\le m}X_i,\ \sum_{i > m}X_i)$로 분할해도 충분하다.
 - 따라서 충분통계량은 **유일하지 않다.** 전체 자료 $X$ 자체도 (축약 없는) 충분통계량이다.
 
@@ -103,7 +103,7 @@ $$\Pr_\theta(X=x\mid T=t)=\frac{\theta^t(1-\theta)^{n-t}}{\binom nt\theta^t(1-\t
 
 **정리** $T(X)$가 $\theta$에 대한 충분통계량 ⟺ $\theta$와 무관한 함수 $h$와 함수 $g_\theta$가 있어
 
-$$p_\theta(x)=h(x)\,g_\theta\big(T(x)\big)\quad\text{(모든 }x,\theta\text{)} .$$
+$$p_\theta(x)=h(x)\thinspace g_\theta\big(T(x)\big)\quad\text{(모든 }x,\theta\text{)} .$$
 
 **핵심 한 수** (⇐) 조건부확률의 분모 합에서 $g_\theta(t)$가 **공통인자로 빠져** 약분된다. (⇒) $g_\theta(t)=\Pr_\theta(T=t)$, $h(x)=\Pr(X=x\mid T=T(x))$로 정의.
 
@@ -117,14 +117,14 @@ $$\Pr_\theta(X=x\mid T=t)=\frac{p_\theta(x_1,\dots,x_n,\ T=t)}{p_\theta(T=t)}=\f
 
 (⇒) 충분하다고 하자. $g_\theta(t)=\Pr_\theta(T=t)$, $h(x)=\Pr_\theta(X=x\mid T=T(x))$로 두면 충분성 때문에 $h$는 $\theta$와 무관하다. 곱셈법칙으로
 
-$$p_\theta(x)=\Pr_\theta(X=x,\ T=T(x))=\Pr_\theta(T=T(x))\,\Pr(X=x\mid T=T(x))=g_\theta(T(x))\,h(x).\qquad\blacksquare$$
+$$p_\theta(x)=\Pr_\theta(X=x,\ T=T(x))=\Pr_\theta(T=T(x))\thinspace\Pr(X=x\mid T=T(x))=g_\theta(T(x))\thinspace h(x).\qquad\blacksquare$$
 
 **(보충) 연속형** 분해정리는 연속형에서도 그대로 쓴다 (증명은 측도론이 필요해 생략). 시험에서는 "분해정리에 의해"라고 쓰면 된다.
 
 **자주 하는 실수**
 - $h$에 $\theta$가 숨어 있음 (특히 support의 지시함수를 $h$에 넣는 실수 → 3.3)
 - $g_\theta$가 $x$에 **$T(x)$를 통하지 않고** 의존함
-- "$T$의 일대일 변환도 충분"은 되지만, $T$의 **일대일이 아닌** 함수는 충분하지 않을 수 있음
+- " $T$의 일대일 변환도 충분"은 되지만, $T$의 **일대일이 아닌** 함수는 충분하지 않을 수 있음
 
 ### 3.2 Ex 4.3 정규 표본
 
@@ -132,13 +132,13 @@ $$p_\theta(x)=\Pr_\theta(X=x,\ T=T(x))=\Pr_\theta(T=T(x))\,\Pr(X=x\mid T=T(x))=g
 
 $X_i\overset{\text{iid}}{\sim}N(\mu,\sigma^2)$이면
 
-$$p_{\mu,\sigma^2}(x)=(2\pi\sigma^2)^{-n/2}\exp\Big\{-\frac1{2\sigma^2}\Big(\sum_ix_i^2-2\mu\sum_ix_i+n\mu^2\Big)\Big\}$$
+$$p_{\mu,\sigma^2}(x)=(2\pi\sigma^2)^{-n/2}\exp\Big\lbrace-\frac1{2\sigma^2}\Big(\sum_ix_i^2-2\mu\sum_ix_i+n\mu^2\Big)\Big\rbrace$$
 
 이라 $h(x)=1$로 두면 $(\sum X_i,\ \sum X_i^2)$가 $(\mu,\sigma^2)$에 대한 충분통계량이다.
 
 **$\sigma^2$을 알 때:** 항등식 $\sum_i(x_i-\mu)^2=\sum_i(x_i-\bar x)^2+n(\bar x-\mu)^2$로
 
-$$p_\mu(x)=\underbrace{(2\pi\sigma^2)^{-n/2}\exp\Big\{-\frac{\sum(x_i-\bar x)^2}{2\sigma^2}\Big\}}_{h(x)}\ \underbrace{\exp\Big\{-\frac{n(\bar x-\mu)^2}{2\sigma^2}\Big\}}_{g_\mu(\bar x)}$$
+$$p_\mu(x)=\underbrace{(2\pi\sigma^2)^{-n/2}\exp\Big\lbrace-\frac{\sum(x_i-\bar x)^2}{2\sigma^2}\Big\rbrace}_ {h(x)}\ \underbrace{\exp\Big\lbrace-\frac{n(\bar x-\mu)^2}{2\sigma^2}\Big\rbrace}_ {g_\mu(\bar x)}$$
 
 → $\bar X$ 하나가 $\mu$에 대한 충분통계량. (항등식은 $x_i-\mu=(x_i-\bar x)+(\bar x-\mu)$를 제곱해 더하면 교차항 $2(\bar x-\mu)\sum(x_i-\bar x)=0$)
 
@@ -146,15 +146,15 @@ $$p_\mu(x)=\underbrace{(2\pi\sigma^2)^{-n/2}\exp\Big\{-\frac{\sum(x_i-\bar x)^2}
 
 (보충) hw1 #8·#9의 핵심. [T22]
 
-**틀** 각 관측의 밀도에 붙은 지시함수를 모두 곱한 뒤 **$\min$·$\max$ 하나의 지시함수로** 바꾼다.
+**틀** 각 관측의 밀도에 붙은 지시함수를 모두 곱한 뒤 **$\min$· $\max$ 하나의 지시함수로** 바꾼다.
 
-$$\prod_{i=1}^nI(x_i\ge\theta)=I\big(\min_ix_i\ge\theta\big),\qquad\prod_{i=1}^nI(x_i\le\theta)=I\big(\max_ix_i\le\theta\big),\qquad\prod_{i=1}^nI(a < x_i < b)=I\big(a < \min_ix_i\big)\,I\big(\max_ix_i < b\big).$$
+$$\prod_{i=1}^nI(x_i\ge\theta)=I\big(\min_ix_i\ge\theta\big),\qquad\prod_{i=1}^nI(x_i\le\theta)=I\big(\max_ix_i\le\theta\big),\qquad\prod_{i=1}^nI(a \lt  x_i \lt  b)=I\big(a \lt  \min_ix_i\big)\thinspace I\big(\max_ix_i \lt  b\big).$$
 
 (모든 $x_i$가 조건을 만족 ⟺ 가장 작은(큰) 것이 만족)
 
 **예: $\text{Unif}(0,\theta)$**
 
-$$p_\theta(x)=\prod_{i=1}^n\frac1\theta I(0\le x_i\le\theta)=\underbrace{I\big(\min_ix_i\ge0\big)}_{h(x)}\ \underbrace{\theta^{-n}I\big(\max_ix_i\le\theta\big)}_{g_\theta(x_{(n)})}$$
+$$p_\theta(x)=\prod_{i=1}^n\frac1\theta I(0\le x_i\le\theta)=\underbrace{I\big(\min_ix_i\ge0\big)}_ {h(x)}\ \underbrace{\theta^{-n}I\big(\max_ix_i\le\theta\big)}_ {g_\theta(x_{(n)})}$$
 
 → $X_{(n)}$이 충분통계량. ⚠ $I(\max x_i\le\theta)$는 $\theta$에 의존하므로 **반드시 $g_\theta$ 쪽**에 둔다. $I(\min x_i\ge0)$는 $\theta$와 무관하므로 $h$에 둔다.
 
@@ -188,7 +188,7 @@ $$R_\theta(x,y)\ \text{가}\ \theta\ \text{와 무관}\iff T(x)=T(y)$$
 
 를 만족하면 $T$는 최소충분통계량이다.
 
-- support가 $\theta$에 의존하면 비가 0/0이 될 수 있다. 그때는 "**모든 $\theta$에서 $p_\theta(y)=k(x,y)\,p_\theta(x)$인 $\theta$와 무관한 $k(x,y) > 0$이 있다**"로 읽는다.
+- support가 $\theta$에 의존하면 비가 0/0이 될 수 있다. 그때는 "**모든 $\theta$에서 $p_\theta(y)=k(x,y)\thinspace p_\theta(x)$인 $\theta$와 무관한 $k(x,y) > 0$이 있다**"로 읽는다.
 
 **핵심 한 수 (쓰는 법)** $p_\theta(y)/p_\theta(x)$를 계산해서 $\theta$가 들어간 부분이 **$T(y)-T(x)$ (또는 지시함수의 비교)** 꼴로만 남게 정리하고, "무관 ⟺ $T(x)=T(y)$"의 **양방향**을 모두 확인한다.
 
@@ -198,39 +198,39 @@ $$R_\theta(x,y)\ \text{가}\ \theta\ \text{와 무관}\iff T(x)=T(y)$$
 
 **(a) $T$는 충분하다.** 각 값 $t$마다 $T(x_t)=t$인 대표점 $x_t$를 하나씩 고정한다. 임의의 $x$에 대해 $T(x)=T(x_{T(x)})$이므로 가정에 의해 $p_\theta(x)/p_\theta(x_{T(x)})$는 $\theta$와 무관하다. 이를 $h(x)$라 하고 $g_\theta(t)=p_\theta(x_t)$로 두면
 
-$$p_\theta(x)=p_\theta(x_{T(x)})\cdot\frac{p_\theta(x)}{p_\theta(x_{T(x)})}=g_\theta(T(x))\,h(x)$$
+$$p_\theta(x)=p_\theta(x_{T(x)})\cdot\frac{p_\theta(x)}{p_\theta(x_{T(x)})}=g_\theta(T(x))\thinspace h(x)$$
 
 이므로 분해정리로 $T$는 충분하다.
 
-**(b) $T$는 최소다.** $S$를 임의의 충분통계량이라 하면 분해정리로 $p_\theta(x)=h'(x)g'_\theta(S(x))$. $S(x)=S(y)$이면
+**(b) $T$는 최소다.** $S$를 임의의 충분통계량이라 하면 분해정리로 $p_\theta(x)=h'(x)g'_ \theta(S(x))$. $S(x)=S(y)$이면
 
-$$\frac{p_\theta(y)}{p_\theta(x)}=\frac{h'(y)g'_\theta(S(y))}{h'(x)g'_\theta(S(x))}=\frac{h'(y)}{h'(x)}$$
+$$\frac{p_\theta(y)}{p_\theta(x)}=\frac{h'(y)g'_ \theta(S(y))}{h'(x)g'_ \theta(S(x))}=\frac{h'(y)}{h'(x)}$$
 
-로 $\theta$와 무관 → 가정의 (⟹) 방향으로 $T(x)=T(y)$. 즉 "$S(x)=S(y)\Rightarrow T(x)=T(y)$"이므로 $T$는 $S$의 함수다. $S$가 임의였으므로 $T$는 최소충분. ∎
+로 $\theta$와 무관 → 가정의 (⟹) 방향으로 $T(x)=T(y)$. 즉 " $S(x)=S(y)\Rightarrow T(x)=T(y)$"이므로 $T$는 $S$의 함수다. $S$가 임의였으므로 $T$는 최소충분. ∎
 
 ### 5.3 보충 예: 정규, 균등, 지수족
 
 **Example 4.4 (포아송)** [p4]
 
-$$\frac{p_\theta(y)}{p_\theta(x)}=\theta^{\sum_iy_i-\sum_ix_i}\,\frac{\prod_ix_i!}{\prod_iy_i!}$$
+$$\frac{p_\theta(y)}{p_\theta(x)}=\theta^{\sum_iy_i-\sum_ix_i}\thinspace\frac{\prod_ix_i!}{\prod_iy_i!}$$
 
 ($e^{-n\theta}$는 약분). $\theta$와 무관 ⟺ 지수 $\sum y_i-\sum x_i=0$. 따라서 $\sum X_i$는 최소충분통계량이다.
 
 **(보충) 정규 $N(\mu,\sigma^2)$** — 3.2의 식으로
 
-$$\frac{p(y)}{p(x)}=\exp\Big\{-\frac1{2\sigma^2}\Big(\sum y_i^2-\sum x_i^2\Big)+\frac\mu{\sigma^2}\Big(\sum y_i-\sum x_i\Big)\Big\}.$$
+$$\frac{p(y)}{p(x)}=\exp\Big\lbrace-\frac1{2\sigma^2}\Big(\sum y_i^2-\sum x_i^2\Big)+\frac\mu{\sigma^2}\Big(\sum y_i-\sum x_i\Big)\Big\rbrace.$$
 
 모든 $(\mu,\sigma^2)$에서 무관 ⟺ 두 괄호가 모두 0 → $(\sum X_i,\sum X_i^2)$, 동치로 $(\bar X,S^2)$가 최소충분. (한 괄호라도 0이 아니면 $\mu$나 $\sigma^2$을 움직일 때 비가 변한다)
 
 **(보충) $\text{Unif}(\theta,\theta+1)$** — 1차원 모수에 2차원 최소충분통계량
 
-$$p_\theta(x)=\prod I(\theta < x_i < \theta+1)=I\big(x_{(n)}-1 < \theta < x_{(1)}\big).$$
+$$p_\theta(x)=\prod I(\theta \lt  x_i \lt  \theta+1)=I\big(x_{(n)}-1 \lt  \theta \lt  x_{(1)}\big).$$
 
-$p_\theta(y)=k\,p_\theta(x)$가 모든 $\theta$에서 성립하려면 두 지시함수가 같은 $\theta$ 구간에서 1이어야 한다 (한쪽만 1인 $\theta$가 있으면 $0=k\cdot1$ 또는 $1=k\cdot0$). 즉 $(x_{(1)},x_{(n)})=(y_{(1)},y_{(n)})$. 따라서 $(X_{(1)},X_{(n)})$이 최소충분.
+$p_\theta(y)=k\thinspace p_\theta(x)$가 모든 $\theta$에서 성립하려면 두 지시함수가 같은 $\theta$ 구간에서 1이어야 한다 (한쪽만 1인 $\theta$가 있으면 $0=k\cdot1$ 또는 $1=k\cdot0$). 즉 $(x_{(1)},x_{(n)})=(y_{(1)},y_{(n)})$. 따라서 $(X_{(1)},X_{(n)})$이 최소충분.
 
 **(보충) 지수족** $p_\alpha(x)=\prod e^{\alpha^\top t(x_i)-\psi(\alpha)}f_0(x_i)$이면
 
-$$\frac{p_\alpha(y)}{p_\alpha(x)}=\exp\Big\{\alpha^\top\Big(\sum t(y_i)-\sum t(x_i)\Big)\Big\}\prod\frac{f_0(y_i)}{f_0(x_i)} .$$
+$$\frac{p_\alpha(y)}{p_\alpha(x)}=\exp\Big\lbrace\alpha^\top\Big(\sum t(y_i)-\sum t(x_i)\Big)\Big\rbrace\prod\frac{f_0(y_i)}{f_0(x_i)} .$$
 
 자연모수공간 $A$가 열린 집합을 포함하면, $\alpha$에 대해 무관 ⟺ $\sum t(y_i)=\sum t(x_i)$. 따라서 $\sum t(X_i)$는 최소충분. (hw1 #5(e)의 $(\sum X_i,\sum X_iX_i^\top)$도 최소충분)
 
@@ -238,7 +238,7 @@ $$\frac{p_\alpha(y)}{p_\alpha(x)}=\exp\Big\{\alpha^\top\Big(\sum t(y_i)-\sum t(x
 
 💡 [ch4 p4]
 
-위치모수 Cauchy 모형 $p_\theta(x)=\{\pi[1+(x-\theta)^2]\}^{-1}$에서는 일반적으로 **순서통계량 $(X_{(1)},\dots,X_{(n)})$이 최소충분**하다. 표본의 **순서는 버릴 수 있지만** 값들을 몇 개의 합으로 더 줄일 수는 없다. "모수의 차원이 작다"고 해서 저차원 충분통계량이 항상 있는 것은 아니다. (Cauchy는 지수족이 아니다 — ch2의 "고정 차원 충분통계량 ⟺ 지수족"과 맞물린다)
+위치모수 Cauchy 모형 $p_\theta(x)=\lbrace\pi[1+(x-\theta)^2]\rbrace^{-1}$에서는 일반적으로 **순서통계량 $(X_{(1)},\dots,X_{(n)})$이 최소충분**하다. 표본의 **순서는 버릴 수 있지만** 값들을 몇 개의 합으로 더 줄일 수는 없다. "모수의 차원이 작다"고 해서 저차원 충분통계량이 항상 있는 것은 아니다. (Cauchy는 지수족이 아니다 — ch2의 "고정 차원 충분통계량 ⟺ 지수족"과 맞물린다)
 
 ---
 
@@ -266,11 +266,11 @@ $$\frac{p_\alpha(y)}{p_\alpha(x)}=\exp\Big\{\alpha^\top\Big(\sum t(y_i)-\sum t(x
 
 **모범 답안** 지시함수를 쓰면 $f(x_i\mid\theta)=e^{\theta-x_i}I(x_i\ge\theta)$. 독립이므로
 
-$$f(x_1,\dots,x_n\mid\theta)=\prod_{i=1}^ne^{\theta-x_i}I(x_i\ge\theta)=\underbrace{e^{-\sum_ix_i}}_{h(x)}\ \underbrace{e^{n\theta}\,I\big(\min_ix_i\ge\theta\big)}_{g_\theta(T(x))} .$$
+$$f(x_1,\dots,x_n\mid\theta)=\prod_{i=1}^ne^{\theta-x_i}I(x_i\ge\theta)=\underbrace{e^{-\sum_ix_i}}_ {h(x)}\ \underbrace{e^{n\theta}\thinspace I\big(\min_ix_i\ge\theta\big)}_ {g_\theta(T(x))} .$$
 
 여기서 $\prod_iI(x_i\ge\theta)=I(\min_ix_i\ge\theta)$ (모든 $x_i\ge\theta$ ⟺ 가장 작은 값 $\ge\theta$)를 썼다. $h$는 $\theta$와 무관하고, $g_\theta$는 자료에 $T(x)=\min_ix_i$를 통해서만 의존한다. 분해정리 (Thm 4.1)로 $T=\min_iX_i$는 $\theta$에 대한 충분통계량이다. ∎
 
-**(보충) 최소충분이기도 하다.** $p_\theta(y)=k\,p_\theta(x)$가 모든 $\theta$에서 성립하려면 $e^{-\sum y_i}I(\min y_i\ge\theta)=k\,e^{-\sum x_i}I(\min x_i\ge\theta)$ — 지시함수가 1인 $\theta$ 범위 $(-\infty,\min]$가 같아야 하므로 $\min x_i=\min y_i$. 역도 성립. 우도비 판정법으로 최소충분.
+**(보충) 최소충분이기도 하다.** $p_\theta(y)=k\thinspace p_\theta(x)$가 모든 $\theta$에서 성립하려면 $e^{-\sum y_i}I(\min y_i\ge\theta)=k\thinspace e^{-\sum x_i}I(\min x_i\ge\theta)$ — 지시함수가 1인 $\theta$ 범위 $(-\infty,\min]$가 같아야 하므로 $\min x_i=\min y_i$. 역도 성립. 우도비 판정법으로 최소충분.
 
 **채점 포인트**
 - **지시함수를 명시**해서 결합밀도를 쓰기 (support 조건을 빼먹으면 $h=e^{-\sum x_i}$, $g=e^{n\theta}$로 "상수가 충분"이라는 틀린 결론이 된다)
@@ -287,24 +287,24 @@ $$f(x_1,\dots,x_n\mid\theta)=\prod_{i=1}^ne^{\theta-x_i}I(x_i\ge\theta)=\underbr
 
 📝 [hw1 p5] · 내 풀이 [CamScanner p9]
 
-**문제 요지** $X_i$ 독립, $f_i(x_i\mid\theta)=\dfrac1{2i\theta}$ ($-i(\theta-1) < x_i < i(\theta+1)$), $\theta > 0$. $\theta$에 대한 2차원 충분통계량을 찾아라.
+**문제 요지** $X_i$ 독립, $f_i(x_i\mid\theta)=\dfrac1{2i\theta}$ ($-i(\theta-1) < x_i < i(\theta+1){}$), $\theta > 0$. $\theta$에 대한 2차원 충분통계량을 찾아라.
 
-**전략** 각 $x_i$의 범위를 **$i$로 나눠** 모든 $i$에 공통인 조건으로 바꾼다. 그러면 지시함수의 곱이 $\min$·$\max$ 하나로 묶인다.
+**전략** 각 $x_i$의 범위를 **$i$로 나눠** 모든 $i$에 공통인 조건으로 바꾼다. 그러면 지시함수의 곱이 $\min$· $\max$ 하나로 묶인다.
 
 **모범 답안**
 1. 범위를 $i$로 나누면: $-i(\theta-1) < x_i < i(\theta+1)\iff1-\theta < \dfrac{x_i}i < 1+\theta$.
 2. 독립이므로
 
-$$f(x\mid\theta)=\prod_{i=1}^n\frac1{2i\theta}I\Big(1-\theta < \frac{x_i}i < 1+\theta\Big)=\underbrace{\Big(\prod_{i=1}^n\frac1{2i}\Big)}_{h(x)}\ \underbrace{\theta^{-n}\,I\Big(1-\theta < \min_i\frac{x_i}i\Big)\,I\Big(\max_i\frac{x_i}i < 1+\theta\Big)}_{g_\theta(T(x))}.$$
+$$f(x\mid\theta)=\prod_{i=1}^n\frac1{2i\theta}I\Big(1-\theta \lt  \frac{x_i}i \lt  1+\theta\Big)=\underbrace{\Big(\prod_{i=1}^n\frac1{2i}\Big)}_ {h(x)}\ \underbrace{\theta^{-n}\thinspace I\Big(1-\theta \lt  \min_i\frac{x_i}i\Big)\thinspace I\Big(\max_i\frac{x_i}i \lt  1+\theta\Big)}_ {g_\theta(T(x))}.$$
 
 3. 분해정리로 $T(X)=\Big(\min_i\dfrac{X_i}i,\ \max_i\dfrac{X_i}i\Big)$가 $\theta$에 대한 2차원 충분통계량이다. ∎
 
 **(보충) 사실 1차원으로 충분하다 — 최소충분통계량.** 조건 $1-\theta < x_i/i < 1+\theta$는 $\lvert x_i/i-1\rvert < \theta$와 같다. 따라서
 
-$$f(x\mid\theta)=\Big(\prod_i\frac1{2i}\Big)\theta^{-n}I\big(T^\ast(x) < \theta\big),\qquad T^\ast(x)=\max_i\Big\lvert\frac{x_i}i-1\Big\rvert=\max\Big(1-\min_i\frac{x_i}i,\ \max_i\frac{x_i}i-1\Big).$$
+$$f(x\mid\theta)=\Big(\prod_i\frac1{2i}\Big)\theta^{-n}I\big(T^\ast(x) \lt  \theta\big),\qquad T^\ast(x)=\max_i\Big\lvert\frac{x_i}i-1\Big\rvert=\max\Big(1-\min_i\frac{x_i}i,\ \max_i\frac{x_i}i-1\Big).$$
 
 - 분해정리로 $T^\ast$가 충분하다.
-- 우도비 판정법: $\theta^{-n}I(T^\ast(y) < \theta)=k\,\theta^{-n}I(T^\ast(x) < \theta)$가 모든 $\theta > 0$에서 성립 ⟺ $k=1$, $T^\ast(x)=T^\ast(y)$. 따라서 **$T^\ast$가 최소충분**이다.
+- 우도비 판정법: $\theta^{-n}I(T^\ast(y) < \theta)=k\thinspace\theta^{-n}I(T^\ast(x) < \theta)$가 모든 $\theta > 0$에서 성립 ⟺ $k=1$, $T^\ast(x)=T^\ast(y)$. 따라서 **$T^\ast$가 최소충분**이다.
 - $T^\ast$는 $T$의 함수지만 $T$는 $T^\ast$의 함수가 아니다 → hw가 요구한 2차원 $T$는 충분하지만 최소는 아니다. (시험에서 "최소충분통계량을 구하라"로 바뀌면 답은 $T^\ast$)
 
 **채점 포인트**
@@ -328,7 +328,7 @@ $$f(x\mid\theta)=\Big(\prod_i\frac1{2i}\Big)\theta^{-n}I\big(T^\ast(x) < \theta\
 
 <details><summary>풀이</summary>
 
-충분: 본문 [3.3](#33-보충-support가-모수에-의존할-때). 최소: $p_\theta(x)=\theta^{-n}I(x_{(n)}\le\theta)I(x_{(1)}\ge0)$. 표본점을 support 안($x_{(1)},y_{(1)}\ge0$)에서 비교하면 $p_\theta(y)=k\,p_\theta(x)$ ∀θ ⟺ $I(y_{(n)}\le\theta)=k\,I(x_{(n)}\le\theta)$ ∀θ ⟺ $k=1$, $x_{(n)}=y_{(n)}$.
+충분: 본문 [3.3](#33-보충-support가-모수에-의존할-때). 최소: $p_\theta(x)=\theta^{-n}I(x_{(n)}\le\theta)I(x_{(1)}\ge0)$. 표본점을 support 안($x_{(1)},y_{(1)}\ge0$)에서 비교하면 $p_\theta(y)=k\thinspace p_\theta(x)$ ∀θ ⟺ $I(y_{(n)}\le\theta)=k\thinspace I(x_{(n)}\le\theta)$ ∀θ ⟺ $k=1$, $x_{(n)}=y_{(n)}$.
 
 </details>
 
@@ -372,7 +372,7 @@ hw1 #9처럼 조건을 $i$로 나눠 공통 조건으로: $x_i\ge i\theta\iff x_
 </details>
 <details><summary>풀이</summary>
 
-$$f(x\mid\theta)=\prod_ie^{i\theta-x_i}I\Big(\frac{x_i}i\ge\theta\Big)=\underbrace{e^{-\sum x_i}}_{h}\ \underbrace{e^{\theta\sum_i i}\,I\Big(\min_i\frac{x_i}i\ge\theta\Big)}_{g_\theta(T)},\qquad\sum_{i=1}^ni=\frac{n(n+1)}2 .$$
+$$f(x\mid\theta)=\prod_ie^{i\theta-x_i}I\Big(\frac{x_i}i\ge\theta\Big)=\underbrace{e^{-\sum x_i}}_ {h}\ \underbrace{e^{\theta\sum_i i}\thinspace I\Big(\min_i\frac{x_i}i\ge\theta\Big)}_ {g_\theta(T)},\qquad\sum_{i=1}^ni=\frac{n(n+1)}2 .$$
 
 분해정리로 $T=\min_i(X_i/i)$.
 
@@ -459,7 +459,7 @@ $\theta < x_i < 2\theta\iff x_i/2 < \theta < x_i$ → 모든 $i$에 대해 모�
 </details>
 <details><summary>풀이</summary>
 
-$p_\theta(x)=\theta^{-n}I\big(\tfrac{x_{(n)}}2 < \theta < x_{(1)}\big)$. 분해정리로 $(X_{(1)},X_{(n)})$이 충분. $p_\theta(y)=k\,p_\theta(x)$ ∀θ이려면 $\theta^{-n}$은 약분되고 두 지시함수의 $\theta$ 구간이 같아야 한다 → $(x_{(1)},x_{(n)})=(y_{(1)},y_{(n)})$. 최소충분통계량은 2차원 $(X_{(1)},X_{(n)})$. (V2와 같은 구조)
+$p_\theta(x)=\theta^{-n}I\big(\tfrac{x_{(n)}}2 < \theta < x_{(1)}\big)$. 분해정리로 $(X_{(1)},X_{(n)})$이 충분. $p_\theta(y)=k\thinspace p_\theta(x)$ ∀θ이려면 $\theta^{-n}$은 약분되고 두 지시함수의 $\theta$ 구간이 같아야 한다 → $(x_{(1)},x_{(n)})=(y_{(1)},y_{(n)})$. 최소충분통계량은 2차원 $(X_{(1)},X_{(n)})$. (V2와 같은 구조)
 
 </details>
 
@@ -528,5 +528,5 @@ $\max_i\lvert X_i/i-1\rvert$ (1차원).
 | 쪽 | 강의노트 원문 | 노트에 반영한 것 | 근거 | 영향 |
 | --- | --- | --- | --- | --- |
 | p3 Thm 4.1 증명 | $p_\theta(x_1,\dots,x_n.T=t)$ | ✏️ $p_\theta(x_1,\dots,x_n,\ T=t)$ | 마침표 → 쉼표 | · |
-| p2 Ex 4.1 | 모형($X_i\overset{\text{iid}}{\sim}\text{Poi}(\theta)$)을 밝히지 않고 "$T\sim\text{Poi}(n\theta)$이므로"로 시작 | 모형을 명시 | 문맥 | · |
-| p4 Thm 4.2 | 증명 없음, 0/0 처리 언급 없음 | 보충 증명 + "$p_\theta(y)=k\,p_\theta(x)$ ∀θ"로 읽는 법 | support가 모수에 의존하는 예 (hw1 #8·#9) | ★ |
+| p2 Ex 4.1 | 모형($X_i\overset{\text{iid}}{\sim}\text{Poi}(\theta){}$)을 밝히지 않고 " $T\sim\text{Poi}(n\theta)$이므로"로 시작 | 모형을 명시 | 문맥 | · |
+| p4 Thm 4.2 | 증명 없음, 0/0 처리 언급 없음 | 보충 증명 + " $p_\theta(y)=k\thinspace p_\theta(x)$ ∀θ"로 읽는 법 | support가 모수에 의존하는 예 (hw1 #8·#9) | ★ |

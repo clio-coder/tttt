@@ -2,7 +2,7 @@
 
 > **원본:** `lecture_ch1_concentration_inequality.pdf` (12쪽, 9/3 수업, 9/9 갱신판). 이전 판 `1주차_0903_Concentration_Inequality.pdf`는 쓰지 않는다.
 > **관련 숙제:** hw1 #1 (Hoeffding's lemma 증명) · #2 (Bernstein vs Hoeffding) · #4 (sub-Gaussian과 대칭화)
-> **기호:** $S_n=\sum_{i=1}^n X_i$ (hw1 #2에서는 $S_n=\sum(X_i-\mathbb E X_i)$), $\bar X_n=S_n/n$. Chernoff 변수는 $\lambda$로 쓴다 (강의노트 Thm 1.6의 증명은 $t$로 씀). $\epsilon$ = 합의 편차, $t$ = 평균의 편차 ($\epsilon=nt$).
+> **기호:** $S_n=\sum_{i=1}^n X_i$ (hw1 #2에서는 $S_n=\sum(X_i-\mathbb E X_i){}$), $\bar X_n=S_n/n$. Chernoff 변수는 $\lambda$로 쓴다 (강의노트 Thm 1.6의 증명은 $t$로 씀). $\epsilon$ = 합의 편차, $t$ = 평균의 편차 ($\epsilon=nt$).
 > **범례:** 📝 hw1에 나옴 · 🧩 강의노트에 증명 없음 → 보충 증명 · 📐 강의노트에 증명 있음 · 🔢 계산 · 💡 개념·해석 · (보충) 강의노트에 없는 내용
 > **도구 번호** `[T1]`… 는 [00 문제풀이 도구상자](00%20문제풀이%20도구상자.md)의 도구 카드 번호다.
 
@@ -52,13 +52,13 @@
 
 | 도구 | 쓰는 곳 |
 | --- | --- |
-| [T1] Markov: $t\,I(X\ge t)\le X$ | Chebyshev, Chernoff의 출발점 |
+| [T1] Markov: $t\thinspace I(X\ge t)\le X$ | Chebyshev, Chernoff의 출발점 |
 | [T2] Chernoff: 지수로 올려 Markov, $\lambda$ 최적화 | Hoeffding, sub-Gaussian 꼬리, Bernstein |
 | [T3] 독립이면 MGF가 곱으로 | Hoeffding, 대칭화 (e) |
 | [T4] 볼록성: 현 부등식, Jensen (조건부 포함) | Hoeffding's lemma (b), 대칭화 (c) |
 | [T5] Taylor 나머지항 + 2계도함수 상계 | Hoeffding's lemma (f) |
 | [T6] $u(1-u)\le\frac14$ | Hoeffding's lemma (e) |
-| [T7] $\operatorname{Var}Z=\min_c\mathbb E(Z-c)^2$ | hw1 #2(b) |
+| [T7] $\mathop{\mathrm{Var}}\nolimits Z=\min_c\mathbb E(Z-c)^2$ | hw1 #2(b) |
 | [T8] 대칭화: 독립 복사본 + Rademacher | hw1 #4 |
 | [T9] 급수 비교 $(2k)!\ge 2^k k!$ | Rademacher MGF |
 | [T10] 합집합: 양측 = 2 × 단측 | Hoeffding 양측, 유한 함수집합 |
@@ -79,7 +79,7 @@ $$\widehat R_{\text{train}}(\hat f)=\frac1n\sum_{i=1}^n L(\hat f(x_i),y_i),\qqua
 - **두 질문은 수학적으로 다르다.**
   1. 독립인 test set: test error가 $R(\hat f)$를 얼마나 정확히 근사하나? → training data에 **조건부로** $\hat f$는 고정되고 test loss들은 독립이다. $0\le L\le 1$이면 Hoeffding으로
 
-  $$\Pr\Big(\big\lvert\widehat R_{\text{test}}(\hat f)-R(\hat f)\big\rvert > \epsilon\ \Big\vert\ D_{\text{train}}\Big)\le 2e^{-2m\epsilon^2}$$
+  $$\Pr\Big(\big\lvert\widehat R_{\text{test}}(\hat f)-R(\hat f)\big\rvert \gt  \epsilon\ \Big\vert\ D_{\text{train}}\Big)\le 2e^{-2m\epsilon^2}$$
 
   우변이 $D_{\text{train}}$에 의존하지 않으므로 **무조건부로도 같은 bound**가 성립한다 (∵ $\Pr(A)=\mathbb E[\Pr(A\mid D_{\text{train}})]\le 2e^{-2m\epsilon^2}$).
   2. training set: generalization gap $R(\hat f)-\widehat R_{\text{train}}(\hat f)$는 얼마나 큰가? → $\hat f$가 **바로 그 training data로 선택**되었으므로 $L(\hat f(x_i),y_i)$를 고정된 함수의 독립표본으로 볼 수 없다. Hoeffding을 그대로 쓰면 안 된다.
@@ -87,7 +87,7 @@ $$\widehat R_{\text{train}}(\hat f)=\frac1n\sum_{i=1}^n L(\hat f(x_i),y_i),\qqua
 
 (보충) **유한 함수집합의 uniform bound** — 변형 문제 [V7](#v7-유한-함수집합의-uniform-bound)에서 유도한다: $\lvert\mathcal F\rvert=K$, $0\le L\le1$이면
 
-$$\Pr\Big(\max_{f\in\mathcal F}\big\lvert\widehat R_{\text{train}}(f)-R(f)\big\rvert > \epsilon\Big)\le 2Ke^{-2n\epsilon^2}.$$
+$$\Pr\Big(\max_{f\in\mathcal F}\big\lvert\widehat R_{\text{train}}(f)-R(f)\big\rvert \gt  \epsilon\Big)\le 2Ke^{-2n\epsilon^2}.$$
 
 <details><summary>시험에 나온다면 — Q1. 왜 training error에는 Hoeffding을 바로 쓸 수 없나?</summary>
 
@@ -109,18 +109,18 @@ $\hat f$가 같은 training data에 의존하므로, $L(\hat f(x_i),y_i)$들은 
 **가정** $X\ge 0$, $\mathbb E X < \infty$
 **결론** 모든 $t > 0$에 대해
 
-$$\Pr(X > t)\le\frac{\mathbb E X}{t},\qquad\text{같은 말로}\quad \Pr\big(X > t\,\mathbb E X\big)\le\frac1t .$$
+$$\Pr(X \gt  t)\le\frac{\mathbb E X}{t},\qquad\text{같은 말로}\quad \Pr\big(X \gt  t\thinspace\mathbb E X\big)\le\frac1t .$$
 
-**핵심 한 수** $X\ge t\,I(X\ge t)$ [T1]
+**핵심 한 수** $X\ge t\thinspace I(X\ge t)$ [T1]
 
 **증명 (강의노트: 밀도가 있는 경우)** $X\ge0$이므로
 
-$$\mathbb E X=\int_0^t xf(x)\,dx+\int_t^\infty xf(x)\,dx\ \ge\ \int_t^\infty xf(x)\,dx\ \ge\ t\int_t^\infty f(x)\,dx=t\Pr(X\ge t).$$
+$$\mathbb E X=\int_0^t xf(x)\thinspace dx+\int_t^\infty xf(x)\thinspace dx\ \ge\ \int_t^\infty xf(x)\thinspace dx\ \ge\ t\int_t^\infty f(x)\thinspace dx=t\Pr(X\ge t).$$
 
-- 첫 부등호: $\int_0^t xf\,dx\ge0$ (∵ $x\ge0$). 둘째 부등호: 적분 구간에서 $x\ge t$.
+- 첫 부등호: $\int_0^t xf\thinspace dx\ge0$ (∵ $x\ge0$). 둘째 부등호: 적분 구간에서 $x\ge t$.
 - 결론은 $\Pr(X\ge t)$로 나오는데 $\Pr(X > t)\le\Pr(X\ge t)$이므로 정리의 꼴도 성립한다.
 
-**(보충) 일반 증명 — 이산·연속 가리지 않음.** $X\ge0$이면 항상 $t\,I(X\ge t)\le X$ ($X\ge t$이면 좌변 $=t\le X$, 아니면 좌변 $=0\le X$). 양변에 기댓값을 취하면 $t\Pr(X\ge t)\le\mathbb E X$. ∎
+**(보충) 일반 증명 — 이산·연속 가리지 않음.** $X\ge0$이면 항상 $t\thinspace I(X\ge t)\le X$ ($X\ge t$이면 좌변 $=t\le X$, 아니면 좌변 $=0\le X$). 양변에 기댓값을 취하면 $t\Pr(X\ge t)\le\mathbb E X$. ∎
 
 **가정이 빠지면** $X\ge0$이 필요하다. 반례: $X=-100$ 또는 $10$ (각 확률 1/2)이면 $\mathbb E X=-45 < 0$인데 $\Pr(X > 1)=1/2$.
 
@@ -129,17 +129,17 @@ $$\mathbb E X=\int_0^t xf(x)\,dx+\int_t^\infty xf(x)\,dx\ \ge\ \int_t^\infty xf(
 - $\varphi(x)=e^{\lambda x}$ → Chernoff
 - $\varphi(x)=\lvert x\rvert^k$ → $\Pr(\lvert X\rvert\ge t)\le\mathbb E\lvert X\rvert^k/t^k$
 
-**해석** 평균이 1인 비음 확률변수가 10보다 클 확률은 최대 10%다. $X\in\{0,t\}$이면 등호가 되므로 ($\Pr(X=t)=\mathbb E X/t$) **평균만 알 때는 더 좋은 bound가 없다.**
+**해석** 평균이 1인 비음 확률변수가 10보다 클 확률은 최대 10%다. $X\in\lbrace0,t\rbrace$이면 등호가 되므로 ($\Pr(X=t)=\mathbb E X/t$) **평균만 알 때는 더 좋은 bound가 없다.**
 
 **셀프 체크**
 <details><summary>Q1. 일반 증명의 한 줄은?</summary>
 
-$t\,I(X\ge t)\le X$에 기댓값.
+$t\thinspace I(X\ge t)\le X$에 기댓값.
 
 </details>
 <details><summary>Q2. Markov에서 등호가 되는 분포는?</summary>
 
-$X\in\{0,t\}$, $\Pr(X=t)=\mathbb E X/t$.
+$X\in\lbrace0,t\rbrace$, $\Pr(X=t)=\mathbb E X/t$.
 
 </details>
 
@@ -149,7 +149,7 @@ $X\in\{0,t\}$, $\Pr(X=t)=\mathbb E X/t$.
 
 📐 [ch1 p4–5 Thm 1.2] · 쓰이는 곳: ch3 WLLN (Thm 3.1), qm ⟹ p (Thm 3.2), 베르누이 예제
 
-**가정** $\mathbb E X=\mu_X$, $\operatorname{Var}X=\sigma_X^2 < \infty$
+**가정** $\mathbb E X=\mu_X$, $\mathop{\mathrm{Var}}\nolimits X=\sigma_X^2 < \infty$
 **결론** 모든 $t > 0$에 대해 $\Pr(\lvert X-\mu_X\rvert > t\sigma_X)\le\dfrac1{t^2}$. 같은 말로 $\Pr(\lvert X-\mu_X\rvert\ge\epsilon)\le\dfrac{\sigma_X^2}{\epsilon^2}$.
 
 **핵심 한 수** $(X-\mu)^2$에 Markov
@@ -162,7 +162,7 @@ $$\Pr(\lvert X-\mu_X\rvert\ge t\sigma_X)=\Pr\big((X-\mu_X)^2\ge t^2\sigma_X^2\bi
 
 **해석** 편차는 **표준편차 정도의 크기(typical deviation)**를 갖고, 그 $t$배 이상 벗어날 확률은 $1/t^2$ 수준이다. 가정(적률)을 더하면 확률이 줄어드는 속도는 빨라지지만 **편차의 크기는 여전히 $\sigma_X$ 차수**다. Markov보다 가정이 하나 더 있다 (분산의 존재, 대신 비음 조건은 필요 없음).
 
-**(보충) 등호 예.** $t\ge1$일 때 $X=\mu\pm t\sigma$ (각 확률 $\frac1{2t^2}$), $X=\mu$ (확률 $1-\frac1{t^2}$)이면 $\operatorname{Var}X=\sigma^2$이고 $\Pr(\lvert X-\mu\rvert\ge t\sigma)=1/t^2$. **분산만 알 때는 더 좋은 bound가 없다.**
+**(보충) 등호 예.** $t\ge1$일 때 $X=\mu\pm t\sigma$ (각 확률 $\frac1{2t^2}$), $X=\mu$ (확률 $1-\frac1{t^2}$)이면 $\mathop{\mathrm{Var}}\nolimits X=\sigma^2$이고 $\Pr(\lvert X-\mu\rvert\ge t\sigma)=1/t^2$. **분산만 알 때는 더 좋은 bound가 없다.**
 
 ---
 
@@ -175,13 +175,13 @@ $$\Pr(\lvert X-\mu_X\rvert\ge t\sigma_X)=\Pr\big((X-\mu_X)^2\ge t^2\sigma_X^2\bi
 **가정** 어떤 $\lambda > 0$에서 $M_X(\lambda)=\mathbb E e^{\lambda X} < \infty$
 **결론** 모든 $t > 0$에 대해
 
-$$\Pr(X\ge t)\le e^{-\lambda t}M_X(\lambda),\qquad \Pr(X\ge t)\le\inf_{\lambda > 0}\exp\{-\lambda t+\log M_X(\lambda)\}.$$
+$$\Pr(X\ge t)\le e^{-\lambda t}M_X(\lambda),\qquad \Pr(X\ge t)\le\inf_{\lambda \gt  0}\exp\lbrace-\lambda t+\log M_X(\lambda)\rbrace.$$
 
 **핵심 한 수** 지수함수로 올린 뒤 Markov [T2]
 
 **증명** $\lambda > 0$이면 $x\mapsto e^{\lambda x}$가 증가함수이므로 $X\ge t\iff\lambda X-\lambda t\ge0\iff e^{\lambda X-\lambda t}\ge1$. 따라서
 
-$$\Pr(X\ge t)=\Pr\big(e^{\lambda X-\lambda t}\ge1\big)\le\mathbb E\,e^{\lambda X-\lambda t}=e^{-\lambda t}M_X(\lambda)$$
+$$\Pr(X\ge t)=\Pr\big(e^{\lambda X-\lambda t}\ge1\big)\le\mathbb E\thinspace e^{\lambda X-\lambda t}=e^{-\lambda t}M_X(\lambda)$$
 
 (부등호: Markov, ∵ $e^{\lambda X-\lambda t}\ge0$). 모든 $\lambda > 0$에서 성립하므로 inf를 취한다. ∎
 
@@ -189,7 +189,7 @@ $$\Pr(X\ge t)=\Pr\big(e^{\lambda X-\lambda t}\ge1\big)\le\mathbb E\,e^{\lambda X
 
 **(보충) 최적화 공식 — 이 장에서 계속 쓴다.** $c > 0$, $t > 0$이면
 
-$$\min_{\lambda > 0}\Big(-\lambda t+\frac{c\lambda^2}{2}\Big)=-\frac{t^2}{2c}\quad(\lambda^\star=t/c).$$
+$$\min_{\lambda \gt  0}\Big(-\lambda t+\frac{c\lambda^2}{2}\Big)=-\frac{t^2}{2c}\quad(\lambda^\star=t/c).$$
 
 그래서 $\mathbb E e^{\lambda X}\le e^{c\lambda^2/2}$ 꼴의 MGF 상계가 있으면 곧바로 $\Pr(X\ge t)\le e^{-t^2/(2c)}$.
 
@@ -211,22 +211,22 @@ $\lambda^\star=t/c$에서 $-t^2/(2c)$.
 
 📐 [ch1 p6–7 Thm 1.4]
 
-**결론** $Z\sim N(0,1)$이면 $\displaystyle\Pr(\lvert Z\rvert > t)\le\sqrt{\frac2\pi}\,\frac{e^{-t^2/2}}{t}$ ($t > 0$).
+**결론** $Z\sim N(0,1)$이면 $\displaystyle\Pr(\lvert Z\rvert > t)\le\sqrt{\frac2\pi}\thinspace\frac{e^{-t^2/2}}{t}$ ($t > 0$).
 
 **핵심 한 수** 적분 구간 $[t,\infty)$에서 $s/t\ge1$을 곱해 적분 가능한 꼴 $se^{-s^2/2}$로 만든다.
 
 **증명**
 
 $$\begin{aligned}
-\Pr(\lvert Z\rvert\ge t)&=\frac{2}{\sqrt{2\pi}}\int_t^\infty e^{-s^2/2}\,ds &&(\because\ \text{대칭})\\
-&\le\sqrt{\frac2\pi}\,\frac1t\int_t^\infty s\,e^{-s^2/2}\,ds &&(\because\ s\ge t\ \text{이면}\ 1\le s/t)\\
-&=\sqrt{\frac2\pi}\,\frac1t\int_{t^2/2}^\infty e^{-u}\,du &&(u=s^2/2)\\
-&=\sqrt{\frac2\pi}\,\frac{e^{-t^2/2}}{t}.
+\Pr(\lvert Z\rvert\ge t)&=\frac{2}{\sqrt{2\pi}}\int_t^\infty e^{-s^2/2}\thinspace ds &&(\because\ \text{대칭})\cr
+&\le\sqrt{\frac2\pi}\thinspace\frac1t\int_t^\infty s\thinspace e^{-s^2/2}\thinspace ds &&(\because\ s\ge t\ \text{이면}\ 1\le s/t)\cr
+&=\sqrt{\frac2\pi}\thinspace\frac1t\int_{t^2/2}^\infty e^{-u}\thinspace du &&(u=s^2/2)\cr
+&=\sqrt{\frac2\pi}\thinspace\frac{e^{-t^2/2}}{t}.
 \end{aligned}$$
 
 **표본평균에 적용** $X_i\overset{\text{iid}}{\sim}N(\mu,\sigma^2)$이면 $Z=\frac{\bar X-\mu}{\sigma/\sqrt n}\sim N(0,1)$이므로
 
-$$\Pr\Big(\lvert\bar X-\mu\rvert > \frac{t\sigma}{\sqrt n}\Big)\le\sqrt{\frac2\pi}\frac{e^{-t^2/2}}{t}\qquad\text{vs. Chebyshev}\quad\le\frac1{t^2}.$$
+$$\Pr\Big(\lvert\bar X-\mu\rvert \gt  \frac{t\sigma}{\sqrt n}\Big)\le\sqrt{\frac2\pi}\frac{e^{-t^2/2}}{t}\qquad\text{vs. Chebyshev}\quad\le\frac1{t^2}.$$
 
 🔢 (보충, 계산으로 확인) $\Pr(\lvert Z\rvert > t)$ 비교:
 
@@ -263,7 +263,7 @@ $$\mathbb E e^{\lambda X}\le\exp\Big(\frac{\lambda^2(b-a)^2}{8}\Big).$$
 
 **(b) 현 부등식.** $x\in[a,b]$를 $a,b$의 볼록결합으로 쓰면
 
-$$x=\underbrace{\frac{b-x}{b-a}}_{=:\,\theta}\,a+\underbrace{\frac{x-a}{b-a}}_{=\,1-\theta}\,b,\qquad\theta\in[0,1].$$
+$$x=\underbrace{\frac{b-x}{b-a}}_ {=:\thinspace\theta}\thinspace a+\underbrace{\frac{x-a}{b-a}}_ {=\thinspace1-\theta}\thinspace b,\qquad\theta\in[0,1].$$
 
 $g(x)=e^{\lambda x}$는 $g''(x)=\lambda^2e^{\lambda x}\ge0$이라 볼록이므로 $g(\theta a+(1-\theta)b)\le\theta g(a)+(1-\theta)g(b)$, 즉
 
@@ -277,7 +277,7 @@ $$\mathbb E e^{\lambda X}\le\frac{b-\mathbb E X}{b-a}e^{\lambda a}+\frac{\mathbb
 
 **(d) 재매개화.** $p=\frac{-a}{b-a}$, $h=\lambda(b-a)$로 둔다. $b-a > 0$, $-a\ge0$이므로 $p\ge0$이고, $1-p=\frac{b}{b-a}\ge0$이므로 $p\le1$. 또 $\lambda a=-\lambda(b-a)p=-ph$, $\lambda b=\lambda a+\lambda(b-a)=-ph+h$. 따라서 (c)의 우변은
 
-$$(1-p)e^{-ph}+p\,e^{-ph+h}=e^{-ph}\big(1-p+pe^h\big)=\exp\big(L(h)\big),\qquad L(h):=-ph+\log(1-p+pe^h).$$
+$$(1-p)e^{-ph}+p\thinspace e^{-ph+h}=e^{-ph}\big(1-p+pe^h\big)=\exp\big(L(h)\big),\qquad L(h):=-ph+\log(1-p+pe^h).$$
 
 ($1-p+pe^h > 0$이라 log가 정의된다.)
 
@@ -301,8 +301,8 @@ $$L(h)=L(0)+L'(0)h+\frac{L''(\xi)}{2}h^2=\frac{L''(\xi)}{2}h^2\le\frac{h^2}{8}.$
 
 **자주 하는 실수**
 - (b)에서 가중치를 명시하지 않음. (c)에서 **어디서 $\mathbb E X=0$을 쓰는지** 안 밝힘 (hw가 콕 집어 물었다).
-- (d)에서 "$-a > 0$"이라고 씀 → $a=0$일 수 있으니 $-a\ge0$.
-- (f)에서 나머지항의 꼴을 안 씀 ("$\xi$는 0과 $h$ 사이").
+- (d)에서 " $-a > 0$"이라고 씀 → $a=0$일 수 있으니 $-a\ge0$.
+- (f)에서 나머지항의 꼴을 안 씀 (" $\xi$는 0과 $h$ 사이").
 
 **셀프 체크**
 <details><summary>Q1. p와 h의 정의, 그리고 λa를 p, h로 쓰면?</summary>
@@ -334,9 +334,9 @@ $$\Pr\Big(\frac1n\sum_{i=1}^nX_i\ge t\Big)\le\exp\Big(-\frac{2n^2t^2}{\sum_{i=1}
 
 **증명** ($\epsilon=nt$로 두면 두 꼴이 같다. 강의노트는 Chernoff 변수를 $t$로 썼는데 여기서는 $\lambda$로 쓴다.)
 
-1. $\lambda > 0$에 대해 $\Pr\big(\sum X_i\ge\epsilon\big)\le e^{-\lambda\epsilon}\,\mathbb E\,e^{\lambda\sum X_i}$ [Chernoff]
-2. $\mathbb E\,e^{\lambda\sum X_i}=\prod_{i=1}^n\mathbb E\,e^{\lambda X_i}$ (∵ 독립)
-3. $\mathbb E\,e^{\lambda X_i}\le\exp\big(\lambda^2(b_i-a_i)^2/8\big)$ (∵ Lemma 1.5: $a_i\le X_i\le b_i$, $\mathbb E X_i=0$). 따라서
+1. $\lambda > 0$에 대해 $\Pr\big(\sum X_i\ge\epsilon\big)\le e^{-\lambda\epsilon}\thinspace\mathbb E\thinspace e^{\lambda\sum X_i}$ [Chernoff]
+2. $\mathbb E\thinspace e^{\lambda\sum X_i}=\prod_{i=1}^n\mathbb E\thinspace e^{\lambda X_i}$ (∵ 독립)
+3. $\mathbb E\thinspace e^{\lambda X_i}\le\exp\big(\lambda^2(b_i-a_i)^2/8\big)$ (∵ Lemma 1.5: $a_i\le X_i\le b_i$, $\mathbb E X_i=0$). 따라서
 
 $$\Pr\Big(\sum X_i\ge\epsilon\Big)\le\exp\Big(\phi(\lambda)\Big),\qquad\phi(\lambda)=-\lambda\epsilon+\frac{\lambda^2}{8}\sum_{i=1}^n(b_i-a_i)^2.$$
 
@@ -349,7 +349,7 @@ $$\Pr\Big(\sum X_i\ge\epsilon\Big)\le\exp\Big(\phi(\lambda)\Big),\qquad\phi(\lam
 - **평균이 0이 아니면:** $X_i-\mathbb E X_i\in[a_i-\mathbb E X_i,\ b_i-\mathbb E X_i]$ — 범위 길이가 그대로 $b_i-a_i$라서 같은 bound가 $\sum(X_i-\mathbb E X_i)$에 성립한다.
 - **편차 크기로 다시 쓰기** [p9]:
 
-$$\Pr\Big(\Big\lvert\frac1n\sum X_i\Big\rvert > t\,\frac{\sqrt{\sum(b_i-a_i)^2}}{n}\Big)\le 2e^{-2t^2}.$$
+$$\Pr\Big(\Big\lvert\frac1n\sum X_i\Big\rvert \gt  t\thinspace\frac{\sqrt{\sum(b_i-a_i)^2}}{n}\Big)\le 2e^{-2t^2}.$$
 
   편차의 크기는 여전히 표준편차 수준 (같은 범위면 $(b-a)/\sqrt n$)이지만, 확률이 $1/t^2$ 대신 $e^{-2t^2}$로 **지수적으로** 준다.
 - **베르누이:** $X_i\sim\text{Bernoulli}(p)$이면 $b_i-a_i=1$이므로 $\Pr(\lvert\bar X_n-p\rvert\ge\epsilon)\le2e^{-2n\epsilon^2}$.
@@ -388,9 +388,9 @@ $\lambda^\star=4\epsilon/\sum(b_i-a_i)^2$, 지수 $-2\epsilon^2/\sum(b_i-a_i)^2$
 | 부등식 | 주요 가정 | 꼬리 모양 (schematic) | 한 줄 요약 |
 | --- | --- | --- | --- |
 | Markov | $X\ge0$, $\mathbb E X < \infty$ | $1/t$ | 평균만 사용 |
-| Chebyshev | $\operatorname{Var}X < \infty$ | $1/t^2$ | 분산 사용 |
+| Chebyshev | $\mathop{\mathrm{Var}}\nolimits X < \infty$ | $1/t^2$ | 분산 사용 |
 | Hoeffding | 독립, 유계 | $\exp(-ct^2)$ | 범위만 사용 (sub-Gaussian) |
-| Bernstein | 독립, sub-exponential 적률조건 | $\exp(-c\min\{t^2,t\})$ | 분산 + 꼬리 |
+| Bernstein | 독립, sub-exponential 적률조건 | $\exp(-c\min\lbrace t^2,t\rbrace)$ | 분산 + 꼬리 |
 
 Markov·Chebyshev는 매우 일반적이지만 polynomial tail이다. Hoeffding·Bernstein은 가정이 강한 대신 exponential tail을 준다.
 
@@ -404,18 +404,18 @@ Markov·Chebyshev는 매우 일반적이지만 polynomial tail이다. Hoeffding�
 
 **정의** 평균이 $\mu$인 $X$가 모든 $s\in\mathbb R$에 대해
 
-$$\mathbb E\exp\{s(X-\mu)\}\le\exp\Big(\frac{\sigma^2s^2}{2}\Big)$$
+$$\mathbb E\exp\lbrace s(X-\mu)\rbrace\le\exp\Big(\frac{\sigma^2s^2}{2}\Big)$$
 
 를 만족하면 $X$를 **$\sigma$-sub-Gaussian**이라 한다.
 
 - **자기 말로 (hw1 #4(a)):** 중심화된 MGF가 $N(0,\sigma^2)$의 MGF보다 작다. 그래서 꼬리가 분산 $\sigma^2$인 정규분포만큼 **빨리** 준다: Chernoff와 4.1의 최적화 공식으로 $\Pr(X-\mu\ge t)\le e^{-t^2/(2\sigma^2)}$.
 - **정규분포:** $X\sim N(\mu,\sigma^2)$이면 $\mathbb E e^{sX}=e^{s\mu+\sigma^2s^2/2}$이므로 $\mathbb E e^{s(X-\mu)}=e^{\sigma^2s^2/2}$ — 등호로 성립, 즉 $\sigma$-sub-Gaussian.
-- **유계:** Lemma 1.5는 "$[a,b]$ 값, 평균 0이면 $\frac{b-a}2$-sub-Gaussian"이라는 말이다.
+- **유계:** Lemma 1.5는 " $[a,b]$ 값, 평균 0이면 $\frac{b-a}2$-sub-Gaussian"이라는 말이다.
 
 **(보충) 성질** — 변형 문제 [V4](#v4-sub-gaussian의-성질)에서 증명한다.
 1. 독립인 $X_i$가 각각 $\sigma_i$-sub-Gaussian이면 $\sum X_i$는 $\sqrt{\sum\sigma_i^2}$-sub-Gaussian.
 2. $cX$는 $\lvert c\rvert\sigma$-sub-Gaussian.
-3. $\operatorname{Var}X\le\sigma^2$.
+3. $\mathop{\mathrm{Var}}\nolimits X\le\sigma^2$.
 
 ### 6.2 Rademacher 변수
 
@@ -430,13 +430,13 @@ $$\mathbb E e^{s\varepsilon}=\frac{e^s+e^{-s}}2=\sum_{k=0}^\infty\frac{s^{2k}}{(
 
 **목표 (hw1 #4)** $X_1,\dots,X_n$ iid, $\mathbb E X_i=\mu$, $a\le X_i\le b$ a.s.이면
 
-$$\Pr\Big(\Big\lvert\frac1n\sum X_i-\mu\Big\rvert\ge t\Big)\le2\exp\Big(-\frac{nt^2}{2(b-a)^2}\Big),\qquad t > 0.$$
+$$\Pr\Big(\Big\lvert\frac1n\sum X_i-\mu\Big\rvert\ge t\Big)\le2\exp\Big(-\frac{nt^2}{2(b-a)^2}\Big),\qquad t \gt  0.$$
 
 **핵심 한 수** 독립 복사본 $X'$를 빼서 **대칭**으로 만들면, 대칭 변수는 Rademacher 부호를 곱해도 분포가 같다 → Rademacher의 MGF bound를 조건부로.
 
 **(c) Jensen으로 복사본 끼워 넣기.** $\mathbb E X=0$, $a\le X\le b$인 $X$와 그 독립 복사본 $X'$ (같은 분포, $X$와 독립)를 생각한다. $X'$가 $X$와 독립이고 $\mathbb E X'=0$이므로 $\mathbb E[s(X-X')\mid X]=sX$. 볼록함수 $\varphi(u)=e^u$에 **조건부 Jensen**을 쓰면
 
-$$e^{sX}=e^{\mathbb E[s(X-X')\mid X]}\le\mathbb E\big[e^{s(X-X')}\,\big\vert\,X\big].$$
+$$e^{sX}=e^{\mathbb E[s(X-X')\mid X]}\le\mathbb E\big[e^{s(X-X')}\thinspace\big\vert\thinspace X\big].$$
 
 양변에 $\mathbb E_X$를 취하면 $\mathbb E_Xe^{sX}\le\mathbb E_{X,X'}e^{s(X-X')}$. (볼록성을 쓴 함수: $u\mapsto e^u$)
 
@@ -449,7 +449,7 @@ $$\Pr(\varepsilon(X-X')\le u)=\tfrac12\Pr(X-X'\le u)+\tfrac12\Pr(-(X-X')\le u)=\
   즉 $X-X'\overset{d}{=}\varepsilon(X-X')$.
 - $(X,X')$에 조건부로 6.2를 $s$ 대신 $s(X-X')$에 쓰면
 
-$$\mathbb E e^{s(X-X')}=\mathbb E e^{s\varepsilon(X-X')}=\mathbb E\Big[\mathbb E\big[e^{s(X-X')\varepsilon}\,\big\vert\,X,X'\big]\Big]\le\mathbb E\exp\Big(\frac{s^2(X-X')^2}{2}\Big)\le\exp\Big(\frac{s^2(b-a)^2}{2}\Big).$$
+$$\mathbb E e^{s(X-X')}=\mathbb E e^{s\varepsilon(X-X')}=\mathbb E\Big[\mathbb E\big[e^{s(X-X')\varepsilon}\thinspace\big\vert\thinspace X,X'\big]\Big]\le\mathbb E\exp\Big(\frac{s^2(X-X')^2}{2}\Big)\le\exp\Big(\frac{s^2(b-a)^2}{2}\Big).$$
 
   마지막 부등호: $X,X'\in[a,b]$이므로 $\lvert X-X'\rvert\le b-a$.
 - (c)와 합치면 $\mathbb E e^{sX}\le e^{s^2(b-a)^2/2}$: **유계이고 평균 0인 $X$는 $(b-a)$-sub-Gaussian.**
@@ -462,7 +462,7 @@ $$\mathbb E e^{s(\bar X_n-\mu)}=\mathbb E e^{\frac sn\sum(X_i-\mu)}=\prod_{i=1}^
 
 **(f) Chernoff + 합집합.** $s > 0$이면 [Markov]
 
-$$\Pr(\bar X_n-\mu\ge t)=\Pr\big(e^{s(\bar X_n-\mu)}\ge e^{st}\big)\le e^{-st}\,\mathbb E e^{s(\bar X_n-\mu)}\le\exp\Big(-st+\frac{s^2(b-a)^2}{2n}\Big).$$
+$$\Pr(\bar X_n-\mu\ge t)=\Pr\big(e^{s(\bar X_n-\mu)}\ge e^{st}\big)\le e^{-st}\thinspace\mathbb E e^{s(\bar X_n-\mu)}\le\exp\Big(-st+\frac{s^2(b-a)^2}{2n}\Big).$$
 
 우변 지수는 $\frac{(b-a)^2}{2n}\big(s-\frac{nt}{(b-a)^2}\big)^2-\frac{nt^2}{2(b-a)^2}$ 이므로 $s^\star=\frac{nt}{(b-a)^2} > 0$에서 최소, 값은 $\exp\big(-\frac{nt^2}{2(b-a)^2}\big)$. $-(X_i-\mu)$도 같은 조건 (평균 0, 범위 길이 $b-a$)이므로 $\Pr(\bar X_n-\mu\le-t)$도 같은 bound. 합집합으로 두 꼬리를 더하면 목표식. ∎
 
@@ -512,7 +512,7 @@ $$\Pr\Big(\frac1n\sum_{i=1}^nX_i\ge t\Big)\le\exp\Big(-\frac{nt^2}{2(\bar v+Mt)}
 
 **(a) MGF 상계.** $0 < \lambda < 1/M$이면 $\mathbb E e^{\lambda X_i}\le1+\dfrac{\lambda^2v_i}{2(1-\lambda M)}$.
 
-$$\mathbb E e^{\lambda X_i}=1+\lambda\,\mathbb E X_i+\sum_{k\ge2}\frac{\lambda^k\mathbb E X_i^k}{k!}\le1+\sum_{k\ge2}\frac{\lambda^k\mathbb E\lvert X_i\rvert^k}{k!}\le1+\frac{\lambda^2v_i}{2}\sum_{k\ge2}(\lambda M)^{k-2}=1+\frac{\lambda^2v_i}{2(1-\lambda M)}.$$
+$$\mathbb E e^{\lambda X_i}=1+\lambda\thinspace\mathbb E X_i+\sum_{k\ge2}\frac{\lambda^k\mathbb E X_i^k}{k!}\le1+\sum_{k\ge2}\frac{\lambda^k\mathbb E\lvert X_i\rvert^k}{k!}\le1+\frac{\lambda^2v_i}{2}\sum_{k\ge2}(\lambda M)^{k-2}=1+\frac{\lambda^2v_i}{2(1-\lambda M)}.$$
 
 (∵ $\mathbb E X_i=0$, $X^k\le\lvert X\rvert^k$, 적률조건, 등비급수 $\lambda M < 1$. 기댓값과 급수의 교환은 우변 급수가 수렴하므로 정당하다.)
 
@@ -528,28 +528,28 @@ $\epsilon=nt$, $V=n\bar v$를 넣으면 $\exp\big(-\frac{nt^2}{2(\bar v+Mt)}\big
 
 ### 7.3 유계형 Bernstein
 
-hw1 #2가 쓰는 꼴: 독립, 평균 0, $\lvert Y_i\rvert\le M$ a.s., $\sigma^2=\sum\operatorname{Var}(Y_i)$이면
+hw1 #2가 쓰는 꼴: 독립, 평균 0, $\lvert Y_i\rvert\le M$ a.s., $\sigma^2=\sum\mathop{\mathrm{Var}}\nolimits(Y_i)$이면
 
 $$\Pr\Big(\sum_{i=1}^nY_i\ge t\Big)\le\exp\Big(-\frac{t^2}{2(\sigma^2+Mt/3)}\Big).$$
 
 **(보충) 강의노트 Thm 1.7과의 관계 — $M$ 대신 $M/3$을 넣은 것이다.** $\lvert Y\rvert\le M$이면 $k\ge2$에서
 
-$$\mathbb E\lvert Y\rvert^k\le M^{k-2}\,\mathbb E Y^2\le\frac{k!}{2}\Big(\frac M3\Big)^{k-2}\operatorname{Var}(Y)$$
+$$\mathbb E\lvert Y\rvert^k\le M^{k-2}\thinspace\mathbb E Y^2\le\frac{k!}{2}\Big(\frac M3\Big)^{k-2}\mathop{\mathrm{Var}}\nolimits(Y)$$
 
-(∵ $2\cdot3^{k-2}\le k!$: $k=2,3$에서 등호, $k\ge4$는 귀납법으로 $k!=k\,(k-1)!\ge3\cdot2\cdot3^{k-3}$). 그래서 적률조건이 $(M/3,\ v_i=\operatorname{Var}Y_i)$로 성립하고, 7.2에 넣으면 위 식이 나온다.
+(∵ $2\cdot3^{k-2}\le k!$: $k=2,3$에서 등호, $k\ge4$는 귀납법으로 $k!=k\thinspace(k-1)!\ge3\cdot2\cdot3^{k-3}$). 그래서 적률조건이 $(M/3,\ v_i=\mathop{\mathrm{Var}}\nolimits Y_i)$로 성립하고, 7.2에 넣으면 위 식이 나온다.
 
 ### 7.4 두 영역
 
 합의 꼴 지수 $\dfrac{\epsilon^2}{2(\sigma^2+M\epsilon/3)}$ (유계형 기준):
 - $\epsilon\ll\sigma^2/M$: 분모 ≈ $2\sigma^2$ → $\exp\big(-\frac{\epsilon^2}{2\sigma^2}\big)$. **실제 분산**을 쓰는 정규 꼬리.
 - $\epsilon\gg\sigma^2/M$: 분모 ≈ $\frac23M\epsilon$ → $\exp\big(-\frac{3\epsilon}{2M}\big)$. 지수 꼬리 ($\epsilon$에 1차).
-- 그래서 비교표의 꼴이 $\exp(-c\min\{t^2,t\})$다.
+- 그래서 비교표의 꼴이 $\exp(-c\min\lbrace t^2,t\rbrace)$다.
 
 ### 7.5 Bernstein vs Hoeffding
 
 📝 (= hw1 #2 (d)–(f)의 핵심. 문항별 답안은 [hw1 #2](#hw1-2-bernstein-vs-hoeffding))
 
-설정: $X_i$ 독립, $a\le X_i\le b$, $S_n=\sum(X_i-\mathbb E X_i)$, $\sigma^2=\sum\operatorname{Var}X_i$, $t > 0$.
+설정: $X_i$ 독립, $a\le X_i\le b$, $S_n=\sum(X_i-\mathbb E X_i)$, $\sigma^2=\sum\mathop{\mathrm{Var}}\nolimits X_i$, $t > 0$.
 
 | | 지수 (bound = $e^{-\text{지수}}$) | 쓰는 정보 |
 | --- | --- | --- |
@@ -558,8 +558,8 @@ $$\mathbb E\lvert Y\rvert^k\le M^{k-2}\,\mathbb E Y^2\le\frac{k!}{2}\Big(\frac M
 
 1. **분산을 최악값으로 두면 Hoeffding이 항상 강하다.** $\sigma^2\le n(b-a)^2/4$를 넣으면 $E_B$의 분모가 $\frac12n(b-a)^2+\frac23(b-a)t > \frac12n(b-a)^2$ (∵ $t > 0$).
 2. **정확한 조건.** $E_B > E_H\iff 2\sigma^2+\frac23(b-a)t < \frac12n(b-a)^2\iff\sigma^2 < \dfrac{n(b-a)^2}{4}-\dfrac{(b-a)t}{3}$. 우변이 양수여야 하므로 $t < \frac34n(b-a)$일 때만 가능하다.
-3. **작은 $t$** ($t\ll\sigma^2/(b-a)$): $E_B\approx t^2/(2\sigma^2)$. $E_B/E_H\approx\dfrac{n(b-a)^2}{4\sigma^2}$ — 분산이 최악값보다 작을수록 Bernstein이 **지수적으로** 강하다. Hoeffding은 범위만 보고 항마다 분산을 최악값 $(b-a)^2/4$로 취급하기 때문이다.
-4. **큰 $t$** ($t\gg\sigma^2/(b-a)$): $E_B\approx\frac{3t}{2(b-a)}$ ($t$에 1차), $E_H$는 $t$에 2차. $E_H > E_B\iff t > \frac34n(b-a)$. $S_n\le n(b-a)$이므로 실제로는 $t\in(\frac34n(b-a),\ n(b-a)]$ — **최대 가능 편차에 가까운 큰 $t$에서는 Hoeffding이 유리**하다.
+3. **작은 $t$** ($t\ll\sigma^2/(b-a){}$): $E_B\approx t^2/(2\sigma^2)$. $E_B/E_H\approx\dfrac{n(b-a)^2}{4\sigma^2}$ — 분산이 최악값보다 작을수록 Bernstein이 **지수적으로** 강하다. Hoeffding은 범위만 보고 항마다 분산을 최악값 $(b-a)^2/4$로 취급하기 때문이다.
+4. **큰 $t$** ($t\gg\sigma^2/(b-a){}$): $E_B\approx\frac{3t}{2(b-a)}$ ($t$에 1차), $E_H$는 $t$에 2차. $E_H > E_B\iff t > \frac34n(b-a)$. $S_n\le n(b-a)$이므로 실제로는 $t\in(\frac34n(b-a),\ n(b-a)]$ — **최대 가능 편차에 가까운 큰 $t$에서는 Hoeffding이 유리**하다.
 
 🔢 (보충, 계산으로 확인) $X_i\sim\text{Bernoulli}(0.01)$, $n=1000$, $t=20$ (평균 10에서 20 이상 벗어날 확률): $\sigma^2=9.9$.
 - Hoeffding: $e^{-2\cdot400/1000}=0.449$
@@ -608,7 +608,7 @@ $$\mathbb E\lvert Y\rvert^k\le M^{k-2}\,\mathbb E Y^2\le\frac{k!}{2}\Big(\frac M
 **내 풀이 점검**
 - ✅ (a)–(f) 흐름과 계산 모두 맞다. (c)에서 $\mathbb E X=0$을 두 번 쓴 곳을 표시한 것, (e)의 $L''$ 계산, (f)의 Taylor 모두 좋다.
 - ⚠ (b) $f''(x)=\lambda^2e^{\lambda x} > 0$이라고 씀 → $\lambda=0$이면 0이므로 **$\ge0$** (볼록성에는 $\ge0$이면 충분).
-- ⚠ (d) "$b-a > -a > 0$"이라고 씀 → $a=0$일 수 있으므로 **$-a\ge0$**, 그리고 $b-a\ge-a$ (∵ $b\ge0$). 결론 $p\in[0,1]$은 같다.
+- ⚠ (d) " $b-a > -a > 0$"이라고 씀 → $a=0$일 수 있으므로 **$-a\ge0$**, 그리고 $b-a\ge-a$ (∵ $b\ge0$). 결론 $p\in[0,1]$은 같다.
 
 ### hw1 2 Bernstein vs Hoeffding
 
@@ -622,11 +622,11 @@ $$\mathbb E\lvert Y\rvert^k\le M^{k-2}\,\mathbb E Y^2\le\frac{k!}{2}\Big(\frac M
 
 **(a)** $Y_i=X_i-\mathbb E X_i$는 각각 $X_i$만의 함수이므로 $Y_1,\dots,Y_n$은 독립이다. $\mathbb E Y_i=\mathbb E X_i-\mathbb E X_i=0$. $a\le X_i\le b$ a.s.에서 기댓값을 취하면 $a\le\mathbb E X_i\le b$. 따라서 $Y_i=X_i-\mathbb E X_i\in[a-b,\ b-a]$, 즉 $\lvert Y_i\rvert\le b-a$ a.s. → **$M=b-a$**.
 
-**(b)** 임의의 상수 $c$에 대해 $\mathbb E(Z-c)^2=\operatorname{Var}Z+(\mathbb E Z-c)^2\ge\operatorname{Var}Z$ [T7]. $c=\frac{a+b}2$로 두면 $Z\in[a,b]$에서 $\lvert Z-\frac{a+b}2\rvert\le\frac{b-a}2$이므로
+**(b)** 임의의 상수 $c$에 대해 $\mathbb E(Z-c)^2=\mathop{\mathrm{Var}}\nolimits Z+(\mathbb E Z-c)^2\ge\mathop{\mathrm{Var}}\nolimits Z$ [T7]. $c=\frac{a+b}2$로 두면 $Z\in[a,b]$에서 $\lvert Z-\frac{a+b}2\rvert\le\frac{b-a}2$이므로
 
-$$\operatorname{Var}Z=\mathbb E(Z-\mathbb EZ)^2\le\mathbb E\Big(Z-\frac{a+b}2\Big)^2\le\frac{(b-a)^2}4 .$$
+$$\mathop{\mathrm{Var}}\nolimits Z=\mathbb E(Z-\mathbb EZ)^2\le\mathbb E\Big(Z-\frac{a+b}2\Big)^2\le\frac{(b-a)^2}4 .$$
 
-각 $X_i$에 적용하면 $\sigma^2=\sum\operatorname{Var}X_i\le\frac{n(b-a)^2}4$. ($\operatorname{Var}Y_i=\operatorname{Var}X_i$이므로 Bernstein의 $\sigma^2$과 같다.)
+각 $X_i$에 적용하면 $\sigma^2=\sum\mathop{\mathrm{Var}}\nolimits X_i\le\frac{n(b-a)^2}4$. ($\mathop{\mathrm{Var}}\nolimits Y_i=\mathop{\mathrm{Var}}\nolimits X_i$이므로 Bernstein의 $\sigma^2$과 같다.)
 
 **(c)** Bernstein에 $M=b-a$를 넣으면
 
@@ -640,24 +640,24 @@ $$\Pr(S_n\ge t)\le\exp\Big(-\frac{t^2}{\frac12n(b-a)^2+\frac23(b-a)t}\Big).$$
 
 **(e)** 실제 $\sigma^2$을 알 때, Bernstein이 더 강할 조건은 지수 비교로
 
-$$\frac{t^2}{2\sigma^2+\frac23(b-a)t} > \frac{t^2}{\frac12n(b-a)^2}\iff2\sigma^2+\frac23(b-a)t < \frac12n(b-a)^2\iff\sigma^2 < \frac{n(b-a)^2}4-\frac{(b-a)t}3 .$$
+$$\frac{t^2}{2\sigma^2+\frac23(b-a)t} \gt  \frac{t^2}{\frac12n(b-a)^2}\iff2\sigma^2+\frac23(b-a)t \lt  \frac12n(b-a)^2\iff\sigma^2 \lt  \frac{n(b-a)^2}4-\frac{(b-a)t}3 .$$
 
-$\sigma^2\ge0$이므로 이 조건이 가능하려면 우변이 양수, 즉 **$t < \frac34n(b-a)$**여야 한다.
+$\sigma^2\ge0$이므로 이 조건이 가능하려면 우변이 양수, 즉 **$t < \frac34n(b-a)$** 여야 한다.
 
 **(f)** $t\ll\sigma^2/(b-a)$이면 $\frac23(b-a)t\ll\frac23\sigma^2$이라 분모 ≈ $2\sigma^2$, 따라서 $\Pr(S_n\ge t)\lesssim\exp\big(-\frac{t^2}{2\sigma^2}\big)$. Hoeffding 지수 $\frac{2t^2}{n(b-a)^2}$과 비교하면 비율이 $\frac{n(b-a)^2}{4\sigma^2}\ge1$이고, 분산이 작을수록 Bernstein이 지수적으로 강하다. Hoeffding은 범위만 써서 각 항의 분산을 최악값 $(b-a)^2/4$로 취급하기 때문이다. 반대로 $t\gg\sigma^2/(b-a)$이면 분모 ≈ $\frac23(b-a)t$라 Bernstein 지수는 $\frac{3t}{2(b-a)}$로 $t$에 1차 (지수 꼬리)이고, Hoeffding 지수는 $t$에 2차다. 따라서 충분히 큰 $t$ (정확히는 $t > \frac34n(b-a)$, 단 $S_n\le n(b-a)$라 그 이하 범위)에서는 **Hoeffding이 유리**하다.
 
 **채점 포인트**
 - (a) 독립·평균 0·유계를 **각각** 확인 ($\mathbb E X_i\in[a,b]$를 써야 $\lvert Y_i\rvert\le b-a$가 나옴)
-- (b) "$\operatorname{Var}Z\le\mathbb E(Z-c)^2$"의 이유 한 줄
+- (b) " $\mathop{\mathrm{Var}}\nolimits Z\le\mathbb E(Z-c)^2$"의 이유 한 줄
 - (c) bound가 $\sigma^2$에 대해 단조라서 상계를 넣을 수 있다는 말
-- (d) "$t > 0$이면"
+- (d) " $t > 0$이면"
 - (e) 부등호 방향, 엄격한 $<$, $t < \frac34 n(b-a)$
 - (f) 두 영역 각각의 근사식과 "왜" (분산 정보 vs 범위만)
 
 **내 풀이 점검**
 - ✅ (a)(b)(c)(e)(f) 모두 결론이 맞다. (b)에서 $c=\mathbb EZ$로 두고 전개한 방식도 좋다.
-- ⚠ (d) "$t < 0$: Bernstein이 더 좋은 상계"라고 씀 → 꼬리부등식은 **$t > 0$에서만** 의미가 있다 (Chernoff의 $\lambda^\star > 0$이 $t > 0$을 요구). 이 줄은 지우고 "모든 $t > 0$에서 Hoeffding이 더 강하다"만 남긴다.
-- ⚠ (e) "$t\le\frac34n(b-a)$" → **$t < \frac34n(b-a)$** (등호면 우변이 0이라 $\sigma^2 < 0$이 되어 불가능).
+- ⚠ (d) " $t < 0$: Bernstein이 더 좋은 상계"라고 씀 → 꼬리부등식은 **$t > 0$에서만** 의미가 있다 (Chernoff의 $\lambda^\star > 0$이 $t > 0$을 요구). 이 줄은 지우고 "모든 $t > 0$에서 Hoeffding이 더 강하다"만 남긴다.
+- ⚠ (e) " $t\le\frac34n(b-a)$" → **$t < \frac34n(b-a)$** (등호면 우변이 0이라 $\sigma^2 < 0$이 되어 불가능).
 
 **변형** → [V6](#v6-bernoulli에서-bernstein-vs-hoeffding)
 
@@ -749,8 +749,8 @@ Chernoff의 지수 $g(\lambda)=-\lambda t+\mu(e^\lambda-1)$을 미분해 최소�
 
 `●●` (a) 독립인 $X_i$가 각각 평균 $\mu_i$, $\sigma_i$-sub-Gaussian이면 $\sum X_i$가 $\sqrt{\sum\sigma_i^2}$-sub-Gaussian임을 보여라.
 (b) (a)에서 $\Pr\big(\sum(X_i-\mu_i)\ge t\big)\le\exp\big(-t^2/(2\sum\sigma_i^2)\big)$을 보여라.
-(c) $\sigma$-sub-Gaussian이면 $\operatorname{Var}X\le\sigma^2$임을 보여라.
-(d) (c)와 Lemma 1.5로 hw1 #2(b)의 $\operatorname{Var}X\le(b-a)^2/4$를 다시 얻어라.
+(c) $\sigma$-sub-Gaussian이면 $\mathop{\mathrm{Var}}\nolimits X\le\sigma^2$임을 보여라.
+(d) (c)와 Lemma 1.5로 hw1 #2(b)의 $\mathop{\mathrm{Var}}\nolimits X\le(b-a)^2/4$를 다시 얻어라.
 
 <details><summary>전략 힌트</summary>
 
@@ -763,18 +763,18 @@ Chernoff의 지수 $g(\lambda)=-\lambda t+\mu(e^\lambda-1)$을 미분해 최소�
 
 (b) Chernoff: $\le\exp(-st+\frac{s^2}2\sum\sigma_i^2)$, $s^\star=t/\sum\sigma_i^2$.
 
-(c) $Y=X-\mu$: $\mathbb E e^{sY}=1+s\,\mathbb EY+\frac{s^2}2\mathbb EY^2+o(s^2)=1+\frac{s^2}2\operatorname{Var}X+o(s^2)$, 그리고 $e^{\sigma^2s^2/2}=1+\frac{\sigma^2s^2}2+o(s^2)$. 부등식에서 1을 빼고 $s^2/2$로 나눈 뒤 $s\to0$: $\operatorname{Var}X\le\sigma^2$.
+(c) $Y=X-\mu$: $\mathbb E e^{sY}=1+s\thinspace\mathbb EY+\frac{s^2}2\mathbb EY^2+o(s^2)=1+\frac{s^2}2\mathop{\mathrm{Var}}\nolimits X+o(s^2)$, 그리고 $e^{\sigma^2s^2/2}=1+\frac{\sigma^2s^2}2+o(s^2)$. 부등식에서 1을 빼고 $s^2/2$로 나눈 뒤 $s\to0$: $\mathop{\mathrm{Var}}\nolimits X\le\sigma^2$.
 
-(d) Lemma 1.5: $[a,b]$ 값이면 $X-\mathbb EX$는 $\frac{b-a}2$-sub-Gaussian → (c)로 $\operatorname{Var}X\le\frac{(b-a)^2}4$.
+(d) Lemma 1.5: $[a,b]$ 값이면 $X-\mathbb EX$는 $\frac{b-a}2$-sub-Gaussian → (c)로 $\mathop{\mathrm{Var}}\nolimits X\le\frac{(b-a)^2}4$.
 
 </details>
 
 ### V5 최댓값의 기댓값 bound
 
 `●●●` $X_1,\dots,X_n$이 각각 평균 0, $\sigma$-sub-Gaussian이다 (**독립일 필요 없음**).
-(a) $\lambda > 0$에 대해 $\exp\big(\lambda\,\mathbb E\max_iX_i\big)\le n\,e^{\lambda^2\sigma^2/2}$임을 보여라.
+(a) $\lambda > 0$에 대해 $\exp\big(\lambda\thinspace\mathbb E\max_iX_i\big)\le n\thinspace e^{\lambda^2\sigma^2/2}$임을 보여라.
 (b) $\mathbb E\max_iX_i\le\sigma\sqrt{2\log n}$을 보여라.
-(c) $\Pr(\max_iX_i\ge t)\le n\,e^{-t^2/(2\sigma^2)}$을 보여라.
+(c) $\Pr(\max_iX_i\ge t)\le n\thinspace e^{-t^2/(2\sigma^2)}$을 보여라.
 
 <details><summary>전략 힌트</summary>
 
@@ -797,7 +797,7 @@ Chernoff의 지수 $g(\lambda)=-\lambda t+\mu(e^\lambda-1)$을 미분해 최소�
 
 `●●` $X_i\overset{\text{iid}}{\sim}\text{Bernoulli}(p)$, $S_n=\sum(X_i-p)$.
 (a) Hoeffding bound와 유계형 Bernstein bound ($M=1$)를 쓰라.
-(b) 상대 편차 $t=c\,np$ ($c > 0$ 고정)에서 두 지수를 구하라.
+(b) 상대 편차 $t=c\thinspace np$ ($c > 0$ 고정)에서 두 지수를 구하라.
 (c) $np=\lambda$로 고정하고 $p\to0$ (희귀 사건)일 때 어느 bound가 쓸모 있는가?
 
 <details><summary>전략 힌트</summary>
@@ -817,7 +817,7 @@ $\lvert X_i-p\rvert\le\max(p,1-p)\le1$, $\sigma^2=np(1-p)$. (b)에서 두 지수
 
 ### V7 유한 함수집합의 uniform bound
 
-`●●` 손실 $0\le L\le1$, 함수집합 $\mathcal F=\{f_1,\dots,f_K\}$, 학습 데이터는 iid $n$개. $\hat f\in\mathcal F$는 $\widehat R_{\text{train}}$을 최소화하는 함수(ERM), $f^\star=\arg\min_{f\in\mathcal F}R(f)$.
+`●●` 손실 $0\le L\le1$, 함수집합 $\mathcal F=\lbrace f_1,\dots,f_K\rbrace$, 학습 데이터는 iid $n$개. $\hat f\in\mathcal F$는 $\widehat R_{\text{train}}$을 최소화하는 함수(ERM), $f^\star=\arg\min_{f\in\mathcal F}R(f)$.
 (a) $\Pr\big(\max_k\lvert\widehat R_{\text{train}}(f_k)-R(f_k)\rvert > \epsilon\big)\le2Ke^{-2n\epsilon^2}$.
 (b) 확률 $1-\delta$ 이상으로 $\lvert R(\hat f)-\widehat R_{\text{train}}(\hat f)\rvert\le\epsilon_n:=\sqrt{\log(2K/\delta)/(2n)}$.
 (c) 같은 사건 위에서 $R(\hat f)\le R(f^\star)+2\epsilon_n$.
@@ -873,7 +873,7 @@ Hoeffding 양측: $\Pr(\lvert\bar X_n-\mu\rvert > \epsilon)\le2\exp\big(-\frac{2
 
 | ☐ | 증명 | 뼈대 | 위치 |
 | --- | --- | --- | --- |
-| ☐ | Markov (일반) | $t\,I(X\ge t)\le X$ → 기댓값 | [2](#2-markov-부등식) |
+| ☐ | Markov (일반) | $t\thinspace I(X\ge t)\le X$ → 기댓값 | [2](#2-markov-부등식) |
 | ☐ | Chebyshev | $(X-\mu)^2$에 Markov | [3](#3-chebyshev-부등식) |
 | ☐ | Chernoff | $\lambda > 0$, $e^{\lambda X-\lambda t}\ge1$ ⟺ $X\ge t$, Markov | [4.1](#41-chernoff-bound) |
 | ☐ | Mills | 대칭 → $s/t\ge1$ 곱하기 → $u=s^2/2$ | [4.2](#42-mills-부등식) |
@@ -909,7 +909,7 @@ $X_i-\mathbb EX_i$에 쓴다. 범위 길이가 $b_i-a_i$로 그대로라 bound�
 </details>
 <details><summary>5. Bernstein 적률조건에서 유계형으로 갈 때 M은 어떻게 바뀌나?</summary>
 
-$M\to M/3$, $v_i=\operatorname{Var}Y_i$.
+$M\to M/3$, $v_i=\mathop{\mathrm{Var}}\nolimits Y_i$.
 
 </details>
 <details><summary>6. Bernstein이 Hoeffding보다 강해지는 t의 필요조건은?</summary>
