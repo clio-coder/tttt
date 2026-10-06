@@ -6,12 +6,13 @@
 
 ## 장 노트
 
-| 장 | 노트 | 수업일 | 원본 | 주제 | 핵심 증명 | hw1 |
+| 장 | 노트 | 수업일 | 원본 | 주제 | 핵심 증명 | 숙제 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | [집중부등식](ch1%20집중부등식.md) | 9/3 | `lecture_ch1` 12쪽 | Markov, Chebyshev, Chernoff, Mills, Hoeffding, Bernstein, sub-Gaussian | Hoeffding's lemma, Hoeffding, 대칭화, Bernstein vs Hoeffding | #1, #2, #4 |
-| 2 | [모수모형과 지수족](ch2%20모수모형과%20지수족.md) | 9/8 | `lecture_ch2` 11쪽 | 일변량 분포, 지수족, 자연모수공간, 누적생성함수, GLM, 최대 엔트로피 | Theorem 2.1, 자연모수공간의 볼록성 | #3, #5 |
-| 3 | [확률변수의 수렴](ch3%20확률변수의%20수렴.md) | 9/10 | `lecture_ch3` 6쪽 + 보충 2쪽 | a.s., p, qm, d 수렴, CMT, Slutsky, CLT, Borel–Cantelli | p ⟹ d, 표본최댓값, a.s. 충분조건 | #6, #7 |
-| 4 | [자료축약](ch4%20자료축약.md) | 9/15 | `lecture_ch4` 4쪽 | 충분통계량, 분해정리, 우도, 최소충분통계량 | 분해정리, 우도비 판정법 | #8, #9 |
+| 1 | [집중부등식](ch1%20집중부등식.md) | 9/3 | `lecture_ch1` 12쪽 | Markov, Chebyshev, Chernoff, Mills, Hoeffding, Bernstein, sub-Gaussian | Hoeffding's lemma, Hoeffding, 대칭화, Bernstein vs Hoeffding | hw1 #1, #2, #4 |
+| 2 | [모수모형과 지수족](ch2%20모수모형과%20지수족.md) | 9/8 | `lecture_ch2` 11쪽 | 일변량 분포, 지수족, 자연모수공간, 누적생성함수, GLM, 최대 엔트로피 | Theorem 2.1, 자연모수공간의 볼록성 | hw1 #3, #5 |
+| 3 | [확률변수의 수렴](ch3%20확률변수의%20수렴.md) | 9/10 | `lecture_ch3` 6쪽 + 보충 2쪽 | a.s., p, qm, d 수렴, CMT, Slutsky, CLT, Borel–Cantelli | p ⟹ d, 표본최댓값, a.s. 충분조건 | hw1 #6, #7 |
+| 4 | [자료축약](ch4%20자료축약.md) | 9/15 | `lecture_ch4` 4쪽 | 충분통계량, 분해정리, 우도, 최소충분통계량 | 분해정리, 우도비 판정법 | hw1 #8, #9 |
+| 5.3–5.5 | [최대가능도추정 (MLE)](ch5.3-5.5%20최대가능도추정.md) | 9/22, 9/29, 10/6 | `lecture_ch5.3` 5쪽 + `ch5.4` 8쪽 + `ch5.5` 11쪽 (세 강의를 한 노트로) | MLE 존재·유일성, 프로파일 가능도, 불변성, 지수족 MLE, Newton·EM 등 알고리즘, 일치성, 점근정규성, Cramér–Rao, 효율 | 존재·유일성, EM 단조성, 일치성, 점근정규성, Cramér–Rao | hw2 전체 |
 
 ## 튜터링 노트 (수업 외, 2순위)
 
@@ -71,5 +72,5 @@
 
 ## 다음 차례
 
-- `lecture_ch5_point_estimation.pdf` (10쪽), `lecture_ch5.2_method_of_moments.pdf` (5쪽) — 중간고사 1 (10/12) 범위. 같은 규칙으로 정리하고 도구상자에 행을 추가한다.
-- 숙제 2가 나오면 hw1과 같은 방식으로 분석해 시험 포인트 순위를 갱신한다.
+- `수업자료/lecture_ch5.1_point_estimation.pdf` (10쪽), `lecture_ch5.2_method_of_moments.pdf` (5쪽) — 중간고사 1 (10/12) 범위인데 아직 노트가 없다. hw2 #1(c)·#4 (적률법)는 지금은 MLE 노트에 있다.
+- hw2 제출본이 생기면 MLE 노트의 hw2 절에 "내 풀이 점검"을 추가한다.
