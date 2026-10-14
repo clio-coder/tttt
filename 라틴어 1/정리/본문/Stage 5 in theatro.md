@@ -1,44 +1,48 @@
 # Stage 5 · in theātrō
 
-> **강의:** L08 (9/28) · 9/30 계속 예정
+> **강의:** L08 (9/28) · L09 (9/30)
 > **문법 포인트:** **명사 복수 주격** (1변화 `-ae`, 2변화 `-ī`, 3변화 `-ēs`) · **동사 3인칭 복수 `-nt` / `-unt`** · `sunt` · 형용사 복수 주격
 > → [01 명사 격변화 6절](../문법/01%20명사%20격변화.md) · [02 동사 활용 7절](../문법/02%20동사%20활용.md)
-> **퀴즈:** 9/30 어미 변화 quiz 예고 · **읽기 자료:** [myclc stage-5](https://myclc.co.uk/book-1/stage-5)
+> **퀴즈:** stage 5 quiz (L09, 10분) · **읽기 자료:** [myclc stage-5](https://myclc.co.uk/book-1/stage-5)
 
 ---
 
 ## 1. 어휘
 
-### 1.1 Vocabulary checklist 5 — 필수 암기 ★★★
+### 1.1 Vocabulary checklist 5 — 필수 암기 ★★★ [어휘 p16–20]
 
-> 슬라이드에는 checklist 5가 없다. Cambridge 공식 어휘 테스트 데이터에서 가져왔다.
+> 교수님 배포 `stage 1-6 vocabulary checklist.pdf` 그대로다. **중간고사 범위에 포함된다.** 동사는 현재 1인칭 단수, 부정사, 완료 1인칭 단수 순서다. 전체 목록과 시제별 형태는 [필수 어휘](../필수%20어휘%20Stage%201-6.md)에 있다.
 
-| 사전형 | 품사·변화 | 뜻 | 복수 주격 · 3인칭 복수 |
-| --- | --- | --- | --- |
-| adsum, adesse (adest / adsunt) | 불규칙 | 여기 있다, 와 있다 | adsunt |
-| agricola, -ae, **m.** | 1변화 **남성** | 농부 | agricolae |
-| ambulō, ambulāre (ambulat) | 1활용 | 걷다 | ambulant |
-| audiō, audīre (audit) | 4활용 | 듣다 | audiunt |
-| clāmor, clāmōris, m. | 3변화 | 함성, 소음 | clāmōrēs |
-| contendō, contendere (contendit) | 3활용 | 서두르다 | contendunt |
-| currō, currere (currit) | 3활용 | 달리다 | currunt |
-| fābula, -ae, f. | 1변화 | 연극, 이야기 | fābulae |
-| fēmina, -ae, f. | 1변화 | 여자 | fēminae |
-| hodiē | 부사 | 오늘 | |
-| iuvenis, iuvenis, c. | 3변화 | 젊은이 | iuvenēs |
-| meus, -a, -um | 소유형용사 | 나의 | meī |
-| multus, -a, -um / multī | 형용사 | 많은 / 많은 사람들 | multī |
-| optimus, -a, -um | 형용사 | 최고의, 매우 좋은 | optimī |
-| petō, petere (petit) | 3활용 | 향해 가다, 공격하다 | petunt |
-| plaudō, plaudere (plaudit) | 3활용 | 박수치다 | plaudunt |
-| puella, -ae, f. | 1변화 | 소녀 | puellae |
-| senex, senis, c. | 3변화 | 노인 | senēs |
-| spectō, spectāre (spectat) | 1활용 | 보다, 구경하다 | spectant |
-| stō, stāre (stat) | 1활용 | 서 있다 | stant |
-| turba, -ae, f. | 1변화 | 군중 | turbae |
-| ubi | 의문부사 | 어디에 | |
-| urbs, urbis, f. | 3변화 | 도시 | urbēs |
-| veniō, venīre (venit) | 4활용 | 오다 | veniunt |
+| 사전형 | 뜻 | 변화/활용 |
+| --- | --- | --- |
+| **명사** | | |
+| agricola, agricolae, m. | 농부 | 1변화 명사 |
+| clāmor, clāmōris, m. | 소음, 외침 | 3변화 명사 |
+| fābula, fābulae, f. | 연극, 이야기 | 1변화 명사 |
+| fēmina, fēminae, f. | 여자 | 1변화 명사 |
+| iuvenis, iuvenis, m./f. | 젊은 사람 | 3변화 명사 |
+| puella, puellae, f. | 소녀 | 1변화 명사 |
+| senex, senis, m./f. | 노인 | 3변화 명사 |
+| turba, turbae, f. | 군중 | 1변화 명사 |
+| urbs, urbis, f. | 도시 | 3변화 명사 |
+| **동사** | | |
+| adsum, adesse, adfuī | 있다, 참석하다 | 불규칙 동사 |
+| ambulō, ambulāre, ambulāvī | 걷다 | 1활용 동사 |
+| audiō, audīre, audīvī | 듣다 | 4활용 동사 |
+| contendō, contendere, contendī | 서두르다, 향하다 | 3활용 동사 |
+| currō, currere, cucurrī | 달리다 | 3활용 동사 |
+| petō, petere, petīvī | 향하다, 공격하다, 구하다 | 3활용 동사 |
+| plaudō, plaudere, plausī | 박수치다 | 3활용 동사 |
+| spectō, spectāre, spectāvī | 바라보다, 구경하다 | 1활용 동사 |
+| stō, stāre, stetī | 서다 | 1활용 동사 |
+| veniō, venīre, vēnī | 오다 | 4활용 동사 |
+| **형용사** | | |
+| meus, mea, meum | 나의 | 1·2변화 소유형용사 |
+| multus, multa, multum | 많은 | 1·2변화 형용사 |
+| optimus, optima, optimum | 매우 좋은, 최고의 | 1·2변화 형용사 |
+| **기타** | | |
+| hodiē | 오늘 | 부사 |
+| ubi? | 어디에?, 어디에서? | 의문부사 |
 
 ### 1.2 그 밖의 단어 (지문 등장 순)
 
@@ -55,9 +59,9 @@
 | theātrum, -ī, n. | 2변화 중성 | 극장 | |
 | nauta, -ae, **m.** | 1변화 **남성** | 선원 | nautae |
 | pāstor, pāstōris, m. | 3변화 | 목동 | pāstōrēs |
-| dē (+abl.) | 전치사 | ~에서 아래로; ~에 관하여 | dē monte |
+| dē (+abl.) | 전치사 | \~에서 아래로; \~에 관하여 | dē monte |
 | mōns, montis, m. | 3변화 | 산 | |
-| per (+acc.) | 전치사 | ~을 통과하여, ~을 따라 | per portam |
+| per (+acc.) | 전치사 | \~을 통과하여, \~을 따라 | per portam · checklist 6 |
 | porta, -ae, f. | 1변화 | 성문 | |
 | ruō, ruere (ruit) | 3활용 | 돌진하다, 몰려가다 | |
 | nūntius, -ī, m. | 2변화 | 전령 | |
@@ -74,7 +78,7 @@
 | vexō, vexāre (vexat) | 1활용 | 괴롭히다, 귀찮게 하다 | |
 | dīcō, dīcere (dīcit) | 3활용 | 말하다 | |
 | omnis, omne | 3변화 형용사 | 모든 | omnēs |
-| absum, abesse (abest) | 불규칙 | 없다, 자리에 없다 | |
+| absum, abesse (abest) | 불규칙 | 없다, 자리에 없다 | checklist 6 |
 | columba, -ae, f. | 1변화 | 비둘기 (애칭: 자기야) | |
 | dēliciae, -ārum, f. pl. | 1변화 복수 | 기쁨, 사랑하는 사람 | 형태는 복수, 뜻은 한 사람 |
 | spectātor, spectātōris, m. | 3변화 | 관객 | spectātōrēs |
@@ -83,9 +87,9 @@
 | scurrīlis, -e | 3변화 형용사 | 저속한 | |
 | perterritus, -a, -um | 형용사 | 겁에 질린 | perterritī |
 | persōnātus, -a, -um | 형용사 | 가면을 쓴 | |
-| subitō | 부사 | 갑자기 | |
+| subitō | 부사 | 갑자기 | checklist 6 |
 | fūnambulus, -ī, m. | 2변화 | 줄타기 곡예사 | |
-| nēmō | 대명사 | 아무도 ~않다 | |
+| nēmō | 대명사 | 아무도 \~않다 | |
 
 ### 1.3 새 등장인물
 
@@ -117,7 +121,7 @@
 
 ## 3. 지문
 
-### 3.1 āctōrēs — 교재 72쪽 · 과제 ✅ 9/23·9/28 · [L08 p45–46] · [Explorer](https://files.cambridgescp.com/MyCLC/Explorers/UK5nexus.html?file=w5U05EX001)
+### 3.1 āctōrēs — 교재 72쪽 · 과제 ✅ 9/23·9/28 · [L08 p45–46 · L09 p18–19] · [Explorer](https://files.cambridgescp.com/MyCLC/Explorers/UK5nexus.html?file=w5U05EX001)
 
 **줄거리:** 축제일에 폼페이 사람들이 모두 일을 쉬고, 유명 배우 악티우스와 소렉스의 연극을 보러 극장으로 몰려간다. 그루미오만 집에 남는다.
 
@@ -127,7 +131,7 @@
 | --- | --- | --- | --- |
 | magna turba | magnus + turba | 형용사 여성 주격 + 1변화 **단수** 주격 | 큰 군중 |
 | fēminae / puellae | fēmina / puella | 1변화 복수 주격 | 여자들 / 소녀들 |
-| sunt | sum | 3인칭 복수 | ~있다 |
+| sunt | sum | 3인칭 복수 | \~있다 |
 | senēs / iuvenēs | senex / iuvenis | 3변화 복수 주격 | 노인들 / 젊은이들 |
 | servī | servus | 2변화 복수 주격 | 노예들 |
 | labōrant / dormiunt | labōrō / dormiō | 1활용 / 4활용 3인칭 복수 | 일한다 / 잔다 |
@@ -242,7 +246,7 @@
 
 ---
 
-### 3.3 in theātrō — 교재 76쪽 (Practising the Language) · 과제 ✅ 9/30 · 슬라이드 없음 · [Explorer](https://files.cambridgescp.com/MyCLC/Explorers/UK5nexus.html?file=w5U05EX003)
+### 3.3 in theātrō — 교재 76쪽 (Practising the Language) · 과제 ✅ 9/30 · [L09 p20–21] · [Explorer](https://files.cambridgescp.com/MyCLC/Explorers/UK5nexus.html?file=w5U05EX003)
 
 **줄거리:** 극장에서 가면을 쓴 배우 악티우스의 공연이 한창인데, 줄타기 곡예사 프루덴스가 왔다는 소식에 관객이 모두 빠져나간다. 악티우스도 곡예를 구경하러 간다.
 
@@ -262,7 +266,7 @@
 | audiunt | audiō | 4활용 3인칭 복수 | 듣는다 |
 | Prūdentem | Prūdēns | 3변화 대격 | 프루덴스를 |
 | currunt | currō | 3활용 3인칭 복수 | 달린다 |
-| nēmō | nēmō | 대명사 주격 | 아무도 ~않다 |
+| nēmō | nēmō | 대명사 주격 | 아무도 \~않다 |
 | manet | maneō | 2활용 3인칭 단수 | 남아 있다 |
 | fūnambulum | fūnambulus | 2변화 대격 | 줄타기 곡예사를 |
 

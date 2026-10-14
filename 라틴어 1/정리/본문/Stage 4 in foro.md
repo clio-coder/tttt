@@ -9,32 +9,36 @@
 
 ## 1. 어휘
 
-### 1.1 Vocabulary checklist 4 — 필수 암기 ★★★
+### 1.1 Vocabulary checklist 4 — 필수 암기 ★★★ [어휘 p12–15]
 
-> 슬라이드에는 checklist 4가 없다. Cambridge 공식 어휘 테스트 데이터에서 가져왔다.
+> 교수님 배포 `stage 1-6 vocabulary checklist.pdf` 그대로다. **중간고사 범위에 포함된다.** 동사는 현재 1인칭 단수, 부정사, 완료 1인칭 단수 순서다. 전체 목록과 시제별 형태는 [필수 어휘](../필수%20어휘%20Stage%201-6.md)에 있다.
 
-| 사전형 | 품사·변화 | 뜻 |
+| 사전형 | 뜻 | 변화/활용 |
 | --- | --- | --- |
-| agō, agere (agit) | 3활용 | 하다; (연극을) 공연하다 |
-| ānulus, -ī, m. | 2변화 | 반지 |
-| coquō, coquere (coquit) | 3활용 | 요리하다 |
-| cūr? | 의문부사 | 왜? |
-| ē (+abl.) | 전치사 | ~에서 (밖으로) |
-| ecce! | 감탄사 | 봐라! |
-| ego | 인칭대명사 | 나 (대격 mē) |
-| ēheu! | 감탄사 | 아이고! 이런! |
-| forum, -ī, n. | 2변화 중성 | 포룸, 광장 |
-| habeō, habēre (habet) | 2활용 | 가지다 |
-| inquit | 동사 | 말한다 |
-| pecūnia, -ae, f. | 1변화 | 돈 |
-| perterritus, -a, -um | 형용사 | 겁에 질린 |
-| quaerō, quaerere (quaerit) | 3활용 | 찾다, 구하다 |
-| quis? | 의문대명사 | 누구? |
-| reddō, reddere (reddit) | 3활용 | 돌려주다 |
-| satis | 부사 | 충분히 |
-| sed | 접속사 | 그러나 |
-| tū | 인칭대명사 | 너 (대격 tē) |
-| vocō, vocāre (vocat) | 1활용 | 부르다 |
+| **명사** | | |
+| ānulus, ānulī, m. | 반지 | 2변화 명사 |
+| forum, forī, n. | 포룸, 광장, 시장 | 2변화 명사 |
+| pecūnia, pecūniae, f. | 돈, 재산 | 1변화 명사 |
+| **동사** | | |
+| agō, agere, ēgī | 하다, 행하다 | 3활용 동사 |
+| coquō, coquere, coxī | 요리하다 | 3활용 동사 |
+| habeō, habēre, habuī | 가지다 | 2활용 동사 |
+| inquit | 말하다 | 불규칙·결여 동사 |
+| quaerō, quaerere, quaesīvī | 찾다, 구하다, 묻다 | 3활용 동사 |
+| reddō, reddere, reddidī | 돌려주다 | 3활용 동사 |
+| vocō, vocāre, vocāvī | 부르다 | 1활용 동사 |
+| **형용사** | | |
+| perterritus, perterrita, perterritum | 겁을 먹은 | 1·2변화 형용사 |
+| **기타** | | |
+| cūr | 왜? | 의문부사 |
+| ē, ex | \~로부터, \~에서부터 | 전치사 (+탈격) |
+| ecce! | 보라!, 자! | 감탄사 |
+| ego | 나 | 인칭대명사 |
+| ēheu! | 아!, 아이고! | 감탄사 |
+| quis? (quid?) | 누구? (무엇?) | 의문대명사 |
+| satis | 충분히 | 부사 |
+| sed | 그러나, 하지만 | 접속사 |
+| tū | 너 | 인칭대명사 |
 
 ### 1.2 그 밖의 단어 (지문 등장 순)
 
@@ -64,10 +68,10 @@
 | multus, -a, -um | 형용사 | 많은 | multam pecūniam |
 | mendāx, mendācis, m. | 3변화 | 거짓말쟁이 | |
 | meus, -a, -um | 소유형용사 | 나의 | checklist 5 |
-| tuus, -a, -um | 소유형용사 | 너의 | |
+| tuus, -a, -um | 소유형용사 | 너의 | checklist 6 |
 | testis, testis, m. | 3변화 | 증인 | |
 | accūsō, accūsāre (accūsat) | 1활용 | 고발하다 | |
-| rēs, reī, f. | 5변화 (미학습) | 일, 사건 | rem probat 사건을 입증하다 |
+| rēs, reī, f. | 5변화 (미학습) | 일, 사건 | rem probat 사건을 입증하다 · checklist 6 |
 | probō, probāre (probat) | 1활용 | 증명하다 | |
 | videō, vidēre (videt) | 2활용 | 보다 | |
 | cēlō, cēlāre (cēlat) | 1활용 | 숨기다 | |
@@ -76,7 +80,7 @@
 | mē / tē | 인칭대명사 대격 | 나를 / 너를 | Grumiō et leō |
 | dīcō, dīcere (dīcit) | 3활용 | 말하다 | quid tū dīcis? |
 | magnificus, -a, -um | 형용사 | 훌륭한, 멋진 | |
-| vēndō, vēndere (vēndit) | 3활용 | 팔다 | 모델 문장 |
+| vēndō, vēndere (vēndit) | 3활용 | 팔다 | 모델 문장 · checklist 6 |
 | discēdō, discēdere (discēdit) | 3활용 | 떠나다 | Stage 5 지문 |
 | ēbrius, -a, -um | 형용사 | 술 취한 | Stage 4 어휘 |
 | ita vērō | 관용 | 그렇다 (yes) | Stage 4 어휘 |
@@ -94,7 +98,7 @@
 
 > 전체 표는 [02 동사 활용 6절](../문법/02%20동사%20활용.md)에 있다.
 
-| 1인칭 (ego ~ō) | 2인칭 질문 (quid tū ~s?) | 해석 |
+| 1인칭 (ego \~ō) | 2인칭 질문 (quid tū \~s?) | 해석 |
 | --- | --- | --- |
 | Grumiō: ego sum coquus. ego cēnam coqu**ō**. | Quīntus: quid tū coqu**is**? | 나는 요리사다. 나는 저녁을 요리한다. / 너는 무엇을 요리하니? |
 | Caecilius: ego sum argentārius. ego pecūniam habe**ō**. | Lūcia: quid tū habē**s**? | 나는 은행가다. 나는 돈을 가지고 있다. / 너는 무엇을 가지고 있니? |
@@ -118,7 +122,7 @@
 | --- | --- | --- | --- |
 | argentāriam | argentāria | 1변화 대격 | 은행 가판대를 |
 | nāvem | nāvis | 3변화 대격 | 배를 |
-| ★sum | sum | 1인칭 단수 | 나는 ~이다 |
+| ★sum | sum | 1인칭 단수 | 나는 \~이다 |
 | ★quaerō | quaerō | 3활용 1인칭 단수 | 나는 찾는다 |
 | ★quaeris | quaerō | 3활용 2인칭 단수 | 너는 찾는다 |
 | ★habēs | habeō | 2활용 2인칭 단수 | 너는 가지고 있다 |
@@ -225,12 +229,12 @@
 | 본문 형태 | 원형 | 분석 | 뜻 |
 | --- | --- | --- | --- |
 | Herculem | Herculēs | 3변화 대격 | 헤르쿨레스를 |
-| ★es | sum | 2인칭 단수 | 너는 ~이다, 있다 |
+| ★es | sum | 2인칭 단수 | 너는 \~이다, 있다 |
 | tē | tū | 대격 | 너를 |
 | ★verberās | verberō | 1활용 2인칭 | 너는 때린다 |
 | quis | quis | 의문대명사 주격 | 누가 |
 | ★habēs | habeō | 2활용 2인칭 | 너는 가지고 있다 |
-| ★sum | sum | 1인칭 | 나는 ~이다 |
+| ★sum | sum | 1인칭 | 나는 \~이다 |
 | mē | ego | 대격 | 나를 |
 | ★teneō | teneō | 2활용 1인칭 | 나는 쥐고 있다 |
 | ★verberō | verberō | 1활용 1인칭 | 나는 때린다 |

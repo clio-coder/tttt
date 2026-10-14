@@ -1,7 +1,7 @@
 # Stage 1 · Caecilius
 
 > **강의:** L01 (9/2) · L02 (9/7) 앞부분
-> **문법 포인트:** `est` 계사(~이다) / 존재(~에 있다) · 주격 · `in` + 장소(탈격) · 현재형 3인칭 단수 `-t`
+> **문법 포인트:** `est` 계사(\~이다) / 존재(\~에 있다) · 주격 · `in` + 장소(탈격) · 현재형 3인칭 단수 `-t`
 > → [04 문장 구조](../문법/04%20문장%20구조·전치사·의문사.md) · [02 동사 활용](../문법/02%20동사%20활용.md) · [01 명사 격변화](../문법/01%20명사%20격변화.md)
 > **읽기 자료:** [myclc stage-1](https://myclc.co.uk/book-1/stage-1)
 
@@ -9,22 +9,27 @@
 
 ## 1. 어휘
 
-### 1.1 Vocabulary checklist 1 — 필수 암기 ★★★ [L02 p9]
+### 1.1 Vocabulary checklist 1 — 필수 암기 ★★★ [어휘 p2–3]
 
-| 사전형 | 품사·변화 | 뜻 |
+> 교수님 배포 `stage 1-6 vocabulary checklist.pdf` 그대로다. **중간고사 범위에 포함된다.** 동사는 현재 1인칭 단수, 부정사, 완료 1인칭 단수 순서다. 전체 목록과 시제별 형태는 [필수 어휘](../필수%20어휘%20Stage%201-6.md)에 있다.
+
+| 사전형 | 뜻 | 변화/활용 |
 | --- | --- | --- |
-| canis, canis, c. | 명사 3변화 | 개 |
-| coquus, -ī, m. | 명사 2변화 | 요리사 |
-| sum, esse (est) | 동사 불규칙 | ~이다, 있다 |
-| fīlia, -ae, f. | 명사 1변화 | 딸 |
-| fīlius, -ī, m. | 명사 2변화 | 아들 |
-| hortus, -ī, m. | 명사 2변화 | 정원 |
-| in (+abl.) | 전치사 | ~안에, ~위에 |
-| labōrō, labōrāre (labōrat) | 동사 1활용 | 일하다 |
-| māter, mātris, f. | 명사 3변화 | 어머니 |
-| pater, patris, m. | 명사 3변화 | 아버지 |
-| servus, -ī, m. | 명사 2변화 | (남자) 노예 |
-| via, -ae, f. | 명사 1변화 | 거리, 길 |
+| **명사** | | |
+| hortus, hortī, m. | 정원 | 2변화 명사 |
+| pater, patris, m. | 아버지 | 3변화 명사 |
+| māter, mātris, f. | 어머니 | 3변화 명사 |
+| fīlius, fīliī, m. | 아들 | 2변화 명사 |
+| fīlia, fīliae, f. | 딸 | 1변화 명사 |
+| servus, servī, m. | 노예, 하인 | 2변화 명사 |
+| coquus, coquī, m. | 요리사 | 2변화 명사 |
+| canis, canis, m./f. | 개 | 3변화 명사 |
+| via, viae, f. | 길, 거리 | 1변화 명사 |
+| **동사** | | |
+| labōrō, labōrāre, labōrāvī | 일하다 | 1활용 동사 |
+| sum, esse, fuī | \~이다, 있다 | 불규칙 동사 |
+| **기타** | | |
+| in | \~에서, \~안에 | 전치사 (+탈격) |
 
 ### 1.2 그 밖의 단어 (Stage 1 Vocabulary [L01 p21] · 지문)
 
@@ -38,7 +43,7 @@
 | culīna, -ae, f. | 1변화 | 부엌 | in culīnā |
 | mēnsa, -ae, f. | 1변화 | 식탁 | in mēnsā |
 | cibus, -ī, m. | 2변화 | 음식 | checklist 2 |
-| scrībō, scrībere (scrībit) | 3활용 | 쓰다 | |
+| scrībō, scrībere (scrībit) | 3활용 | 쓰다 | checklist 6 |
 | sedeō, sedēre (sedet) | 2활용 | 앉아 있다 | checklist 3 |
 | bibō, bibere (bibit) | 3활용 | 마시다 | checklist 3 |
 | legō, legere (legit) | 3활용 | 읽다 | |
@@ -160,4 +165,4 @@
 | 21 | "pestis! furcifer!"… | 호격 + clāmat | "이 망할 놈! 악당 녀석!" 요리사가 외친다. |
 | 22 | Cerberus exit. | exit 불규칙 | 케르베루스가 나간다. |
 
-> `in`은 "~안에"뿐 아니라 "~위에"도 된다: `in mēnsā` 식탁 **위에**.
+> `in`은 "\~안에"뿐 아니라 "\~위에"도 된다: `in mēnsā` 식탁 **위에**.

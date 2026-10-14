@@ -9,30 +9,36 @@
 
 ## 1. 어휘
 
-### 1.1 Vocabulary checklist 3 — 필수 암기 ★★★ [L03 p26 · L04 p20 · L06 p10]
+### 1.1 Vocabulary checklist 3 — 필수 암기 ★★★ [어휘 p7–11]
 
-| 사전형 | 품사·변화 | 뜻 |
+> 교수님 배포 `stage 1-6 vocabulary checklist.pdf` 그대로다. **중간고사 범위에 포함된다.** 동사는 현재 1인칭 단수, 부정사, 완료 1인칭 단수 순서다. 전체 목록과 시제별 형태는 [필수 어휘](../필수%20어휘%20Stage%201-6.md)에 있다.
+
+| 사전형 | 뜻 | 변화/활용 |
 | --- | --- | --- |
-| ad (+acc.) | 전치사 | ~로, ~쪽으로, ~에 |
-| bibō, bibere (bibit) | 3활용 | 마시다 |
-| circumspectō, circumspectāre (circumspectat) | 1활용 | 둘러보다 |
-| clāmō, clāmāre (clāmat) | 1활용 | 외치다 |
-| et | 접속사 | 그리고 |
-| exeō, exīre (exit) | 불규칙 | 나가다 |
-| exspectō, exspectāre (exspectat) | 1활용 | 기다리다 |
-| iānua, -ae, f. | 1변화 | 문 |
-| īrātus, -a, -um | 형용사 | 화난 |
-| magnus, -a, -um | 형용사 | 큰 |
-| nāvis, nāvis, f. | 3변화 | 배 |
-| nōn | 부사 | ~않다 |
-| portō, portāre (portat) | 1활용 | 나르다 |
-| respondeō, respondēre (respondet) | 2활용 | 대답하다 |
-| rīdeō, rīdēre (rīdet) | 2활용 | 웃다, 미소 짓다 |
-| salvē! | 감탄사 | 안녕! |
-| sedeō, sedēre (sedet) | 2활용 | 앉아 있다 |
-| taberna, -ae, f. | 1변화 | 가게, 여관 |
-| videō, vidēre (videt) | 2활용 | 보다 |
-| vīnum, -ī, n. | 2변화 중성 | 포도주 |
+| **명사** | | |
+| iānua, iānuae, f. | 문 | 1변화 명사 |
+| nāvis, nāvis, f. | 배, 선박 | 3변화 명사 |
+| taberna, tabernae, f. | 가게, 상점 | 1변화 명사 |
+| vīnum, vīnī, n. | 포도주 | 2변화 명사 |
+| **동사** | | |
+| bibō, bibere, bibī | 마시다 | 3활용 동사 |
+| circumspectō, circumspectāre, circumspectāvī | 주위를 둘러보다 | 1활용 동사 |
+| clāmō, clāmāre, clāmāvī | 소리치다 | 1활용 동사 |
+| exeō, exīre, exiī, exitum | 나가다 | 불규칙 동사 |
+| exspectō, exspectāre, exspectāvī | 기다리다 | 1활용 동사 |
+| portō, portāre, portāvī | 나르다, 운반하다 | 1활용 동사 |
+| respondeō, respondēre, respondī | 대답하다 | 2활용 동사 |
+| rīdeō, rīdēre, rīsī | 웃다, 미소 짓다 | 2활용 동사 |
+| sedeō, sedēre, sēdī | 앉다 | 2활용 동사 |
+| videō, vidēre, vīdī | 보다 | 2활용 동사 |
+| **형용사** | | |
+| īrātus, īrāta, īrātum | 화난 | 1·2변화 형용사 |
+| magnus, magna, magnum | 큰 | 1·2변화 형용사 |
+| **기타** | | |
+| ad | \~로, \~을 향하여 | 전치사 (+대격) |
+| et | 그리고 | 접속사 |
+| nōn | \~않다, 아니다 | 부사 |
+| salvē! | 안녕! | 인사말 (salveō의 명령형) |
 
 ### 1.2 그 밖의 단어 (지문 등장 순)
 
@@ -47,7 +53,7 @@
 | tōnsor, tōnsōris, m. | 3변화 | 이발사 | 판타가투스 |
 | vēnālīcius, -ī, m. | 2변화 | 노예 상인 | 시팍스 |
 | veniō, venīre (venit) | 4활용 | 오다 | checklist 5 |
-| pulsō, pulsāre (pulsat) | 1활용 | 두드리다, 치다 | artifex |
+| pulsō, pulsāre (pulsat) | 1활용 | 두드리다, 치다 | artifex · checklist 6 |
 | audiō, audīre (audit) | 4활용 | 듣다 | checklist 5 |
 | aperiō, aperīre (aperit) | 4활용 | 열다 | artifex |
 | dūcō, dūcere (dūcit) | 3활용 | 이끌다, 데려가다 | artifex |
@@ -55,14 +61,14 @@
 | pingō, pingere (pingit) | 3활용 | 그리다 | |
 | leō, leōnis, m. | 3변화 | 사자 | |
 | Herculēs, Herculis, m. | 3변화 | 헤르쿨레스 (영웅) | |
-| ferōciter | 부사 | 사납게 | |
+| ferōciter | 부사 | 사납게 | checklist 6 |
 | petō, petere (petit) | 3활용 | 향해 가다, 공격하다, 구하다 | checklist 5 |
 | fūstis, fūstis, m. | 3변화 | 몽둥이 | |
 | teneō, tenēre (tenet) | 2활용 | 잡고 있다 | |
 | verberō, verberāre (verberat) | 1활용 | 때리다 | |
-| fortis, -e | 3변화 형용사 | 용감한, 강한 | |
+| fortis, -e | 3변화 형용사 | 용감한, 강한 | checklist 6 |
 | reveniō, revenīre (revenit) | 4활용 | 돌아오다 | |
-| intentē | 부사 | 주의 깊게 | |
+| intentē | 부사 | 주의 깊게 | checklist 6 |
 | inquit | 동사 | 말한다 | checklist 4 |
 | occupātus, -a, -um | 형용사 | 바쁜 | tōnsor |
 | senex, senis, c. | 3변화 | 노인 | checklist 5 |
@@ -80,10 +86,10 @@
 | multus, -a, -um | 형용사 | 많은 | checklist 5 |
 | sanguis, sanguinis, m. | 3변화 | 피 | |
 | fluō, fluere (fluit) | 3활용 | 흐르다 | |
-| ē (+abl.) | 전치사 | ~에서 (밖으로) | checklist 4 |
+| ē (+abl.) | 전치사 | \~에서 (밖으로) | checklist 4 |
 | surgō, surgere (surgit) | 3활용 | 일어나다 | |
 | portus, -ūs, m. | 4변화 (미학습) | 항구 | 대격 portum |
-| prope (+acc.) | 전치사 | ~근처에 | |
+| prope (+acc.) | 전치사 | \~근처에 | |
 | quaerō, quaerere (quaerit) | 3활용 | 찾다, 구하다 | checklist 4 |
 | doctus, -a, -um | 형용사 | 숙련된, 솜씨 좋은 | |
 | lingua, -ae, f. | 1변화 | 혀, 언어 | |
@@ -97,12 +103,12 @@
 | compōnō, compōnere (compōnit) | 3활용 | 정리하다, 손질하다 | |
 | stola, -ae, f. | 1변화 | (긴) 드레스, 스톨라 | |
 | satis | 부사 | 충분히; (감탄) 그만! | checklist 4 |
-| emō, emere (emit) | 3활용 | 사다 | |
+| emō, emere (emit) | 3활용 | 사다 | checklist 6 |
 | fābula, -ae, f. | 1변화 | 이야기, 연극 | checklist 5 |
 | Orcus, -ī, m. | 2변화 | 저승 | in hortō |
 | custōdiō, custōdīre (custōdit) | 4활용 | 지키다 | |
 | capiō, capere (capit) | 3-io활용 | 붙잡다 | |
-| subitō | 부사 | 갑자기 | |
+| subitō | 부사 | 갑자기 | checklist 6 |
 
 ### 1.3 새 등장인물
 
@@ -253,7 +259,7 @@
 | 18 | tōnsor barbam… | nōn tondet | 이발사는 수염을 다듬지 않는다. |
 | 19 | tōnsor senem… | senex → senem | 이발사가 노인을 벤다. |
 | 20 | multus sanguis… | 형용사 일치 | 많은 피가 흐른다. |
-| 21 | Caecilius surgit… | ē + 탈격 = ~밖으로 | 카이킬리우스는 일어나 가게 밖으로 나간다. |
+| 21 | Caecilius surgit… | ē + 탈격 = \~밖으로 | 카이킬리우스는 일어나 가게 밖으로 나간다. |
 
 ---
 

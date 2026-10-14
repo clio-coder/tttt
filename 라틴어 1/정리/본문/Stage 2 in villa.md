@@ -9,22 +9,28 @@
 
 ## 1. 어휘
 
-### 1.1 Vocabulary checklist 2 — 필수 암기 ★★★ [L02 p12 · L03 p18 · L04 p11]
+### 1.1 Vocabulary checklist 2 — 필수 암기 ★★★ [어휘 p4–6]
 
-| 사전형 | 품사·변화 | 뜻 | 대격 |
-| --- | --- | --- | --- |
-| amīcus, -ī, m. | 2변화 | (남자) 친구 | amīcum |
-| ancilla, -ae, f. | 1변화 | 여자 노예 | ancillam |
-| cēna, -ae, f. | 1변화 | 저녁 식사 | cēnam |
-| cibus, -ī, m. | 2변화 | 음식 | cibum |
-| dominus, -ī, m. | 2변화 | 주인 (집안의) | dominum |
-| dormiō, dormīre (dormit) | 4활용 | 자다 | |
-| intrō, intrāre (intrat) | 1활용 | 들어가다 (+대격: ~에 들어가다) | |
-| laetus, -a, -um | 형용사 | 기쁜, 행복한 | laetum |
-| laudō, laudāre (laudat) | 1활용 | 칭찬하다 | |
-| mercātor, mercātōris, m. | 3변화 | 상인 | mercātōrem |
-| quoque | 부사 | ~도, 또한 | |
-| salūtō, salūtāre (salūtat) | 1활용 | 인사하다, 맞이하다 | |
+> 교수님 배포 `stage 1-6 vocabulary checklist.pdf` 그대로다. **중간고사 범위에 포함된다.** 동사는 현재 1인칭 단수, 부정사, 완료 1인칭 단수 순서다. 전체 목록과 시제별 형태는 [필수 어휘](../필수%20어휘%20Stage%201-6.md)에 있다.
+
+| 사전형 | 뜻 | 변화/활용 |
+| --- | --- | --- |
+| **명사** | | |
+| amīcus, amīcī, m. | 친구 | 2변화 명사 |
+| ancilla, ancillae, f. | 여자 노예, 하녀 | 1변화 명사 |
+| cēna, cēnae, f. | 저녁 식사 | 1변화 명사 |
+| cibus, cibī, m. | 음식 | 2변화 명사 |
+| dominus, dominī, m. | 주인 | 2변화 명사 |
+| mercātor, mercātōris, m. | 상인 | 3변화 명사 |
+| **동사** | | |
+| dormiō, dormīre, dormīvī | 자다 | 4활용 동사 |
+| intrō, intrāre, intrāvī | 들어가다 | 1활용 동사 |
+| laudō, laudāre, laudāvī | 칭찬하다 | 1활용 동사 |
+| salūtō, salūtāre, salūtāvī | 인사하다 | 1활용 동사 |
+| **형용사** | | |
+| laetus, laeta, laetum | 기쁜, 행복한 | 1·2변화 형용사 |
+| **기타** | | |
+| quoque | 또한, \~도 | 부사 |
 
 ### 1.2 그 밖의 단어
 
@@ -55,11 +61,11 @@
 | spectō, spectāre (spectat) | 1활용 | 보다, 바라보다 | checklist 5 |
 | videō, vidēre (videt) | 2활용 | 보다 | checklist 3 |
 | vīsitō, vīsitāre (vīsitat) | 1활용 | 방문하다 | |
-| vituperō, vituperāre (vituperat) | 1활용 | 꾸짖다, 욕하다 | |
+| vituperō, vituperāre (vituperat) | 1활용 | 꾸짖다, 욕하다 | checklist 6 |
 | vocō, vocāre (vocat) | 1활용 | 부르다 | checklist 4 |
 | salvē! | 감탄사 | 안녕! | checklist 3 |
 | et | 접속사 | 그리고 | checklist 3 |
-| nōn | 부사 | ~않다 | checklist 3 |
+| nōn | 부사 | \~않다 | checklist 3 |
 | mox | 부사 | 곧 | |
 | suāviter | 부사 | 감미롭게 | |
 | magnificē | 부사 | 호화롭게 | |
@@ -137,19 +143,19 @@
 | 12 | "salvē!" Caecilius… | | "어서 오시오!" 카이킬리우스가 상인에게 인사한다. |
 | 13 | "salvē!" mercātor… | mercātor 주격 | "안녕하시오!" 상인이 대답한다. |
 | 14 | Caecilius triclīnium… | | 카이킬리우스가 식당으로 들어간다. |
-| 15 | Barbillus quoque… | quoque = ~도 | 바르빌루스도 들어간다. |
+| 15 | Barbillus quoque… | quoque = \~도 | 바르빌루스도 들어간다. |
 | 16 | amīcus in lectō… | in lectō recumbit | 친구는 긴 의자에 기대어 눕는다. |
 | 17 | argentārius in lectō… | | 은행가도 긴 의자에 기대어 눕는다. |
 | 18 | Grumiō in culīnā… | | 그루미오는 부엌에서 노래한다. |
 | 19 | Grumiō pāvōnem… | 3변화 대격 | 그루미오는 공작새를 요리하고 있다. |
 | 20 | coquus est… | laetus 주격 보어 | 요리사는 기분이 좋다. |
-| 21 | Caecilius coquum… | audit + 대격 = ~의 소리를 듣다 | 카이킬리우스는 요리사(의 노랫소리)를 듣는다. |
+| 21 | Caecilius coquum… | audit + 대격 = \~의 소리를 듣다 | 카이킬리우스는 요리사(의 노랫소리)를 듣는다. |
 | 22 | Caecilius nōn est… | nōn은 동사 앞 | 카이킬리우스는 기분이 좋지 않다. |
-| 23 | Caecilius cēnam… | exspectat + 대격 = ~을 기다리다 | 카이킬리우스는 저녁 식사를 기다린다. |
+| 23 | Caecilius cēnam… | exspectat + 대격 = \~을 기다리다 | 카이킬리우스는 저녁 식사를 기다린다. |
 | 24 | amīcus cēnam… | | 친구도 저녁 식사를 기다린다. |
 | 25 | Caecilius Grumiōnem… | 3변화 대격 | 카이킬리우스는 그루미오를 부른다. |
 
-- 17·24번은 원문에 "~도"(quoque)가 없지만, 앞 문장과 이어서 자연스럽게 옮겼다. 직역하면 "은행가는 … 눕는다", "친구는 … 기다린다"이다.
+- 17·24번은 원문에 "\~도"(quoque)가 없지만, 앞 문장과 이어서 자연스럽게 옮겼다. 직역하면 "은행가는 … 눕는다", "친구는 … 기다린다"이다.
 
 ---
 
@@ -199,7 +205,7 @@
 | 22 | Poppaea coquum… | | 포파이아가 요리사를 바라본다. |
 | 23 | coquus ancillam… | | 요리사가 여자 노예를 부른다. |
 | 24 | Poppaea cibum… | | 포파이아는 음식을 맛보고 그루미오를 칭찬한다. |
-| 25 | Grumiō est… | 최상급 = 매우 ~한 | 그루미오는 매우 기쁘다. |
+| 25 | Grumiō est… | 최상급 = 매우 \~한 | 그루미오는 매우 기쁘다. |
 
 - 8번은 함정이다. 사람(Barbillum)이 대격이고 사물(cēna)이 주어다. 어순이 아니라 **어미**로 주어를 찾는다.
 
