@@ -43,6 +43,8 @@ $$\text{equivariant: }f(g\cdot x)=g\cdot f(x)\qquad\qquad\text{invariant: }f(g\c
 
 ## 7.2 합성곱 층
 
+**2D 합성곱 = 창을 옮겨 가며 가중 평균** 10×10 이미지(값 0 또는 90)에 3×3 **평균 필터**를 한 칸씩 옮기며 적용하면, 창 안에 90이 하나면 $90/9=10$, 셋이면 30 … → 경계가 **흐려진다**. 출력은 $10-3+1=8$ 이라 8×8. 필터가 5×5면 더 넓게 평균해 더 흐려지고 출력은 6×6. 합성곱 층은 이 **필터 값을 학습**한다.
+
 - 입력 32×32×3을 펴지 않고 **공간 구조를 유지**한다.
 - 필터 5×5×3 — **필터는 항상 입력의 깊이 전체를 덮는다**.
 - 필터를 이미지 위에서 밀며 **내적**: 한 위치의 출력 = $w^\top x+b$ ( $5\cdot5\cdot3=75$차원 내적 + bias)
@@ -124,6 +126,9 @@ $$(w\star T_{p,q}x)[i,j]=\sum_{a,b}w[a,b]\thinspace x[i+a-p,\thinspace j+b-q]=(w
 - 핵심은 **모든 위치가 같은 $w$를 쓴다**는 것(가중치 공유). ReLU는 원소별이라 이동과 순서를 바꿔도 같다 → CONV–ReLU를 쌓아도 equivariant.
 
 ## 7.3 CNN 구조
+
+**CNN 분류기의 뼈대** INPUT → [CONV + ReLU → POOL]을 반복 (**feature learning**) → FLATTEN → FC → SOFTMAX (**classification**). CNN의 층 종류는 합성곱 층, pooling 층, FC 층 세 가지다.
+- 역사: **LeNet-5** (LeCun, Bottou, Bengio, Haffner 1998, 문서 인식) — 합성곱 → subsampling → FC 구조의 원조
 
 ### ImageNet top-5 오류의 흐름
 
