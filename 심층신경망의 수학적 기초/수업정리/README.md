@@ -2,7 +2,7 @@
 
 → **중간고사 공부는 [중간고사 정리](../중간고사%20정리/00%20중간고사%20가이드.md)** — 이 폴더의 날짜별 노트를 주제별 7장으로 다시 묶은 읽기 쉬운 버전이다. 여기 날짜별 노트에는 판서 쪽수, 판독, 슬라이드 오류 목록 같은 원본 정보가 있다.
 
-→ **Quiz 2 (11/04) 공부는 [Quiz 2 총정리](../퀴즈%20정리/Quiz%202%20총정리.md)** — 10/14·10/21·10/26·10/28·11/2 다섯 수업, 출제 예상 순위·공식 한 장·증명 체크리스트·예상 문제 10개.
+→ **Quiz 2 (11/04, 끝남) 공부는 [Quiz 2 총정리](../퀴즈%20정리/Quiz%202%20총정리.md)** — 10/14·10/21·10/26·10/28·11/2 다섯 수업, 출제 예상 순위·공식 한 장·증명 체크리스트·예상 문제 10개.
 
 → **[00 학습노트](00%20학습노트.md)** — 전체를 한 흐름으로 잇는 노트 (큰 그림, 단계별 흐름, 연결 고리, 증명 체크리스트, 수치 예제, 기호표). 시험 공부는 여기서 시작한다.
 
@@ -24,16 +24,23 @@
 | 9/28(월) | [09.28 수업정리 2 - CNN 기초](09.28%20수업정리%202%20-%20CNN%20기초.md) | `week5_Mon3` p1–71 | 합성곱 층, 출력 크기, pooling, equivariance (**필기 없음**) | – (계산 예제: 출력 크기, 파라미터 수, 합성곱 손계산) |
 | 9/30(수) | – | `0930 수업용 코드` 폴더 | 코드 실습 (**시험 안 나옴**, 노트 없음) | – |
 | 10/7(수) | [10.07 수업정리](10.07%20수업정리.md) | `week6_Wed` p1–55 | AlexNet, ZFNet·VGG, GoogLeNet(inception), ResNet, saliency map (**필기 없음**) | – (계산 예제: AlexNet 크기, inception 파라미터) |
-| 10/14(수) | [10.14 수업정리](10.14%20수업정리.md) | `심수기 1014 강의 요약` (AI 요약 9쪽) | 오차 분해, 일반화와 PAC, 차원의 저주, hinge loss (📋 손실 설계 기말 출제 예정) | 오차 분해 (복원), Chebyshev, Lipschitz 상계 (복원) |
+| 10/14(수) | [10.14 수업정리](10.14%20수업정리.md) | 필기본 p1–3 + `심수기 1014 강의 요약` (AI 요약) | 오차 분해 (approximation / estimation), 일반화와 PAC, 차원의 저주, hinge loss (📋 손실 설계 기말 출제 예정) | 🔴 estimation error ≤ 2 sup + ε<sub>opt</sub>, Chebyshev, Lipschitz 상계, hinge 반례 |
 | 10/21(수) | [10.21 수업정리](10.21%20수업정리.md) | `Week8_Wed` p1–9 (판서 노트만) | Universal Approximation Theorem (Cybenko), Barron class | 🔴 Lemma 4 (Hahn–Banach + Riesz), 🔴 Lemma 5·UAT (귀류법), Barron 정리 진술 |
 | 10/26(월) | [10.26 수업정리](10.26%20수업정리.md) | `week9_Mon` p1–9 (판서 노트만) | Barron 정리의 증명 (Maurey 보조정리), Rademacher complexity | 🔴 Maurey (확률적 방법), Barron 증명 흐름, 일반화 상계 |
 | 10/28(수) | [10.28 수업정리](10.28%20수업정리.md) | `week9_Wed_note` p1–27, `week9_Wed2_note` p1–13 | RNN, BPTT, exploding/vanishing, clipping, LSTM, RNN 언어모델 | 🔴★ 2-step BPTT (D.I.Y. 3개, 📋 "Quiz 2 11/04"), LSTM 게이트, ∂C/∂C = diag(f) |
 | 11/2(월) | [11.02 수업정리](11.02%20수업정리.md) | `week10_Mon_note` p1–43 | 이미지 캡셔닝, attention, self/cross-attention, positional encoding, masking, Transformer | 🔴 √d<sub>k</sub> 의 이유 (Var = d<sub>k</sub>), positional encoding 수치 예, masked attention |
+| 11/4(수) | [11.04 수업정리](11.04%20수업정리.md) | `week10_Wed_note` p1–19 + 필기본 p19 | linear attention, Layer Norm (BN vs LN), scaling law, ViT, GELU | 🔴★ linear attention O(N²) → O(N), BN·LN 수치 예제, 📋 과제 안내 (pdf, PyTorch, Colab) |
+| 11/9(월) | [11.09 수업정리 1 - Swin Transformer](11.09%20수업정리%201%20-%20Swin%20Transformer.md) | `week11_Mon_note` p1–6 | Swin Transformer (advanced): 계층 구조, window attention, patch merging, shifted window | 🔴 행렬곱 O(mnk), MSA O(N²) vs W-MSA 2NM²C = O(N), 수치 예 |
+| 11/9(월) | [11.09 수업정리 2 - 생성 모델 입문](11.09%20수업정리%202%20-%20생성%20모델%20입문.md) | `week11_Mon2_note` p1–24 | 생성 모델 개관, autoregressive (PixelRNN·PixelCNN), compact representation, 표현 학습 | 🔴★ MLE ⇔ cross entropy 최소화 ⇔ KL(P<sub>data</sub>‖P<sub>θ</sub>) 최소화 |
+| 11/11(수) | [11.11 수업정리](11.11%20수업정리.md) | `week11_Wed_note` p1–50 (필기 없음) + 필기본 p20–22 + AI 요약 | latent variable model, autoencoder, VAE | 🔴★ ELBO (Jensen), Gaussian decoder → 제곱오차, Gaussian KL 닫힌 꼴, 🔴★ reparameterization trick |
 
-- 10/5(월)은 자료가 없다 (대체공휴일). 10/12(월)·10/19(월)은 자료가 없다. 10/14는 AI 요약 문서만 있어 식을 복원해 정리했다. 10/20 중간고사.
+- 10/5(월)은 자료가 없다 (대체공휴일). 10/12(월)·10/19(월)은 자료가 없다. 10/20 중간고사.
+- **필기본** (`심수기 1014~1111 필기(1104, 1109 미포함).pdf`, 손필기 22쪽): 10/14·10/21·10/26·10/28·11/2·11/11 수업과 11/4 반 쪽. 10/14와 11/11은 판서 PDF가 없거나 필기가 없어 **필기본을 수업 범위의 기준**으로 썼다. 10/14는 처음에 AI 요약에서 식을 복원했다가 필기본으로 다시 정리했다.
+- 11/9는 자료 두 묶음(Swin Transformer / 생성 모델)이라 두 파일로 나눴다.
 - 9/28은 자료가 세 개라 주제별로 두 파일로 나눴다: 필기가 있는 최적화(1)와 필기가 없는 CNN 기초(2).
 
 ## 다음 수업으로 넘어간 것
+- **VAE 유도 마무리** — 11/11 요약: 다음 시간은 온라인 녹화 강의로 VAE 유도를 마무리하고, 이후 2–3주는 diffusion model과 flow matching → [11.11 §9](11.11%20수업정리.md)
 - (해결) **Descent Lemma ③** "β-smooth ⇒ $v^\top\nabla^2f\thinspace v\le\beta\lVert v\rVert^2$" — 9/23 판서 "Next class" → 9/28에 증명했다: [09.28 수업정리 1](09.28%20수업정리%201%20-%20최적화.md) §1
 - 9/28 판서 메모 "convex optimization, $1/T$, bubeck": 볼록일 때의 수렴 속도는 수업에서 증명하지 않고 참고문헌만 언급한 것으로 보인다.
 
